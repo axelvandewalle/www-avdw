@@ -206,6 +206,10 @@ $key = q/cite_chen:bayes/;
 $ref_files{$key} = "$dir".q|node5.html|; 
 $noresave{$key} = "$nosave";
 
+$key = q/cite_chen:sgte/;
+$ref_files{$key} = "$dir".q|node5.html|; 
+$noresave{$key} = "$nosave";
+
 $key = q/cite_chen:virto/;
 $ref_files{$key} = "$dir".q|node5.html|; 
 $noresave{$key} = "$nosave";
@@ -247,6 +251,10 @@ $ref_files{$key} = "$dir".q|node5.html|;
 $noresave{$key} = "$nosave";
 
 $key = q/cite_demers:ZnP/;
+$ref_files{$key} = "$dir".q|node5.html|; 
+$noresave{$key} = "$nosave";
+
+$key = q/cite_eckert:soliquidy/;
 $ref_files{$key} = "$dir".q|node5.html|; 
 $noresave{$key} = "$nosave";
 
@@ -470,6 +478,10 @@ $key = q/cite_sun:resubthx/;
 $ref_files{$key} = "$dir".q|node5.html|; 
 $noresave{$key} = "$nosave";
 
+$key = q/cite_sundman:xtdb/;
+$ref_files{$key} = "$dir".q|node5.html|; 
+$noresave{$key} = "$nosave";
+
 $key = q/cite_tiwary:amdreview/;
 $ref_files{$key} = "$dir".q|node5.html|; 
 $noresave{$key} = "$nosave";
@@ -523,6 +535,10 @@ $ref_files{$key} = "$dir".q|node5.html|;
 $noresave{$key} = "$nosave";
 
 $key = q/cite_wu:svsl/;
+$ref_files{$key} = "$dir".q|node5.html|; 
+$noresave{$key} = "$nosave";
+
+$key = q/cite_zhu:glassdef/;
 $ref_files{$key} = "$dir".q|node5.html|; 
 $noresave{$key} = "$nosave";
 

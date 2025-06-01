@@ -1,5 +1,37 @@
 \begin{thebibliography}{100}
 
+\bibitem{chen:sgte}
+H.~Chen, Q.~Hong, A.~Navrotsky, and A.~van~de Walle.
+\newblock A computational free energy reference for mechanically unstable
+  phases.
+\newblock {\em Calphad Journal}, submitted, 2025.
+\newblock Download:
+  \htmladdnormallink{[SSRN]}{https://dx.doi.org/10.2139/ssrn.5236216}.
+
+\bibitem{zhu:glassdef}
+S.~Zhu, H.~Eckert, S.~Curtarolo, J.~Schroers, and A.~van~de Walle.
+\newblock Computational study of density fluctuation-induced shear bands
+  formation in bulk metallic glasses.
+\newblock {\em NPJ Comp. Mater. Sci.}, submitted, 2025.
+\newblock Download:
+  \htmladdnormallink{[arXiv]}{https://arxiv.org/abs/2504.01229}.
+
+\bibitem{sundman:xtdb}
+B.~Sundman, F.~Miani, A.~van~de Walle, B.~Hallstedt, U.~R. Kattner, F.~Tang,
+  T.~Abe, R.~Naraghi, E.~Povoden-Karadeniz, A.~Jacob, S.~Chen, R.~Otis,
+  K.~Shobu, M.~Selleby, and A.~Pisch.
+\newblock {XTDB}, an {XML} based format for calphad databases.
+\newblock {\em Calphad Journal}, submitted, 2025.
+
+\bibitem{eckert:soliquidy}
+S.~Curtarolo, H.~Eckert, S.~Kube, S.~Divilov, A.~Guest, A.~Zettel, D.~Hicks,
+  S.~Griesemer, N.~Hotz, X.~Campilongo, S.~Zhu, A.~van~de Walle, and
+  J.~Schroers.
+\newblock Soliquidy: a descriptor for atomic geometrical confusion.
+\newblock {\em npj Computational Materials}, accepted, 2025.
+\newblock Download:
+  \htmladdnormallink{[arXiv]}{https://arxiv.org/abs/2501.18001}.
+
 \bibitem{samanta:cvm}
 S.~Samanta and A.~van~de Walle.
 \newblock Software tools for integrating special quasirandom structures and the
@@ -49,7 +81,7 @@ B.~L. Brugman, Y.~Han, L.~J. Leinbach, K.~Leinenweber, A.~van~de Walle, S.~V.
   Ushakov, Q.-J. Hong, and A.~Navrotsky.
 \newblock Computationally led high pressure synthesis and experimental
   thermodynamics of rock salt yttrium monoxide.
-\newblock {\em Chemistry of Materials}, in press, 2024.
+\newblock {\em Chemistry of Materials}, 36:332, 2024.
 \newblock Download: \doiref{10.1021/acs.chemmater.3c02166}.
 
 \bibitem{samanta:CrMoNbV}
