@@ -1,0 +1,49 @@
+<html>
+<head>
+<title>Relating Fractal Image Compression to Transform Methods</title>
+</head>
+<body>
+
+<H1>Relating Fractal Image Compression to Transform Methods</H1>
+<EM>by Axel van de Walle</EM>
+
+<H2>Abstract</H2>
+
+The purpose of this thesis is to show that
+fractal image compression can be studied
+with the same point of view
+as conventional image compression techniques.<P>
+
+The first chapter presents a quick overview of most conventional signal
+compression techniques: Huffman and arithmetic coding,
+vector quantization, predictive coding and (Karhunen-Lo&egrave;ve)
+transform methods.<P>
+
+Another chapter is devoted specifically to transform methods
+applied to image compression.
+Fundamental statistical properties of images are investigated, such
+as translation and scale invariance, average continuity of images
+and the decay of their power spectra. These properties
+are then related to one another and used to introduce the well
+known discrete cosine transform and orthogonal wavelet transforms.
+An overview of the so-called ``zerotree'' scheme used in wavelet compression
+is also given.<P>
+
+In the final chapter, fractal image compression is introduced and
+is related to the conventional methods previously introduced.
+A statistical justification of fractal compression, inspired
+from transform methods, is given.
+The main result of this thesis is then presented:
+the development of a compression
+scheme which reduces to wavelet compression in one limit and to
+conventional fractal image compression in another limit.<P>
+
+This new algorithm addresses most weaknesses of fractal image compression:
+it avoids the so-called ``tiling'' effect, reduces compression
+and decompression time, increases compression ratio
+and requires weaker criteria to guarantee
+convergence of the decompression algorithm.<P>
+
+Download: <A HREF="mthesis.ps.gz">[PS]</A> <A HREF="mthesis_short.ps.gz">[PS, less figures]</A> <A HREF="mthesis.pdf">[PDF]</A>
+
+</body>

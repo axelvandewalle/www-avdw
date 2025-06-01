@@ -1,0 +1,8 @@
+#!/bin/csh
+echo -n > index.html
+echo "<HTML><HEAD><TITLE>Midi files by Axel van de Walle</TITLE></HEADER><BODY>" >> index.html
+echo "<H1>Midi files, author: Axel van de Walle</H1>" >> index.html
+foreach file ( *.MID )
+  echo '<A HREF="'$file'">'$file'</A><P>' >> index.html
+end
+echo "</BODY></HTML>" >> index.html

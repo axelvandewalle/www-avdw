@@ -1,0 +1,18 @@
+<html>
+<head>
+<title>Textes humoristiques</title>
+</head>
+<body>
+
+Les textes sont disponibles en plusieurs formats:<P>
+
+<UL>
+<LI><A HREF="humour.html">HTML</A>
+<LI><A HREF="humour.txt">Texte pur sans accents</A>
+<LI><A HREF="humour.pc">Texte pur avec accents (format PC)</A>
+<LI><A HREF="humour.dvi">DVI</A>
+<LI><A HREF="humour.ps">PostScript</A>
+</UL>
+
+</body>
+</html>
