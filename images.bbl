@@ -1,0 +1,962 @@
+\begin{thebibliography}{100}
+
+\bibitem{samanta:cvm}
+S.~Samanta and A.~van~de Walle.
+\newblock Software tools for integrating special quasirandom structures and the
+  cluster variation method into the calphad formalism.
+\newblock {\em J. of Phase Equilibria and Diffusion}, Sep, 2024.
+\newblock Download: \doiref{10.1007/s11669-024-01151-6}.
+
+\bibitem{ushakov:ErTmO}
+S.~V. Ushakov, Q.-J. Hong, A.~Pavlik III, A.~van~de Walle, and A.~Navrotsky.
+\newblock Thermal expansion and enthalpies of phase transformation and fusion
+  of {Er$_2$O$_3$} and {Tm$_2$O{$_3$}} from experiment and computation.
+\newblock {\em Chem. Mater.}, 36:4868, 2024.
+\newblock Download: \doiref{10.1021/acs.chemmater.4c00783}.
+
+\bibitem{hong:LLZOpd}
+Q.-J. Hong, P.~D. Tepesch, and A.~van~de Walle.
+\newblock Combined experimental and computational assessment of the
+  {Li$_2$O-La$_2$O$_3$-ZrO$_2$} phase diagram.
+\newblock {\em Journal of the American Ceramic Society}, 107:5682, 2024.
+\newblock Download: \doiref{10.1111/jace.19846}.
+
+\bibitem{kunselman:dotder}
+C.~Kunselman, B.~J. Bocklund, A.~van~de Walle, R.~Otis, and R.~Arroyave.
+\newblock Analytically differentiable metrics for phase stability.
+\newblock {\em Calphad Journal}, 86:102705, 2024.
+\newblock Download: \doiref{10.1016/j.calphad.2024.102705}
+  \htmladdnormallink{[SSRN]}{https://dx.doi.org/10.2139/ssrn.4764779}.
+
+\bibitem{avdw:sgteal}
+A.~van~de Walle, S.~Samanta, C.~Nataraj, S.~Zhu, H.~Chen, H.~Liu, and
+  R.~Arroyave.
+\newblock Revisiting the {SGTE} lattice stability of bcc aluminum.
+\newblock {\em Calphad Journal}, 83:102628, 2023.
+\newblock Download:
+  \htmladdnormallink{[SSRN]}{https://dx.doi.org/10.2139/ssrn.4484065}
+  \doiref{10.1016/j.calphad.2023.102628}.
+
+\bibitem{chen:bayes}
+H.~Chen, S.~Samanta, S.~Zhu, H.~Eckert, J.~Schroers, S.~Curtarolo, and
+  A.~van~de Walle.
+\newblock Bayesian active machine learning for cluster expansion construction.
+\newblock {\em Computational Materials Science}, 231:112571, 2024.
+\newblock Download: \doiref{10.1016/j.commatsci.2023.112571}.
+
+\bibitem{brugman:yo}
+B.~L. Brugman, Y.~Han, L.~J. Leinbach, K.~Leinenweber, A.~van~de Walle, S.~V.
+  Ushakov, Q.-J. Hong, and A.~Navrotsky.
+\newblock Computationally led high pressure synthesis and experimental
+  thermodynamics of rock salt yttrium monoxide.
+\newblock {\em Chemistry of Materials}, in press, 2024.
+\newblock Download: \doiref{10.1021/acs.chemmater.3c02166}.
+
+\bibitem{samanta:CrMoNbV}
+S.~Zhu, C.~Nataraj, A.~van~de Walle, A.~Perron, J.~Shittu, J.~Berry, J.~T.
+  McKeown, and A.~Samanta.
+\newblock Probing phase stability in {CrMoNbV} using cluster expansion method,
+  {CALPHAD} calculations and experiments.
+\newblock {\em Acta Mater.}, 255:119062, 2023.
+\newblock Download: \doiref{10.1016/j.actamat.2023.119062}.
+
+\bibitem{zhu:sgs}
+S.~Zhu, J.~Schroers, S.~Curtarolo, H.~Eckert, and A.~van~de Walle.
+\newblock Special glass structures for first principles studies of bulk
+  metallic glasses.
+\newblock {\em Acta Mater.}, 262:119456, 2024.
+\newblock Download: \doiref{10.1016/j.actamat.2023.119456}
+  \htmladdnormallink{[arXiv]}{https://arxiv.org/abs/2302.11644}.
+
+\bibitem{ushakov:thremonox}
+S.~V. Ushakov, Q.-J. Hong, D.~A. Gilbert, A.~Navrotsky, and A.~van~de Walle.
+\newblock Thorium and rare earth monoxides and related phases.
+\newblock {\em Materials}, 16:1350, 2023.
+\newblock Download: \doiref{10.3390/ma16041350}.
+
+\bibitem{hong:calphadpersp}
+Q.~Hong, A.~van~de Walle, S.~V. Ushakov, and A.~Navrotsky.
+\newblock Integrating computational and experimental thermodynamics of
+  refractory materials at high temperature.
+\newblock {\em Calphad journal}, 79:102500, 2022.
+\newblock Download: \doiref{10.1016/j.calphad.2022.102500}.
+
+\bibitem{liu:geosurf}
+H.~Liu and A.~van~de Walle.
+\newblock Rapid geometric screening of low-energy surfaces in crystals.
+\newblock {\em Symmetry}, 14:2067, 2022.
+\newblock Download: \doiref{10.3390/sym14102067}.
+
+\bibitem{curtarolo:aflowjnt}
+C.~Oses, M.~Esters, D.~Hicks, S.~Divilov, H.~Eckert, R.~Friedrich, M.~J. Mehl,
+  A.~Smolyanyuk, X.~Campilongo, A.~van~de Walle, J.~Schroers, A.~G. Kusne,
+  I.~Takeuchi, E.~Zurek, M.~Buongiorno Nardelli, M.~Fornari, Y.~Lederer,
+  O.~Levy, C.~Toher, and S.~Curtarolo.
+\newblock aflow++: a c++ framework for autonomous materials design.
+\newblock {\em Comput. Mat. Sci.}, 217:111889, 2022.
+\newblock Download:
+  \htmladdnormallink{[arXiv]}{https://arxiv.org/abs/2208.03052}
+  \doiref{10.1016/j.commatsci.2022.111889} Editor's choice.
+
+\bibitem{hong:mlmelt}
+Q.-J. Hong, S.~V. Ushakov, A.~van~de Walle, and A.~Navrotsky.
+\newblock Melting temperature prediction using a graph neural network model:
+  from ancient minerals to new materials.
+\newblock {\em Proceedings of the National Academy of Science},
+  119:e2209630119, 2022.
+\newblock Download: \doiref{10.1073/pnas.2209630119}.
+
+\bibitem{avdw:hidpd}
+A.~van~de Walle, H.~Chen, H.~Liu, C.~Nataraj, S.~Samanta, S.~Zhu, and
+  R.~Arroyave.
+\newblock Interactive exploration of high-dimensional phase diagrams.
+\newblock {\em JOM - J. Min. Met. Mat. S.}, 74:3478, 2022.
+\newblock Download: \doiref{10.1007/s11837-022-05314-z} Editor's choice.
+
+\bibitem{cramer:coviddata}
+E.~Y. Cramer et~al.
+\newblock The united states covid-19 forecast hub dataset.
+\newblock {\em Scientific Data}, 9:462, 2022.
+\newblock Download: \doiref{10.1038/s41597-022-01517-w}.
+
+\bibitem{cramer:covid}
+E.~Y. Cramer et~al.
+\newblock Evaluation of individual and ensemble probabilistic forecasts of
+  covid-19 mortality in the {US}.
+\newblock {\em Proceedings of the National Academy of Science}, 119:e211356111,
+  2022.
+\newblock Download: \doiref{10.1073/pnas.2113561119}
+  \htmladdnormallink{[medRxiv]}{https://www.medrxiv.org/content/10.1101/2021.02.03.21250974v2}.
+
+\bibitem{nataraj:cenl}
+C.~Nataraj, E.~J.~L. Borda, A.~van~de Walle, and A.~Samanta.
+\newblock A systematic analysis of phase stability in refractory high entropy
+  alloys utilizing linear and non-linear cluster expansion models.
+\newblock {\em Acta Mater.}, 220:117269, 2021.
+\newblock Download: \doiref{10.1016/j.actamat.2021.117269}
+  \htmladdnormallink{[SSRN]}{https://dx.doi.org/10.2139/ssrn.3820200}.
+
+\bibitem{nataraj:cowalhf}
+C.~Nataraj, R.~Sun, C.~Woodward, and A.~van~de Walle.
+\newblock First-principles study of the effect of {Al} and {Hf} impurities on
+  {Co$_3$W} antiphase boundary energies.
+\newblock {\em Acta Mater.}, 215:117075, 2021.
+\newblock Download: \doiref{10.1016/j.actamat.2021.117075}.
+
+\bibitem{schroers:straincool}
+R.~Ojeda Mota, E.~Lund, S.~Sohn, D.~Browne, D.~Hofmann, S.~Curtarolo, A.~Van
+  de~Walle, and J.~Schroers.
+\newblock Enhancing ductility in bulk metallic glasses by straining during
+  cooling.
+\newblock {\em Communications Materials}, 2:23, 2021.
+\newblock Download: \doiref{10.1038/s43246-021-00127-0}.
+
+\bibitem{chen:virto}
+H.~Chen, Q.-J. Hong, S.~Ushakov, A.~Navrotzky, and A.~van~de Walle.
+\newblock A simple method for computing the formation energies of metal oxides.
+\newblock {\em Comput. Mat. Sci.}, 198:110692, 2021.
+\newblock Download: \doiref{10.1016/j.commatsci.2021.110692}.
+
+\bibitem{zhu:nire}
+S.~Zhu and A.~van~de Walle.
+\newblock Computational assessment of novel predicted compounds in the {Ni-Re}
+  alloy system.
+\newblock {\em J. of Phase Equilibria and Diffusion}, 42:315, 2021.
+\newblock Download: \doiref{10.1007/s11669-021-00884-y} \htmladdnormallink{[NSF
+  PAR]}{https://par.nsf.gov/biblio/10222507-computational-assessment-novel-predicted-compounds-ni-re-alloy-system}.
+
+\bibitem{samanta:irru}
+S.~Samanta and A.~van~de Walle.
+\newblock Rapid screening of high-throughput ground state predictions.
+\newblock {\em Calphad}, 74:102306, 2021.
+\newblock Download: \doiref{10.1016/j.calphad.2021.102306}.
+
+\bibitem{nataraj:shea}
+C.~Nataraj, A.~van~de Walle, and A.~Samanta.
+\newblock Temperature-dependent configurational entropy calculations for
+  refractory high-entropy alloys.
+\newblock {\em Journal of Phase Equilibria and Diffusion}, 2021.
+\newblock Download: \doiref{10.1007/s11669-021-00879-9} \htmladdnormallink{[NSF
+  PAR]}{https://par.nsf.gov/biblio/10222508-temperature-dependent-configurational-entropy-calculations-refractory-high-entropy-alloys}.
+
+\bibitem{hong:resubmelt}
+Q.~Hong, J.~Schroer, D.~Hofmann, S.~Curtarolo, M.~Asta, and A.~van~de Walle.
+\newblock Theoretical prediction of melting temperature for a {Mo-Ru-Ta-W}
+  {HCP} multi-principal element alloy.
+\newblock {\em NPJ Computational Materials}, 7:1, 2021.
+\newblock Download: \doiref{10.1038/s41524-020-00473-6} \htmladdnormallink{[NSF
+  PAR]}{https://par.nsf.gov/biblio/10208572-theoretical-prediction-high-melting-temperature-morutaw-hcp-multiprincipal-element-alloy}.
+
+\bibitem{liu:resuboxi}
+H.~Liu, M.~Asta, and A.~van~de Walle.
+\newblock Computational assessment of the efficacy of oxidation-resistant
+  iridium coatings for multiple principal component rhenium substitutes.
+\newblock {\em Scripta Mater.}, 189:16, 2020.
+\newblock Download: \doiref{10.1016/j.scriptamat.2020.07.050}.
+
+\bibitem{hong:reentrant}
+Q.-J. Hong and A.~van~de Walle.
+\newblock Re-entrant melting of sodium, magnesium and aluminum: {G}eneral
+  trend.
+\newblock {\em Phys. Rev. B Rapid Communications}, 100:140102(R), 2019.
+\newblock Download: \doiref{10.1103/PhysRevB.100.140102}
+  \htmladdnormallink{[arXiv]}{https://arxiv.org/abs/1910.07507}
+  \htmladdnormallink{[NSF
+  PAR]}{https://par.nsf.gov/biblio/10148260-reentrant-melting-sodium-magnesium-aluminum-general-trend}.
+
+\bibitem{ushakov:CNZrHf}
+S.~V. Ushakov, A.~Navrotsky, Q.-J. Hong, and A.~van~de Walle.
+\newblock {{}}{C}arbides and nitrides of zirconium and hafnium.
+\newblock {\em Materials}, 12:2728, 2019.
+\newblock Download: \doiref{10.3390/ma12172728} \htmladdnormallink{[NSF
+  PAR]}{https://par.nsf.gov/biblio/10120305-carbides-nitrides-zirconium-hafnium}.
+
+\bibitem{sun:resubthx}
+R.~Sun, M.~Asta, and A.~van~de Walle.
+\newblock First-principles thermal compatibility between {Ru}-based
+  {Re}-substitute alloys and {Ir} coatings.
+\newblock {\em Comp. Mater. Sci.}, 170:109199, 2019.
+\newblock Download: \doiref{10.1016/j.commatsci.2019.109199}.
+
+\bibitem{avdw:resubpd}
+A.~van~de Walle, J.~Sabisch, A.~M. Minor, and M.~D. Asta.
+\newblock {{}}{I}dentifying rhenium substitute candidate
+  multi-principal-element alloys from electronic structure and thermodynamic
+  criteria.
+\newblock {\em Journal of Materials Research}, 34:3296, 2019.
+\newblock Download: \doiref{10.1557/jmr.2019.179} \htmladdnormallink{[Full
+  text]}{https://www.cambridge.org/core/journals/journal-of-materials-research/article/identifying-rhenium-substitute-candidate-multiprincipalelement-alloys-from-electronic-structure-and-thermodynamic-criteria/61D8D5CC72C2230214E79EA323BE3929/share/220b028c8c2e6945aadc3d89e6cc54deb6e65f9b}.
+
+\bibitem{avdw:mrspd}
+A.~van~de Walle and M.~Asta.
+\newblock {{}}{H}igh-throughput calculations in the context of alloy design.
+\newblock {\em MRS Bull.}, 44:252, 2019.
+\newblock Download: \doiref{10.1557/mrs.2019.71}.
+
+\bibitem{avdw:norm}
+A.~van~de Walle and Q.-J. Hong.
+\newblock Assessing phase diagram accuracy.
+\newblock {\em J. Phase Equilib. Diff.}, 40:170, 2019.
+\newblock Download: \doiref{10.1007/s11669-019-00711-5}.
+
+\bibitem{kadkhodaei:ltst}
+S.~Kadkhodaei and A.~van~de Walle.
+\newblock A simple local expression for the prefactor in transition state
+  theory.
+\newblock {\em J. Chem. Phys.}, 150:144105, 2019.
+\newblock Download:
+  \htmladdnormallink{[arXiv]}{http://arxiv.org/abs/1812.09599}
+  \doiref{10.1063/1.5086746}.
+
+\bibitem{kadkhodaei:p4}
+S.~Kadkhodaei and A.~van~de Walle.
+\newblock Software tools for thermodynamic calculation of mechanically unstable
+  phases from first-principles data.
+\newblock {\em Comput. Phys. Commun.}, 246:106712, 2019.
+\newblock Download: \doiref{10.1016/j.cpc.2019.01.008} \htmladdnormallink{[NSF
+  PAR]}{https://par.nsf.gov/biblio/10091100-software-tools-thermodynamic-calculation-mechanically-unstable-phases-from-first-principles-data}.
+
+\bibitem{fyhrie:YbLu2O3}
+M.~Fyhrie, Q.~Hong, D.~Kapush, S.V. Ushakov, H.~Liu, A.~van~de Walle, and
+  A.~Navrotsky.
+\newblock Energetics of melting of {Yb$_2$O$_3$} and {Lu$_2$O$_3$} from drop
+  and catch calorimetry and first principles computations.
+\newblock {\em The Journal of Chemical Thermodynamics}, 132:405, 2019.
+\newblock Download: \doiref{10.1016/j.jct.2019.01.008} \htmladdnormallink{[NSF
+  PAR]}{https://par.nsf.gov/biblio/10084213-energetics-melting-yb2o3-lu2o3-from-drop-catch-calorimetry-first-principles-computations}.
+
+\bibitem{hong:ZrHfO2}
+Q.-J. Hong, S.~V. Ushakov, D.~Kapush, C.~J. Benmore, R.~J.~K. Weber, A.~van~de
+  Walle, and A.~Navrotsky.
+\newblock Combined computational and experimental investigation of high
+  temperature thermodynamics and structure of cubic {ZrO$_2$} and {HfO$_2$}.
+\newblock {\em Sci. Rep.}, 8:14962, 2018.
+\newblock Download: \doiref{10.1038/s41598-018-32848-7}.
+
+\bibitem{avdw:tdbdb}
+A.~van~de Walle, C.~Nataraj, and Z.-K Liu.
+\newblock The thermodynamic database database.
+\newblock {\em Calphad}, 61:173, 2018.
+\newblock Download: \doiref{10.1016/j.calphad.2018.04.003}.
+
+\bibitem{avdw:sgteuns}
+A.~van~de Walle.
+\newblock {{}}{R}econciling {SGTE} and ab initio enthalpies of the elements.
+\newblock {\em Calphad}, 60:1, 2018.
+\newblock Download: \doiref{10.1016/j.calphad.2017.10.008}.
+
+\bibitem{kadkhodaei:ptniti}
+S.~Kadkhodaei and A.~van~de Walle.
+\newblock Free energy calculations of the mechanically unstable phases of
+  {PtTi} and {NiTi}.
+\newblock {\em Acta Mater.}, 147:296, 2018.
+\newblock Download: \doiref{10.1016/j.actamat.2018.01.025}.
+
+\bibitem{avdw:sqs2tdb}
+A.~van~de Walle, R.~Sun, Q.-J. Hong, and S.~Kadkhodaei.
+\newblock Software tools for high-throughput calphad from first-principles
+  data.
+\newblock {\em Calphad}, 58:70, 2017.
+\newblock Download: \doiref{10.1016/j.calphad.2017.05.005}.
+
+\bibitem{hong:strpred}
+Q.-J. Hong, J.~Yasi, and A.~van~de Walle.
+\newblock A tetrahedron-tiling method for crystal structure prediction.
+\newblock {\em Phys. Rev. Materials Rapid Communications}, 1:020801(R), 2017.
+\newblock Download: \doiref{10.1103/PhysRevMaterials.1.020801}
+  \htmladdnormallink{[arXiv]}{https://arxiv.org/abs/1702.08576v1}.
+
+\bibitem{avdw:epi}
+A.~van~de Walle, S.~Kadkhodaei, R.~Sun, and Q.-J. Hong.
+\newblock Epicycle method for elasticity limit calculations.
+\newblock {\em Phys. Rev. B}, 95:144113, 2017.
+\newblock Download: \doiref{10.1103/PhysRevB.95.144113}
+  \htmladdnormallink{[arXiv]}{https://arxiv.org/abs/1701.03389}.
+
+\bibitem{sun:apbnial}
+R.~Sun, C.~Woodward, and A.~van~de Walle.
+\newblock First-principles study on {Ni$_3$Al} {$\{111\}$} antiphase boundaries
+  with {Ti} and {Hf} impurities.
+\newblock {\em Phys. Rev. B}, 95:214121, 2017.
+\newblock Download: \doiref{10.1103/PhysRevB.95.214121}.
+
+\bibitem{hong:yttria}
+D.~Kapush, S.~V. Ushakov, A.~Navrotsky, Q.-J. Hong, H.~Liu, and A.~van~de
+  Walle.
+\newblock A combined experimental and theoretical study of enthalpy of phase
+  transition and fusion of yttria above 2000 {$^\circ$C} using 'drop-n-catch'
+  calorimetry and first-principles calculations.
+\newblock {\em Acta Mater.}, 124:204, 2017.
+\newblock Download: \doiref{10.1016/j.actamat.2016.11.003}.
+
+\bibitem{kadkhodaei:dynstabti}
+S.~Kadkhodaei, Q.-J. Hong, and A.~van~de Walle.
+\newblock Free energy calculation of mechanically unstable but dynamically
+  stabilized bcc titanium.
+\newblock {\em Phys. Rev. B}, 95:064101, 2017.
+\newblock Download: \doiref{10.1103/PhysRevB.95.064101}
+  \htmladdnormallink{[arXiv]}{https://arxiv.org/pdf/1702.00911}
+  \htmladdnormallink{[Featured in
+  Kaleidoscope]}{http://journals.aps.org/prb/kaleidoscope/prb/95/6/064101}.
+
+\bibitem{ravi:TiVNbTa}
+R.~Chinnappan, B.~K. Panigrahi, and A.~van~de Walle.
+\newblock First-principles study of phase equilibrium in {Ti-V}, {Ti-Nb}, and
+  {Ti-Ta} alloys.
+\newblock {\em Calphad}, 54:125, 2016.
+\newblock Download: \doiref{10.1016/j.calphad.2016.07.001}.
+
+\bibitem{jong:planarsqs}
+M.~de~Jong, L.~Qi, D.~L. Olmsted, A.~van~de Walle, and M.~Asta.
+\newblock Calculations of planar defect energies in substitutional alloys using
+  the special-quasirandom-structure approach.
+\newblock {\em Phys. Rev. B}, 93:094101, 2016.
+\newblock Download: \doiref{10.1103/PhysRevB.93.094101}.
+
+\bibitem{sun:auto}
+R.~Sun and A.~van~de Walle.
+\newblock Automating impurity-enhanced antiphase boundary energy calculations
+  from ab initio monte carlo.
+\newblock {\em Calphad}, 53:20, 2016.
+\newblock Download: \doiref{10.1016/j.calphad.2016.02.005}.
+
+\bibitem{hong:sluschi}
+Q.-J. Hong and A.~van~de Walle.
+\newblock A user guide for {SLUSCHI} (solid and liquid in ultra small
+  coexistence with hovering interfaces).
+\newblock {\em Calphad}, 52:88, 2016.
+\newblock Download: \doiref{10.1016/j.calphad.2015.12.003}.
+
+\bibitem{tiwary:amdreview}
+P.~Tiwary and A.~van~de Walle.
+\newblock A review of enhanced sampling approaches for accelerated molecular
+  dynamics.
+\newblock In G.~Tucker and C.~Weinberger, editors, {\em Multiscale materials
+  modeling for nanomechanics}. Springer, 2016.
+\newblock Download: \doiref{10.1007/978-3-319-33480-6_6}.
+
+\bibitem{avdw:funstab}
+A.~van~de Walle, Q.-J. Hong, S.~Kadkhodaei, and R.~Sun.
+\newblock The free energy of mechanically unstable phases.
+\newblock {\em Nature Commun.}, 6:7559, 2015.
+\newblock Download: \doiref{10.1038/ncomms8559}.
+
+\bibitem{hong:highT}
+Q.-J. Hong and A.~van~de Walle.
+\newblock Prediction of the material with highest known melting point from ab
+  initio molecular dynamics calculations.
+\newblock {\em Phys. Rev. B Rapid Communications}, 92:020104(R), 2015.
+\newblock Download: \doiref{10.1103/PhysRevB.92.020104} (Editor's Suggestion).
+  Featured in the \htmladdnormallink{Washington
+  Post}{http://www.washingtonpost.com/news/speaking-of-science/wp/2015/07/28/behold-a-new-record-for-the-worlds-highest-melting-point/}
+  and on the \htmladdnormallink{Brown news
+  site}{https://news.brown.edu/articles/2015/07/melting}.
+
+\bibitem{jong:reico}
+M.~M. de~Jong, J.~Kacher, M.H.F. Sluiter, L.~Qi, D.L. Olmsted, A.~van~de Walle,
+  J.~W. Morris, A.M. Minor, and M.~D. Asta.
+\newblock Electronic origins of anomalous twinning in hexagonal close packed
+  transition metals.
+\newblock {\em Phys. Rev. Lett.}, 115:065501, 2015.
+\newblock Download: \doiref{10.1103/PhysRevLett.115.065501} Featured on the
+  \htmladdnormallink{cover}{http://journals.aps.org/prl/issues/115/6}.
+
+\bibitem{miljacic:Taeos}
+L.~Miljacic, S.~Demers, Q.-J. Hong, and A.~van~de Walle.
+\newblock Equation of state of solid, liquid and gaseous tantalum from first
+  principles.
+\newblock {\em Calphad}, 51:133, 2015.
+\newblock Download: \doiref{10.1016/j.calphad.2015.08.005}.
+
+\bibitem{hong:lzo}
+Q.-J. Hong, S.~V. Ushakov, A.~Navrotsky, and A.~van~de Walle.
+\newblock Combined computational and experimental investigation of the
+  refractory properties of {La$_2$Zr$_2$O$_7$}.
+\newblock {\em Acta Mater.}, 84:275--282, 2015.
+\newblock Download: \doiref{10.1016/j.actamat.2014.10.026}.
+
+\bibitem{avdw:meltpersp}
+A.~van~de Walle.
+\newblock Simulations provide a rare look at real melting (in
+  ``perspectives'').
+\newblock {\em Science}, 346:704, 2014.
+\newblock Download: \doiref{10.1126/science.1259685} \htmladdnormallink{[Full
+  text]}{http://www.sciencemag.org/cgi/content/full/346/6210/704?ijkey=OyVzPBGHbutEM&keytype=ref&siteid=sci}.
+
+\bibitem{woodward:nial}
+C.~Woodward, A.~van~de Walle, M.~D. Asta, and D.~Trinkle.
+\newblock First-principles study of interfacial boundaries in {Ni-Ni$_3$Al}.
+\newblock {\em Acta Mater.}, 75:60--70, 2014.
+\newblock Download: \doiref{10.1016/j.actamat.2014.04.056}.
+
+\bibitem{avdw:harm}
+A.~van~de Walle, B.~G. Chirranjeevi, S.~Demers, Q.-J. Hong, A.~Kowalski,
+  L.~Miljacic, G.~S. Pomrehn, and P.~Tiwary.
+\newblock Ab initio calculation of anisotropic interfacial excess free
+  energies.
+\newblock {\em Phys. Rev. B}, 89:184101, 2014.
+\newblock Download: \doiref{10.1103/PhysRevB.89.184101}
+  \htmladdnormallink{[arXiv]}{http://arxiv.org/abs/1301.0168}
+  \htmladdnormallink{[Featured in
+  Kaleidoscope]}{http://journals.aps.org/prb/kaleidoscope/prb/89/18/184101}.
+
+\bibitem{dalash:adapce}
+P.~Dalach, D.~E. Ellis, and A.~van~de Walle.
+\newblock Adaptive cluster expansions and redox-dependent atomic ordering.
+\newblock {\em Comp. Mater. Sci.}, 83:207, 2014.
+\newblock Download: \doiref{10.1016/j.commatsci.2013.10.013}.
+
+\bibitem{pomrehn:zintl}
+G.~S. Pomrehn, A.~Zevalkink, A.~van~de Walle, and G.~J. Snyder.
+\newblock Defect-driven properties in {AZn$_2$Sb$_2$} {Z}intl phases {(A=Ca,
+  Sr, Eu, Yb)}.
+\newblock {\em Angew. Chem. Int. Ed.}, 53, 2014.
+\newblock Download: \doiref{10.1002/anie.201311125}.
+
+\bibitem{avdw:jomatat}
+A.~van~de Walle.
+\newblock {{}}{M}ethods for first-principles alloy thermodynamics.
+\newblock {\em JOM - J. Min. Met. Mat. S.}, 65:1523--1532, 2013.
+\newblock Download: \doiref{10.1007/s11837-013-0764-3}.
+
+\bibitem{avdw:mcsqs}
+A.~van~de Walle, P.~Tiwary, M.~M. de~Jong, D.~L. Olmsted, M.~D. Asta, A.~Dick,
+  D.~Shin, Y.~Wang, L.-Q. Chen, and Z.-K. Liu.
+\newblock Efficient stochastic generation of special quasirandom structures.
+\newblock {\em Calphad}, 42:13--18, 2013.
+\newblock Download: \doiref{10.1016/j.calphad.2013.06.006}.
+
+\bibitem{hong:fastmelt}
+Q.-J. Hong and A.~van~de Walle.
+\newblock Solid-liquid coexistence in small systems: A statistical method to
+  calculate melting temperatures.
+\newblock {\em J. Chem. Phys.}, 139:094114, 2013.
+\newblock Download: \doiref{10.1063/1.4819792}.
+
+\bibitem{tiwary:sisyphus}
+P.~Tiwary and A.~van~de Walle.
+\newblock Accelerated molecular dynamics simulations through stochastic
+  iterations and collective variable based basin identification.
+\newblock {\em Phys. Rev. B}, 87:094304, 2013.
+\newblock Download: \doiref{10.1103/PhysRevB.87.094304}
+  \htmladdnormallink{[arXiv]}{http://arxiv.org/abs/1212.6649}.
+
+\bibitem{dejong:restel}
+M.~M. de~Jong, D.~L. Olmsted, A.~van~de Walle, and M.~D. Asta.
+\newblock First-principles study of the structural and elastic properties of
+  rhenium-based transition-metal alloys.
+\newblock {\em Phys. Rev. B}, 86:224101, 2012.
+\newblock Download: \doiref{10.1103/PhysRevB.86.224101}.
+
+\bibitem{demers:ZnP}
+S.~Demers and A.~van~de Walle.
+\newblock Intrinsic defects and dopability of zinc phosphide.
+\newblock {\em Phys. Rev. B}, 85:195208, 2012.
+\newblock Download: \doiref{10.1103/PhysRevB.85.195208}.
+
+\bibitem{bg:ceria}
+B.~G. Chirranjeevi and A.~van~de Walle.
+\newblock Ab initio thermodynamics of intrinsic oxygen vacancies in ceria.
+\newblock {\em Phys. Rev. B}, 86:134117, 2012.
+\newblock Download: \doiref{10.1103/PhysRevB.86.134117}
+  \htmladdnormallink{[arXiv]}{http://arxiv.org/abs/1206.5429}.
+
+\bibitem{hong:widom}
+Q.-J. Hong and A.~van~de Walle.
+\newblock Direct first-principles chemical potential calculations of liquids.
+\newblock {\em J. Chem. Phys.}, 137:094114, 2012.
+\newblock Download: \doiref{10.1063/1.4749287}.
+
+\bibitem{dalach:perov}
+P.~Dalach, D.~E. Ellis, and A.~van~de Walle.
+\newblock First-principles thermodynamic modeling of lanthanum chromate
+  perovskites.
+\newblock {\em Phys. Rev. B}, 85:014108, 2012.
+\newblock Download: \doiref{10.1103/PhysRevB.85.014108}.
+
+\bibitem{ravi:NbTaV}
+C.~Ravi, B.~K. Panigrahi, M.~C. Valsakumar, and A.~van~de Walle.
+\newblock First-principles calculation of phase equilibrium of {V-Nb}, {V-Ta},
+  and {Nb-Ta} alloys.
+\newblock {\em Phys. Rev. B}, 85:054202, 2012.
+\newblock Download: \doiref{10.1103/PhysRevB.85.054202}.
+
+\bibitem{burton:HfO}
+B.~P. Burton and A.~van~de Walle.
+\newblock First principles phase diagram calculations for the
+  octahedral-interstitial system {HfO$_{x}$}, {$0 \leq x \leq 1/2$}.
+\newblock {\em Calphad}, 37:151--157, 2012.
+\newblock Download: \doiref{10.1016/j.calphad.2011.12.011}
+  \htmladdnormallink{[arXiv]}{http://arxiv.org/abs/1107.4318}.
+
+\bibitem{wang:bccrefrac}
+L.~G. Wang and A.~van~de Walle.
+\newblock Ab initio calculations of the melting temperatures of refractory bcc
+  metals.
+\newblock {\em Phys. Chem. Chem. Phys.}, 14:1529, 2012.
+\newblock Download: \doiref{10.1039/c1cp23036k}.
+
+\bibitem{burton:ZrO}
+B.~P. Burton, A.~van~de Walle, and H.~T. Stokes.
+\newblock First principles phase diagram calculations for the
+  octahedral-interstitial system {ZrO$_X$}, {$0 \leq X \leq 1/2$}.
+\newblock {\em J. Phys. Soc. Jpn.}, 81:014004, 2012.
+\newblock Download: \doiref{10.1143/JPSJ.81.014004}
+  \htmladdnormallink{[arXiv]}{http://arxiv.org/abs/1107.4300}.
+
+\bibitem{tiwary:mcmd}
+P.~Tiwary and A.~van~de Walle.
+\newblock Hybrid deterministic and stochastic approach for efficient long time
+  scale atomistic simulations.
+\newblock {\em Phys. Rev. B}, 84:100301(R), 2011.
+\newblock Download: \doiref{10.1103/PhysRevB.84.100301}
+  \htmladdnormallink{[arXiv]}{http://arxiv.org/abs/1105.6110v1}.
+
+\bibitem{wang:Wmelt}
+L.~G. Wang, A.~van~de Walle, and D.~Alf{\`{e}}.
+\newblock Melting temperature of tungsten from two ab initio approaches.
+\newblock {\em Phys. Rev. B}, 84:092102, 2011.
+\newblock Download: \doiref{10.1103/PhysRevB.84.092102}.
+
+\bibitem{pomrehn:zn8sb7}
+G.~S. Pomrehn, E.~S. Toberer, G.~J. Snyder, and A.~van~de Walle.
+\newblock Predicted electronic and thermodynamic properties of a newly
+  discovered {Zn$_8$Sb$_7$} phase.
+\newblock {\em J. Am. Chem. Soc.}, 133:11255, 2011.
+\newblock Download: \doiref{10.1021/ja202458n}.
+
+\bibitem{burton:345}
+B.~P. Burton, S.~Demers, and A.~van~de Walle.
+\newblock First principles phase diagram calculations for the
+  wurtzite-structure quasibinary systems {SiC-AlN}, {SiC-GaN} and {SiC-InN}.
+\newblock {\em J. Appl. Phys.}, 110:023507, 2011.
+\newblock Download: \doiref{10.1063/1.3602149}.
+
+\bibitem{pomrehn:zn4sb3}
+G.~S. Pomrehn, E.~S. Toberer, G.~J. Snyder, and A.~van~de Walle.
+\newblock Entropic stabilization and retrograde solubility in {Zn$_4$Sb$_3$}.
+\newblock {\em Phys. Rev. B}, 83:094106, 2011.
+\newblock Download: \doiref{10.1103/PhysRevB.83.094106}.
+
+\bibitem{tiwary:moxpot}
+P.~Tiwary, A.~van~de Walle, B.~Jeon, and N.~Gronbech-Jensen.
+\newblock Interatomic potentials for mixed oxide and advanced nuclear fuels.
+\newblock {\em Phys. Rev. B}, 83:094104, 2011.
+\newblock Download: \doiref{10.1103/PhysRevB.83.094104}
+  \htmladdnormallink{[arXiv]}{http://arxiv.org/abs/1010.0976}.
+
+\bibitem{avdw:adiab}
+B.~Meredig, A.~Thompson, H.A. Hansen, C.~Wolverton, and A.~van~de Walle.
+\newblock A method for locating low-energy solutions within {DFT+U}.
+\newblock {\em Phys. Rev. B}, 82:195128, 2010.
+\newblock Download: \doiref{10.1103/PhysRevB.82.195128}.
+
+\bibitem{dalach:zirconia}
+P.~Dalach, D.~E. Ellis, and A.~van~de Walle.
+\newblock First principles thermodynamic modeling of atomic ordering in
+  yttria-stabilized zirconia.
+\newblock {\em Phys. Rev. B}, 82:144117, 2010.
+\newblock Download: \doiref{10.1103/PhysRevB.82.144117}.
+
+\bibitem{vinograd:mixing}
+V.L. Vinograd, N.~Paulsen, B.~Winkler, and A.~van~de Walle.
+\newblock Thermodynamics of mixing in the ternary rhombohedral carbonate solid
+  solution, {(Ca$_x$Mg$_y$Mn$_{1-x-y}$)CO$_3$}, from atomistic simulations.
+\newblock {\em Calphad}, 34:113, 2010.
+\newblock Download: \doiref{10.1016/j.calphad.2010.01.002}.
+
+\bibitem{cockayne:bayes}
+E.~Cockayne and A.~van~de Walle.
+\newblock Building effective models from scarce but accurate data: Application
+  to an alloy cluster expansion model.
+\newblock {\em Phys. Rev. B}, 81:012104, 2010.
+\newblock Download: \doiref{10.1103/PhysRevB.81.012104}
+  \htmladdnormallink{[arXiv]}{http://arxiv.org/abs/0908.0659}.
+
+\bibitem{ravi:VN}
+C.~Ravi, A.~van~de Walle, B.~K. Panigrahi, H.~K. Sahu, and M.~C. Valsakumar.
+\newblock Cluster expansion-monte carlo study of phase stability of vanadium
+  nitrides.
+\newblock {\em Phys. Rev. B}, 81:104111, 2010.
+\newblock Download: \doiref{10.1103/PhysRevB.81.104111}.
+
+\bibitem{avdw:fpat}
+A.~van~de Walle.
+\newblock {{}}{F}irst-principles alloy thermodynamics.
+\newblock In P.~Derosa and T.~Cagin, editors, {\em Multiscale Modeling: From
+  Atoms to Devices}. CRC press, 2010.
+
+\bibitem{chepulskii:fept}
+R.~V. Chepulskii, W.~H. Butler, A.~van~de Walle, and S.~Curtarolo.
+\newblock Surface segregation in nanoparticles from first principles: The case
+  of {FePt}.
+\newblock {\em Scripta Materialia}, 62:179, 2010.
+\newblock Download: \doiref{10.1016/j.scriptamat.2009.10.019}
+  \htmladdnormallink{[arXiv]}{http://arxiv.org/abs/0905.2917}.
+
+\bibitem{tiwary:zbl}
+P.~Tiwary, A.~van~de Walle, and N.~Gronbech Jensen.
+\newblock Ab initio construction of interatomic potentials for uranium dioxide
+  across all interatomic distances.
+\newblock {\em Phys. Rev. B}, 80:174302, 2009.
+\newblock Download: \doiref{10.1103/PhysRevB.80.174302}
+  [\htmladdnormallink{arXiv}{http://arxiv.org/abs/0906.0998}].
+
+\bibitem{avdw:atat2}
+A.~van~de Walle.
+\newblock {{}}{M}ulticomponent multisublattice alloys, nonconfigurational
+  entropy and other additions to the {A}lloy {T}heoretic {A}utomated {T}oolkit.
+\newblock {\em Calphad}, 33:266--278, 2009.
+\newblock Download: \doiref{10.1016/j.calphad.2008.12.005}
+  \htmladdnormallink{[arXiv]}{http://arxiv.org/abs/0906.1608}.
+
+\bibitem{benedek:pourbaix}
+R.~Benedek, M.~M. Thackeray, and A.~van~de Walle.
+\newblock Pourbaix-like phase diagram for lithium manganese spinels in acid.
+\newblock {\em J. Mat. Chem.}, 20:369, 2009.
+\newblock Download: \doiref{10.1039/B913226K}.
+
+\bibitem{adjaoud:ss}
+O.~Adjaoud, G.~Steinle-Neumann, B.P. Burton, and A.~van~de Walle.
+\newblock First-principles phase diagram calculations for the {HfC--TiC},
+  {ZrC--TiC}, and {HfC--ZrC} solid solutions.
+\newblock {\em Phys. Rev. B}, 80:134112, 2009.
+\newblock Download: \doiref{10.1103/PhysRevB.80.134112}.
+
+\bibitem{avdw:gce}
+A.~van~de Walle.
+\newblock A complete representation of structure-property relationships in
+  crystals.
+\newblock {\em Nat. Mater.}, 7:455--458, 2008.
+\newblock Download: \doiref{10.1038/nmat2200} \htmladdnormallink{[Featured on
+  cover]}{http://www.nature.com/nmat/journal/v7/n6/index.html}
+  \htmladdnormallink{[See associated ``News and Views'' piece by Gus
+  Hart]}{http://dx.doi.org/10.1038/nmat2190}.
+
+\bibitem{benedek:acid}
+R.~Benedek and A.~van~de Walle.
+\newblock Reaction free energies of acid attack of lithium cobaltate.
+\newblock {\em Journal of the Electrochemical Society}, 155:A711, 2008.
+\newblock Download: \doiref{10.1149/1.2954958}.
+
+\bibitem{benedek:exch}
+R.~Benedek, M.~M. Thackeray, and A.~van~de Walle.
+\newblock Free energy for protonation reaction in lithium-ion battery cathode
+  materials.
+\newblock {\em Chem. Mater.}, 20:5485, 2008.
+\newblock Download: \doiref{10.1021/cm703042r}.
+
+\bibitem{ghosh:sqsce}
+G.~Ghosh, A.~van~de Walle, and M.~D. Asta.
+\newblock First-principles calculations of properties of bcc, fcc and hcp solid
+  solutions in {Al-TM} ({TM = Ti, Zr, Hf}) systems: A comparison between
+  cluster expansion and supercell methods.
+\newblock {\em Acta Mater.}, 56:3202, 2008.
+\newblock Download: \doiref{10.1016/j.actamat.2008.03.006}.
+
+\bibitem{avdw:smceo2}
+A.~van~de Walle and D.~Ellis.
+\newblock First-principles thermodynamics of coherent interfaces in
+  samarium-doped ceria nanoscale superlattices.
+\newblock {\em Phys. Rev. Lett.}, 98:266101, 2007.
+\newblock Download: \doiref{10.1103/PhysRevLett.98.266101}.
+
+\bibitem{shin:ternsqs}
+D.~Shin, A.~van~de Walle, Y.~Wang, and Z.-K. Liu.
+\newblock First-principles study of ternary fcc solution phases from special
+  quasirandom structures.
+\newblock {\em Phys. Rev. B}, 76:144204, 2007.
+\newblock Download: \doiref{10.1103/PhysRevB.76.144204}
+  \htmladdnormallink{[arXiv]}{http://arxiv.org/abs/0709.2302}
+  \htmladdnormallink{[from PRB
+  online]}{http://link.aps.org/abstract/PRB/v76/e144204}.
+
+\bibitem{lanier:stoc6x2}
+C.~H. Lanier, A.~van~de Walle, N.~Erdman, E.~Landree, O.~Warschkow,
+  A.~Kazimirov, K.~R. Poeppelmeier, J.~Zegenhagen, M.~D. Asta, and L.~D. Marks.
+\newblock The c(6x2) reconstruction on the {SrTiO$_3$} (001) surface.
+\newblock {\em Phys. Rev. B}, 76:045421, 2007.
+\newblock Download: \doiref{10.1103/PhysRevB.76.045421}
+  \htmladdnormallink{[arXiv]}{http://arxiv.org/abs/0707.2561}.
+
+\bibitem{liu:cdtfc}
+J.~Z. Liu, G.~Ghosh, A.~van~de Walle, and M.~D. Asta.
+\newblock Transferable force-constant modeling of vibrational thermodynamic
+  properties in fcc-based {Al-TM (TM = Ti, Zr, Hf)} alloys.
+\newblock {\em Phys. Rev. B}, 75:104117, 2007.
+\newblock Download: \doiref{10.1103/PhysRevB.75.104117}.
+
+\bibitem{ghosh:AlZnTi}
+G.~Ghosh, A.~van~de Walle, and M.~D. Asta.
+\newblock First-principles phase stability calculations of pseudobinary alloys
+  of {(Al,Zn)$_3$Ti} with {L1$_2$}, {DO$_{22}$} and {DO$_{23}$} structures.
+\newblock {\em J. Phase Equilib. Diff.}, 28:9, 2007.
+\newblock Download: \doiref{10.1007/s11669-006-9007-4}
+  \htmladdnormallink{[PDF]}{papers/jped.pdf}.
+
+\bibitem{burton:AlGaInN}
+B.~Burton, A.~van~de Walle, and U.~Kattner.
+\newblock First principles phase diagram calculations for the
+  wurtzite-structure systems {AlN-GaN}, {AlN-InN} and {GaN-InN}.
+\newblock {\em J. Appl. Phys.}, 100:113528, 2006.
+\newblock Download: \doiref{10.1063/1.2372309}.
+
+\bibitem{shin:hcpsqs}
+D.~Shin, R.~Arroyave, Z.-K. Liu, and A.~van~de Walle.
+\newblock Thermodynamic properties of binary hcp solution phases from special
+  quasirandom structures.
+\newblock {\em Phys. Rev. B}, 74:024204, 2006.
+\newblock Download: \doiref{10.1103/PhysRevB.74.024204}.
+
+\bibitem{arroyave:znzr}
+R.~Arroyave, A.~van~de Walle, and Z.-K. Liu.
+\newblock First-principles calculations of the {Zn-Zr} system.
+\newblock {\em Acta Mater.}, 54:473, 2006.
+\newblock Download: \doiref{10.1016/j.actamat.2005.09.018}.
+
+\bibitem{avdw:naclkcl}
+B.P. Burton and A.~van~de Walle.
+\newblock First principles phase diagram calculations for the system
+  {NaCl-KCl}: the role of excess vibrational entropy.
+\newblock {\em Chem. Geol.}, 225:222, 2006.
+\newblock Download: \doiref{10.1016/j.chemgeo.2005.08.016}.
+
+\bibitem{avdw:hart}
+A.~van~de Walle.
+\newblock Genesis of crystal structures (in ``news and views'').
+\newblock {\em Nat. Mater.}, 4:362, 2005.
+\newblock Download: \doiref{doi:10.1038/nmat1378}.
+
+\bibitem{avdw:amape}
+A.~van~de Walle, G.~Ghosh, and M.~D. Asta.
+\newblock Ab initio modeling of alloy phase equilibria.
+\newblock In G.~Bozzolo, R.D. Noebe, and P.~Abel, editors, {\em Applied
+  Computational Materials Modeling: Theory, Simulation and Experiment}. Kluwer
+  Academic Publishers, 2005.
+\newblock Download: \doiref{10.1007/978-0-387-34565-9_1}.
+
+\bibitem{avdw:fpmpe}
+A.~van~de Walle and M.~D. Asta.
+\newblock First-principles modeling of phase equilibria.
+\newblock In S.~Yip, editor, {\em Handbook of Materials Modeling}, volume Part
+  A. Springer, Dordrecht, the Netherlands, 2005.
+\newblock Download: \doiref{10.1007/978-1-4020-3286-8_17}
+  \htmladdnormallink{[From
+  Springer]}{http://www.springeronline.com/sgw/cda/frontpage/0,11855,5-10100-22-48576847-0,00.html}.
+
+\bibitem{zliu:tensor}
+J.~Z. Liu, A.~van~de Walle, G.~Ghosh, and M.~D. Asta.
+\newblock Structure, energetics, and mechanical stability of {Fe-Cu} bcc alloys
+  from first-principles calculations.
+\newblock {\em Phys. Rev. B}, 72:144109, 2005.
+\newblock Download: \doiref{10.1103/PhysRevB.72.144109}.
+
+\bibitem{benedek:phpref}
+R.~Benedek, A.~van~de Walle, S.~Gerstl, M.~D. Asta, D.~N. Seidman, and
+  C.~Woodward.
+\newblock Partitioning of solutes in multiphase {TiAl} alloys.
+\newblock {\em Phys. Rev. B}, 71:094201, 2005.
+\newblock Download: \doiref{10.1103/PhysRevB.71.094201}
+  \htmladdnormallink{[from PRB
+  online]}{http://link.aps.org/abstract/PRB/v71/e094201}.
+
+\bibitem{avdw:culi}
+A.~van~de Walle, Z.~Moser, and W.~Gasior.
+\newblock First-principles calculation of the {Cu-Li} phase diagram.
+\newblock {\em Arch. Metall. Mater.}, 49:535, 2004.
+\newblock Download: \htmladdnormallink{[PDF]}{papers/CuLipd.pdf}
+  \htmladdnormallink{[Caltech]}{http://resolver.caltech.edu/CaltechAUTHORS:20110822-131811446}.
+
+\bibitem{beck:gewl}
+M.~J. Beck, A.~van~de Walle, and M.~D. Asta.
+\newblock Surface energetics and structure of the {Ge} wetting layer on {Si}
+  (100).
+\newblock {\em Phys. Rev. B}, 70:205337, 2004.
+\newblock Download: \doiref{10.1103/PhysRevB.70.205337}
+  \htmladdnormallink{[from PRB
+  online]}{http://link.aps.org/abstract/PRB/v70/e205337}.
+
+\bibitem{avdw:gesi}
+A.~van~de Walle, M.~D. Asta, and P.~W. Voorhees.
+\newblock First-principles calculation of the effect of strain on the diffusion
+  of {Ge} adatoms on {Si} and {Ge} (001) surfaces.
+\newblock {\em Phys. Rev. B}, 67:041308(R), 2003.
+\newblock Download: \doiref{10.1103/PhysRevB.67.041308}
+  \htmladdnormallink{[arXiv]}{http://arXiv.org/abs/cond-mat/0301195}
+  \htmladdnormallink{[from PRB
+  online]}{http://link.aps.org/abstract/PRB/v67/e041308}.
+
+\bibitem{wu:svsl}
+E.~Wu, G.~Ceder, and A.~van~de Walle.
+\newblock Using bond-length-dependent transferable force constants to predict
+  vibrational entropies in {Au-Cu}, {Au-Pd}, and {Cu-Pd} alloys.
+\newblock {\em Phys. Rev. B}, 67:134103, 2003.
+\newblock Download: \doiref{10.1103/PhysRevB.67.134103}
+  \htmladdnormallink{[arXiv]}{http://arXiv.org/abs/cond-mat/0302109}.
+
+\bibitem{burton:caco3}
+B.~Burton and A.~van~de Walle.
+\newblock First-principles-based calculations of the {CaCO$_3$-MgCO$_3$} and
+  {CdCO$_3$-MgCO$_3$} subsolidus phase diagrams.
+\newblock {\em Phys. Chem. Miner.}, 30:88, 2003.
+\newblock Download: \doiref{10.1007/s00269-002-0294-y}.
+
+\bibitem{morgan:mno2}
+D.~Morgan, B.~Wang, G.~Ceder, and A.~van~de Walle.
+\newblock First-principles study of magnetism in spinel {MnO$_2$}.
+\newblock {\em Phys. Rev. B}, 67:134404, 2003.
+\newblock Download: \doiref{10.1103/PhysRevB.67.134404}
+  \htmladdnormallink{[From PRB
+  online]}{http://link.aps.org/abstract/PRB/v67/e134404}.
+
+\bibitem{balachandra:MnO2}
+D.~Balachandran, D.~Morgan, G.~Ceder, and A.~van~de Walle.
+\newblock First-principles study of the structure of stoichiometric and
+  {M}n-deficient {MnO$_2$}.
+\newblock {\em J. of Solid State Chem.}, 173:462, 2003.
+\newblock Download: \doiref{10.1016/S0022-4596(03)00023-9}.
+
+\bibitem{avdw:vibrev}
+A.~van~de Walle and G.~Ceder.
+\newblock The effect of lattice vibrations on substitutional alloy
+  thermodynamics.
+\newblock {\em Rev. Mod. Phys.}, 74:11--45, 2002.
+\newblock Download: \doiref{10.1103/RevModPhys.74.11}
+  \htmladdnormallink{[arXiv]}{http://arxiv.org/abs/cond-mat/0106490}
+  \htmladdnormallink{[errata]}{papers/rmperr.pdf}.
+
+\bibitem{avdw:atat}
+A.~van~de Walle, M.~D. Asta, and G.~Ceder.
+\newblock {{}}{T}he {A}lloy {T}heoretic {A}utomated {T}oolkit: {A} user guide.
+\newblock {\em Calphad}, 26:539--553, 2002.
+\newblock Download: \doiref{10.1016/S0364-5916(02)80006-2}
+  \htmladdnormallink{[arXiv]}{http://arxiv.org/abs/cond-mat/0212159}.
+
+\bibitem{avdw:maps}
+A.~van~de Walle and G.~Ceder.
+\newblock Automating first-principles phase diagram calculations.
+\newblock {\em J. Phase Equilib.}, 23:348--359, 2002.
+\newblock Download: \doiref{10.1361/105497102770331596}
+  \htmladdnormallink{[arXiv]}{http://arXiv.org/abs/cond-mat/0201511}
+  \htmladdnormallink{[PDF 1173 KB]}{papers/jpe_lores.pdf}
+  \htmladdnormallink{[PDF 2701 KB]}{papers/jpe_hires.pdf}
+  \htmladdnormallink{[paper errata (preprint ok)]}{papers/mapserr.pdf}.
+
+\bibitem{avdw:emc2}
+A.~van~de Walle and M.~D. Asta.
+\newblock Self-driven lattice-model monte carlo simulations of alloy
+  thermodynamic properties and phase diagrams.
+\newblock {\em Model. Simul. Mater. Sc.}, 10:521, 2002.
+\newblock Download: \doiref{10.1088/0965-0393/10/5/304}
+  \htmladdnormallink{[arXiv]}{http://arXiv.org/abs/cond-mat/0201473}.
+
+\bibitem{avdw:apbtial}
+A.~van~de Walle and M.~D. Asta.
+\newblock First-principle investigation of perfect and diffuse anti-phase
+  boundaries in hcp-based {Ti-Al} alloys.
+\newblock {\em Metallurgical and Materials Transactions A}, 33A:735, 2002.
+\newblock Download: \doiref{10.1007/s11661-002-0139-9}
+  \htmladdnormallink{[arXiv]}{http://arXiv.org/abs/cond-mat/0301199}
+  [\htmladdnormallink{from Science
+  Direct}{http://www.sciencedirect.com/science/journal/10735623}].
+
+\bibitem{ghosh:hfnb}
+G.~Ghosh, A.~van~de Walle, M.~D. Asta, and G.B. Olson.
+\newblock Phase stability of the {Hf-Nb} system: From first-principles to
+  {CALPHAD}.
+\newblock {\em Calphad}, 26:491, 2002.
+\newblock Download: \doiref{10.1016/S0364-5916(02)80003-7}.
+
+\bibitem{morgan:ptdef}
+D.~Morgan, D.~Balachandran, G.~Ceder, and A.~van~de Walle.
+\newblock A drastic influence of point defects on phase stability in {MnO$_2$}.
+\newblock In M.~Greenblatt, M.A. Alario-Franco, M.S. Whittingham, and
+  G.~Rohrer, editors, {\em MRS Proceedings}, volume 755, pages DD2.8--1, 2002.
+\newblock Download: \doiref{10.1557/PROC-755-DD2.8} \htmladdnormallink{[From
+  MRS site]}{http://www.mrs.org/publications/epubs/proceedings/fall2002/dd/}.
+
+\bibitem{harish:soliq}
+H.~Ramalingam, M.~D. Asta, A.~van~de Walle, and J.~J. Hoyt.
+\newblock Atomic-scale simulation study of equilibrium solute adsorption at
+  alloy solid-liquid interfaces.
+\newblock {\em Interface Science}, 10:149, 2002.
+\newblock Download: \doiref{10.1023/A:1015889313170}.
+
+\bibitem{avdw:pd3v}
+A.~van~de Walle and G.~Ceder.
+\newblock First-principles computation of the vibrational entropy of ordered
+  and disordered {Pd$_3$V}.
+\newblock {\em Phys. Rev. B}, 61:5972, 2000.
+\newblock Download: \doiref{10.1103/PhysRevB.61.5972}
+  \htmladdnormallink{[arXiv]}{http://publish.aps.org/eprint/gateway/eplist/aps1999apr29_006}.
+
+\bibitem{morgan:aruba}
+D.~Morgan, A.~van~de Walle, G.~Ceder, J.~D. Althoff, and D.~de~Fontaine.
+\newblock Vibrational thermodynamics: coupling of chemical order and size
+  effects.
+\newblock {\em Modelling Simul. Mater Sci Eng.}, 8:295, 2000.
+\newblock Download: \doiref{10.1088/0965-0393/8/3/310}
+  \htmladdnormallink{[PDF]}{papers/aruba.pdf}.
+
+\bibitem{avdw:lda-p}
+A.~van~de Walle and G.~Ceder.
+\newblock Correcting overbinding in {LDA} calculations.
+\newblock {\em Phys. Rev. B}, 59:14992, 1999.
+\newblock Download: \doiref{10.1103/PhysRevB.59.14992}.
+
+\bibitem{avdw:ni3al}
+A.~van~de Walle, G.~Ceder, and U.~V. Waghmare.
+\newblock First-principles computation of the vibrational entropy of ordered
+  and disordered {Ni$_3$Al}.
+\newblock {\em Phys. Rev. Lett.}, 80:4911, 1998.
+\newblock Download: \doiref{10.1103/PhysRevLett.80.4911}
+  \htmladdnormallink{[arXiv]}{http://publish.aps.org/eprint/gateway/eplist/aps1998apr22_001}.
+
+\bibitem{avdw:carbonblack}
+A.~van~de Walle, C.~Tricot, and M.~Gerspacher.
+\newblock Modeling carbon black reinforcement in rubber compound.
+\newblock {\em Kautschuk Gummi Kunststoffe}, 49:172, 1996.
+\newblock Download: \htmladdnormallink{[gzipped PS]}{papers/black.ps.gz}
+  \htmladdnormallink{[PDF]}{papers/black.pdf}.
+
+\end{thebibliography}
