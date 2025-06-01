@@ -1,0 +1,66 @@
+#download
+  atat2_32.tar.gz
+  mcc_tialhcp1.tar
+  mcc_tialhcp2.tar
+#and place in home directory
+
+# to install atat
+cd
+mkdir bin
+tar -zxf atat2_32.tar.gz
+cd atat
+make
+make install
+cd
+# to set your path
+echo 'set path = ($HOME/bin $path)' >> .cshrc
+set path = ($HOME/bin $path)
+rehash
+
+#pretend maps and ab initio codes have been run already
+tar -xvf mcc_tialhcp1.tar
+cd TiAlhcp
+#rerun maps just to show what output looks like
+maps -c0=0.75 -c1=1 &
+#when done, stop maps
+touch stop
+#view results
+mapsrep
+
+#generate perturbations
+cat gs.out
+# pick structures:
+echo 5 262 > strname.in
+fitsvsl -ms=0.03 -ns=3 -er=5.8
+#pretend we have run ab initio code
+tar -xvf ../mcc_tialhcp2.tar
+#fit the LDTFC spring model
+fitsvsl -f
+#use LDTFC to predict phonon dos etc.
+echo 2000 21 > Trange.in
+foreachfile str_relax.out pwd \; svsl -d
+#do cluster expansion of high-T limit of vibrational entropy
+clusterexpand svib_ht
+#(disregard 'ioctl' error messages)
+#check if ok?
+cat allsvib_ht.out
+cat svib_ht.eci
+#do cluster expansion of vibrational free energy
+clusterexpand fvib
+cat fvib.eci
+
+#now do electronic excitations
+foreachfile str_relax.out pwd \; felec -d
+#cluster expansion
+clusterexpand felec
+
+#put everything together
+mkteci fvib.eci felec.eci
+
+#simple MC run to find phase boundaries
+emc2 -q -gs=1 -keV -er=20 -dx=3e-3 -T0=300 -dT=50 -T1=2000 -mu0=1.5 -mu1=2.5 -dmu=0.05 -innerT -o=mc1.out &
+#view progress
+cut -f 1,2,4,17 mc1.out
+gnuplot
+plot 'mc1.out' u 4:1
+q
