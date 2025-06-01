@@ -1,0 +1,101 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2018.3 (Released July 19, 2018) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>wycked</TITLE>
+<META NAME="description" CONTENT="wycked">
+<META NAME="keywords" CONTENT="manual">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131198421-1"><
+/script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-131198421-1');
+</script>
+
+<LINK REL="STYLESHEET" HREF="manual.css">
+
+<LINK REL="next" HREF="node104.html">
+<LINK REL="previous" HREF="node102.html">
+<LINK REL="next" HREF="node104.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node104.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node55.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node102.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node104.html">getproto</A>
+<B> Up:</B> <A
+ HREF="node55.html">Command line options</A>
+<B> Previous:</B> <A
+ HREF="node102.html">str2cif</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H2><A ID="SECTION008248000000000000000">
+wycked</A>
+</H2>
+<PRE>
+WYCKoff position EDitor, by Axel van de Walle
+Syntax:
+  wycked spcgrp [-r] list_of_wyckoff_position_letter_without_seperators [species1:species2:...]
+The output is meant to first be edited to set the free parameters a,b,c,alpha,beta,gamma,x,y,z,etc
+in each of the lines starting with #const 
+and processed by sspp to create a valid ATAT structure file.
+ If the -r option is specified, then:
+   the structure is relaxed using a soft-sphere model (of radius 1.5 A) by invoking the GULP code
+   (multiple times (10) with randomized initial positions).
+   In that case, you can also specify a colon-separated list of species that will populate each 
+                     wyckoff position.
+   Also, the structure will be isotropically re-scaled so that the nearest neighbor distance are 
+                     consistent
+   with atom radii from the atat/data/radii.in file.
+
+ACKNOWLEDGEMENTS
+This code makes use of a Wyckoff position database downloaded from the Bilbao Crystallographic 
+                     Server
+at http://www.cryst.ehu.es/
+Accordingly, if you use this code, you should cite, in addition to the usual ATAT citations,
+the following papers:
+  M. I. Aroyo, J. M. Perez-Mato, D. Orobengoa, E. Tasci, G. de la Flor, A. Kirov
+      "Crystallography online: Bilbao Crystallographic Server" 
+      Bulg. Chem. Commun. 43(2) 183-197 (2011).
+  M. I. Aroyo, J. M. Perez-Mato, C. Capillas, E. Kroumova, S. Ivantchev, G. Madariaga,
+  A. Kirov and H. Wondratschek,
+      "Bilbao Crystallographic Server I: Databases and crystallographic computing programs" 
+      Z. Krist. 221, 1, 15-27 (2006). doi:10.1524/zkri.2006.221.1.15 
+  M. I. Aroyo, A. Kirov, C. Capillas, J. M. Perez-Mato and H. Wondratschek
+      "Bilbao Crystallographic Server II: Representations of crystallographic point groups and
+      space groups", Acta Cryst. A62, 115-128 (2006). doi:10.1107/S0108767305040286 
+If you use the -r option, you should also acknowledge the GULP code:
+  "GULP - a computer program for the symmetry adapted simulation of solids", J.D. Gale, JCS Faraday 
+                     Trans., 93, 629 (1997)
+  "The General Utility Lattice Program", J.D. Gale and A.L. Rohl, Mol. Simul., 29, 291-341 (2003)
+  "GULP: Capabilities and prospects", J.D. Gale, Z. Krist., 220, 552-554 (2005)
+</PRE>
+<BR><HR>
+<ADDRESS>
+avdw@alum.mit.edu Wed, Dec  6, 2023 12:55:16 PM
+</ADDRESS>
+</BODY>
+</HTML>

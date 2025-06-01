@@ -1,0 +1,123 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2018.3 (Released July 19, 2018) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>Test MAPS with a simple example</TITLE>
+<META NAME="description" CONTENT="Test MAPS with a simple example">
+<META NAME="keywords" CONTENT="manual">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131198421-1"><
+/script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-131198421-1');
+</script>
+
+<LINK REL="STYLESHEET" HREF="manual.css">
+
+<LINK REL="previous" HREF="node9.html">
+<LINK REL="next" HREF="node11.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node11.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node7.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node9.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node11.html">Install the interface between</A>
+<B> Up:</B> <A
+ HREF="node7.html">Getting started</A>
+<B> Previous:</B> <A
+ HREF="node9.html">Installation</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H2><A ID="SECTION00303000000000000000">
+Test MAPS with a simple example</A>
+</H2>
+
+<P>
+Change to a directory of your choice (preferably empty) and type
+<table width="90%"><tr><td valign="top">&nbsp;<SPAN style="font-family:monospace">cp atat/examples/cuau.in lat.in</SPAN></td></tr>
+<tr><td valign="top">&nbsp;<SPAN style="font-family:monospace">maps -d &amp;</SPAN>
+</td></tr></table>
+
+Maps is running and waiting for a signal. Type
+<table width="90%"><tr><td valign="top">&nbsp;<SPAN style="font-family:monospace">touch ready</SPAN></td></tr></table>
+
+to indicate that you are ready to for maps to generate a structure.
+Maps replies <SPAN style="font-family:monospace">Finding best structure...</SPAN> To find the structure just created,
+wait for <SPAN style="font-family:monospace">done</SPAN> to appear and type:
+<table width="90%"><tr><td valign="top">&nbsp;<SPAN style="font-family:monospace">ls */wait</SPAN></td></tr></table>
+
+to observe that directory <SPAN style="font-family:monospace">0</SPAN> has been created.
+This directory contains a file <SPAN style="font-family:monospace">str.out</SPAN> which
+describes the structure whose energy needs to be calculated.
+The file <SPAN style="font-family:monospace">wait</SPAN> is just a flag that allows you to find the newly created directory.
+Let's pretend that we have computed the energy of that structure.
+We need to let maps know about it. Type, for instance:
+<table width="90%"><tr><td valign="top">&nbsp;<SPAN style="font-family:monospace">echo 1.1  &gt;  0/energy</SPAN> (If 1.1 is the energy of the structure.)</td></tr>
+<tr><td valign="top">&nbsp;<SPAN style="font-family:monospace">rm 0/wait</SPAN>
+</td></tr></table>
+
+Maps responds by <SPAN style="font-family:monospace">Finding best cluster expansion...</SPAN>, followed by <SPAN style="font-family:monospace">done</SPAN>.
+You can repeat the process (<SPAN style="font-family:monospace">touch ready</SPAN>, etc.) to add more structures.
+Maps will update the current cluster expansion every time a new energy becomes known.
+(By default, maps checks every 10 sec.).
+For a description of the output files, type:
+<table width="90%"><tr><td valign="top">&nbsp;<SPAN style="font-family:monospace">maps -h | more</SPAN></td></tr></table>
+
+or refer to section <A HREF="node32.html#manpages">7</A>
+A nice utility called <SPAN style="font-family:monospace">mapsrep</SPAN> allows you to plot the results using gnuplot.
+To stop maps cleanly, type:
+<SPAN style="font-family:monospace">touch stop</SPAN>
+
+<P>
+Suggestion: to clarify the output of the program, it is recommended that you run <SPAN style="font-family:monospace">maps</SPAN> in one terminal window
+and type all other command in another terminal window.
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A
+ HREF="node11.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node7.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node9.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node11.html">Install the interface between</A>
+<B> Up:</B> <A
+ HREF="node7.html">Getting started</A>
+<B> Previous:</B> <A
+ HREF="node9.html">Installation</A></DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+avdw@alum.mit.edu Wed, Dec  6, 2023 12:55:16 PM
+</ADDRESS>
+</BODY>
+</HTML>

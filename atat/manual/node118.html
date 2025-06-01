@@ -1,0 +1,104 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2018.3 (Released July 19, 2018) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>pollmach</TITLE>
+<META NAME="description" CONTENT="pollmach">
+<META NAME="keywords" CONTENT="manual">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131198421-1"><
+/script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-131198421-1');
+</script>
+
+<LINK REL="STYLESHEET" HREF="manual.css">
+
+<LINK REL="next" HREF="node119.html">
+<LINK REL="previous" HREF="node117.html">
+<LINK REL="next" HREF="node119.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node119.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node55.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node117.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node119.html">fixeol</A>
+<B> Up:</B> <A
+ HREF="node55.html">Command line options</A>
+<B> Previous:</B> <A
+ HREF="node117.html">node</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H2><A ID="SECTION008263000000000000000">
+pollmach</A>
+</H2>
+<PRE>
+Syntax: pollmach [-f] [-e] [-m alternate_machine_configuration_file] [-s] [-w] command_to_run
+
+This command periodically checks the load on various machines
+(specified in the file ~/.machines.rc)
+and looks for subdirectories containing a file called "wait".
+If the load on a machine is sufficiently low, it executes command_to_run
+on that machine, in the directory where the oldest wait file lies.
+A default ~/.machines.rc file is created the first time the chl command
+is run. The format of the file is explained in the comments therein.
+If no ~/.machines.rc file exists, command_to_run is run sequentially on
+the local computer in each directory containing a "wait" file.
+This is the single-machine mode.
+
+When using this command with maps, command_to_run will typically be runstruct_vasp
+
+The -m option overrides the default ~/.machines.rc (it is optional).
+
+The -e option specifies that the command should terminate when no more
+"wait" files are to be found (only works in single-machine (sequential) mode,
+when no ~/.machines.rc file is given).
+
+The -f option forces the command to run even if of pollmach_is_running file exists.
+
+The -s option cause pollmach to self-manage the load (it does not poll the nodes for their loads
+but instead keeps track of where it sends a job and does not send any other job to that node until 
+                     it is done.
+The first column in the machine_configuration_file is ignored and can be omitted.
+
+The -w option tells pollmach to wait until all sub processes have finished before quitting.
+
+The -il interactive loop option (beta). Here pollmach waits for a file called 'busy' to be created,
+        then runs command and then deletes 'busy'.
+        This repeats itself until a stop or stoppoll file is created.
+
+The -t "command" option first runs "command" and, only if its return code is 0, runs 
+                     command_to-run.
+
+To cleanly stop this program, type
+        touch stoppoll
+</PRE>
+<BR><HR>
+<ADDRESS>
+avdw@alum.mit.edu Wed, Dec  6, 2023 12:55:16 PM
+</ADDRESS>
+</BODY>
+</HTML>

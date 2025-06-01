@@ -1,0 +1,19 @@
+#!/bin/csh
+#cp `ls -1 ~/backup/atat[^b]*.tar.gz | sort -n | tail -1` .
+
+set collab=`grep -l "<TITLE>Collaborators" manual/*`
+set finan=`grep -l "<TITLE>Financial" manual/*`
+set licen=`grep -l "<TITLE>License" manual/*`
+set atatrecent=`ls -1 atat*.tar.gz | sort -n | tail -1`
+set atatstable=`cat stable.in`
+cat index.org | sed "s+SUB:collaborators+$collab+g" | \
+ sed "s+SUB:finan+$finan+g" | \
+ sed "s+SUB:licen+$licen+g" | \
+ sed "s+SUB:atatrecent+$atatrecent+g" | \
+ sed "s+SUB:atatstable+$atatstable+g" > index.html
+
+#scp $atatstable athena.dialup.mit.edu:~/www/maps/atat.tar.gz
+
+pushd manual
+ln -s ../references.bib .
+popd

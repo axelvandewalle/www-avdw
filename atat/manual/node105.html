@@ -1,0 +1,231 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2018.3 (Released July 19, 2018) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>sqs2tdb</TITLE>
+<META NAME="description" CONTENT="sqs2tdb">
+<META NAME="keywords" CONTENT="manual">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131198421-1"><
+/script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-131198421-1');
+</script>
+
+<LINK REL="STYLESHEET" HREF="manual.css">
+
+<LINK REL="next" HREF="node106.html">
+<LINK REL="previous" HREF="node104.html">
+<LINK REL="next" HREF="node106.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node106.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node55.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node104.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node106.html">symbrklib</A>
+<B> Up:</B> <A
+ HREF="node55.html">Command line options</A>
+<B> Previous:</B> <A
+ HREF="node104.html">getproto</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H2><A ID="SECTION008250000000000000000">
+sqs2tdb</A>
+</H2>
+<PRE>
+sqs2tdb version 3.48 by Axel van de Walle and with contributions to the SQS database
+        from Ruoshi Sun, Qijun Hong and Sara Kadkhodaei.
+
+Usage: sqs2tdb [options]    where the available options are:
+-h   : More help.
+-cp  : Copy SQS from the database to the current directory. Must specify:
+       -lv=[level]
+           level indicates how fine of composition mesh to use (0: only end members, 1: mid points, 
+                     etc.)
+       -l=[lattice]
+          Available lattices
+           AUCD_B19
+           AUCD_B19.tar
+           AUCU_L10
+           BCC_A2
+           BETASN_A5
+           CDI2_C6
+           CHI_A12
+           CR3SI_A15
+           CSCL_B2
+           CUPRITE_C3
+           CUPT_B22
+           CUPT_L11
+           DIAMOND_A4
+           DUMMY
+           FCC_A1
+           FE3AL_D03
+           FLUORITE_C1
+           GA3PT5
+           GAMMA_L12
+           HCP_A3
+           HEUSLER_D022
+           HEUSLER_L21
+           hidden
+           LIQUID
+           MGCU2_C15
+           MGZN2_C14
+           NI3SN_D019
+           NI4MO_D1A
+           NIAS_D81
+           OMEGA_C32
+           PEROVSKITE_E21
+           PYRITE_C2
+           REO3_D09
+           ROCKSALT_B1
+           RUTILE_C4
+           SIGMA_D8B
+           tmp.sspp
+           tmp.sspp~
+           WURTZITE_B4
+           ZINCBLENDE_B3
+           ZINTL_B32
+           ZIRCONIA_TET
+
+        Optional: -sp=Element,Element,...  to indicate which elements to consider
+                      (otherwise read from species.in if it exists).
+-fit : Fit solution model from SQS energies (to be run within the desired lattice directory)
+       The -sro option can also be specified (with -fit) to include short-range order effects.
+-tdb : Combine solution models from one or multiple lattices into a single .tdb file.
+       add the -oc (Open Calphad) option to generate a more portable tdb file.
+-mk  : Generate input file for SQS generation with mcsqs. (Usually not needed - only for experts.)
+       To be run in the SQS database directory:
+       /home/avdw/avdw/atat/data/sqsdb/[lattice name]
+Note that -h,-mk,-cp,-fit,-tdb are mutually exclusive.
+
+
+For more information see user guide published in:
+  A. van de Walle, R. Sun, Q.-J. Hong, and S. Kadkhodaei.
+  Software tools for high-throughput calphad from first-principles data.
+  Calphad, 58:70, 2017.
+  https://doi.org/10.1016/j.calphad.2017.05.005
+(Also, this paper should be cited in any publication resulting from this code's use.)
+
+EXAMPLES
+
+-&gt; A simple session of sqs2tdb could be:
+
+cp ~/atat/example/vasp.wrap .
+emacs vasp.wrap   #edit as needed
+
+echo Al,Ni &gt; species.in
+
+sqs2tdb -cp -l=FCC_A1 -lv=1
+sqs2tdb -cp -l=FCC_A1 -lv=1
+
+cd FCC_A1
+foreachfile wait pwd \; runstruct_vasp
+
+sqs2tdb -fit
+
+Edit the file terms.in to read
+1,0
+2,0
+
+sqs2tdb -fit
+
+cd ..
+
+(repeat the above for other lattices if necessary)
+
+sqs2tdb -tdb
+
+The file AL_NI.tdb would contain a valid .tdb file.
+
+-&gt; In a more advanced example, the runstruct_vasp command could be replaced
+by a job script submission containing the runstruct_vasp command.
+
+-&gt; When there are lattice instabilities, the runstruct_vasp could be replaced by 
+robustrelax_vasp -mk  #this is to be run only once (see robustrelax_vasp -h for instructions)
+robustrelax_vasp -id
+
+-&gt; If phonons are to be included (for end members) one could do:
+foreachfile endmem pwd \; fitfc -si=str_relax.out -ernn=4 -ns=1 -nrr
+foreachfile -d 3 wait \; runstruct_vasp -lu -w vaspf.wrap
+   where vaspf.wrap contains parameters for a static run to calculate forces.
+foreachfile endmem pwd \; fitfc -si=str_relax.out -f -frnn=2
+foreachfile endmem pwd \; robustrelax_vasp -vib
+
+sqs2tdb -fit
+
+OPTIONAL input files (to placed in the topmost directory):
+
+    exfromsgte.in : specify which phases should NOT be copied from SGTE database
+                    (by default all phases for each relevant element are included,
+                    but you may want to use ab initio data for virtual phase)
+    subref.sed    : substitution rule (sed command to be applied to final tdb file)
+
+OUTPUT FILES
+    In addition to the *.tdb files, there is some diagnostic info available in the files 
+                     fit_[property].out where property could be 
+    energy, svib_ht, etc.
+
+ADVANCED FEATURES
+    In each sqs subdirectory created, there may be a file called link that contains the path to
+    another directory where energy data can be found. This is useful if another structure is
+    known be equivalent by symmetry. This file is created by default for equivalence within a
+    given structure type can even find symmetries across structure types.
+    You can also create the file yourself and the code will follow your link.
+
+    There may also be a file called bump which indicates that a structure must be moved up in energy 
+                     by the
+    amount specified by the -bv option (or 5e-3 by default) to avoid degeneracy with an equivalent 
+                     higher symmetry structure.
+    This file is created by default (during the -cp step) when the code detects higher symmetry 
+                     (e.g. a GAMMA_L12 phase with all sites occupied
+    with the same type of atom is just FCC). You can delete this file if the higher-symmetry 
+                     structure is not in your
+    set of structures. This file is read during the -fit step.
+
+    In summary, if you see a bump file, ask yourself if you have that structure elsewhere and put an 
+                     appropriate link file.
+    If you don't have that structure elsewhere, you can delete the bump file.
+    The code will still work and give the right answer if you don't do this, but it will spend  more 
+                     computer time.
+
+    During the -fit step, one can specify the -sro option to include a low-order CVM approximation 
+                     to the short range order.
+    One can also specify the weights used to enforce better fit of the end members with the -ew 
+                     option (a weight of 10 is the default).
+
+    The default lower and upper temperature limits of 298.15K and 10000K can be changed with the 
+                     -Tl=... and -Tu=... options, respectively.
+    
+    This code now allows for the input free energies to general CALPHAD-compatible T-dependent 
+                     functions. To use this feature, place your functions
+    in 'func' files and do not specify 'energy' or 'svib_ht' files.
+</PRE>
+<BR><HR>
+<ADDRESS>
+avdw@alum.mit.edu Wed, Dec  6, 2023 12:55:16 PM
+</ADDRESS>
+</BODY>
+</HTML>

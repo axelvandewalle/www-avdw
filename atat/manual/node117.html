@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2018.3 (Released July 19, 2018) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>node</TITLE>
+<META NAME="description" CONTENT="node">
+<META NAME="keywords" CONTENT="manual">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131198421-1"><
+/script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-131198421-1');
+</script>
+
+<LINK REL="STYLESHEET" HREF="manual.css">
+
+<LINK REL="next" HREF="node118.html">
+<LINK REL="previous" HREF="node116.html">
+<LINK REL="next" HREF="node118.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node118.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node55.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node116.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node118.html">pollmach</A>
+<B> Up:</B> <A
+ HREF="node55.html">Command line options</A>
+<B> Previous:</B> <A
+ HREF="node116.html">minload</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H2><A ID="SECTION008262000000000000000">
+node</A>
+</H2>
+<PRE>
+This command is basically like rsh, except that the command
+makes sure that the current directory on the remote machine 
+is the same as on the local machine.
+(If the two machines do not share the same disk space, use the -r option.)
+
+Syntax: node [-s] [-r] user@host command
+ -s: use ssh instead of rsh
+ -r: copy files in current directory to remote host before running command
+ if user is the same on remote host, use may use
+   node [-s] [-r] host command
+</PRE>
+<BR><HR>
+<ADDRESS>
+avdw@alum.mit.edu Wed, Dec  6, 2023 12:55:16 PM
+</ADDRESS>
+</BODY>
+</HTML>

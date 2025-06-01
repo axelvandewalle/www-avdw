@@ -1,0 +1,138 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2018.3 (Released July 19, 2018) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>Interpreting the output files</TITLE>
+<META NAME="description" CONTENT="Interpreting the output files">
+<META NAME="keywords" CONTENT="manual">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131198421-1"><
+/script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-131198421-1');
+</script>
+
+<LINK REL="STYLESHEET" HREF="manual.css">
+
+<LINK REL="previous" HREF="node26.html">
+<LINK REL="next" HREF="node28.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node28.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node24.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node26.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node28.html">Recent developments</A>
+<B> Up:</B> <A
+ HREF="node24.html">Monte Carlo simulations</A>
+<B> Previous:</B> <A
+ HREF="node26.html">Examples</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H2><A ID="SECTION00543000000000000000">
+Interpreting the output files</A>
+</H2>
+
+<P>
+The output file of <SPAN style="font-family:monospace">emc2</SPAN> reports the value of all calculated thermodynamic functions for each 
+value of temperature and chemical potential scanned.
+The quantities reported include
+
+<UL>
+<LI>Statistical averages over Monte Carlo steps, such as energy, concentration,
+ short-range and long-range order parameters.<A ID="tex2html43"
+  HREF="footnode.html#foot2005"><SUP><SPAN CLASS="arabic">5</SPAN>.<SPAN CLASS="arabic">5</SPAN></SUP></A>
+</LI>
+<LI>Integrated statistical averages, such as the Gibbs free energy <SPAN CLASS="MATH"><IMG STYLE="height: 1.75ex; vertical-align: -0.12ex; " SRC="img31.png"
+ ALT="$G$"></SPAN> or the semi-grand-canonical potential <SPAN CLASS="MATH"><IMG STYLE="height: 2.24ex; vertical-align: -0.57ex; " SRC="img60.png"
+ ALT="$\phi=G-\mu x$"></SPAN>.
+</LI>
+<LI>The result of common approximations, namely, the low temperature expansion (LTE) [<A
+ HREF="node30.html#ducastelle:book">6</A>,<A
+ HREF="node30.html#afk:lte">11</A>,<A
+ HREF="node30.html#woodward:sgce">27</A>], the mean-field (MF) approximation
+and the high temperature expansion (HTE) (see, for instance, [<A
+ HREF="node30.html#ducastelle:book">6</A>]).
+</LI>
+</UL>
+While quantities obtained from statistical averages over Monte Carlo steps are valid for all temperatures and chemical potentials,
+caution must be exercised when interpreting the result of the various approximations or when looking at the integrated quantities.
+The LTE, MF and HTE approximations are only accurate in a limited range of temperature and it is the
+responsibility of the user to assess this range of validity.
+Also, the free energy or the semi-grand-canonical potential are obtained
+from thermodynamic integration and are thus only valid if the starting point of the integration
+is chosen appropriately. 
+By default, the low temperature expansion value is used as a starting point whenever the
+phase of interest is a ground state, while the high temperature expansion is used when
+the phase of interest is the disordered state.
+Hence, to obtain absolute values of the semi-grand-canonical potential, one must ensure that
+the calculations are started at a sufficiently low temperature (or sufficiently high temperature,
+in the case of the disordered phase). This can be checked by comparing the Monte Carlo estimates with the LTE (or HTE) estimates and verifying that they agree for the first
+few steps of the thermodynamic integration. A user-specified starting point for <SPAN CLASS="MATH"><IMG STYLE="height: 2.10ex; vertical-align: -0.57ex; " SRC="img61.png"
+ ALT="$\phi$"></SPAN> (<I>e.g.</I> obtained from
+an earlier Monte Carlo simulation) can be indicated using the option
+<table width="90%"><tr><td valign="top">&nbsp;<SPAN style="font-family:monospace">-phi0=</SPAN><SPAN CLASS="MATH"><IMG STYLE="height: 2.10ex; vertical-align: -0.57ex; " SRC="img61.png"
+ ALT="$\phi$"></SPAN></td></tr></table>
+
+Note that, unlike <SPAN style="font-family:monospace">emc2</SPAN>, the <SPAN style="font-family:monospace">phb</SPAN> code automatically makes use of the low temperature expansion whenever
+it is sufficiently accurate in order to save a considerable amount of computational time.
+
+<P>
+By default, the code reports the thermodynamic quantities associated
+with the semi-grand-canonical ensemble, such as the
+semi-grand-canonical potential <SPAN CLASS="MATH"><IMG STYLE="height: 2.10ex; vertical-align: -0.57ex; " SRC="img61.png"
+ ALT="$\phi$"></SPAN>. The command-line option <SPAN style="font-family:monospace">-can</SPAN>, instructs the code to add <SPAN CLASS="MATH"><IMG STYLE="height: 1.61ex; vertical-align: -0.57ex; " SRC="img62.png"
+ ALT="$\mu x$"></SPAN> to all 
+appropriate thermodynamic quantities, so that the code outputs the more commonly used canonical quantities, such as the
+Gibbs free energy <SPAN CLASS="MATH"><IMG STYLE="height: 1.75ex; vertical-align: -0.12ex; " SRC="img31.png"
+ ALT="$G$"></SPAN> and the internal energy <SPAN CLASS="MATH"><IMG STYLE="height: 1.61ex; vertical-align: -0.12ex; " SRC="img63.png"
+ ALT="$E$"></SPAN>.
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A
+ HREF="node28.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node24.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node26.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node28.html">Recent developments</A>
+<B> Up:</B> <A
+ HREF="node24.html">Monte Carlo simulations</A>
+<B> Previous:</B> <A
+ HREF="node26.html">Examples</A></DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+avdw@alum.mit.edu Wed, Dec  6, 2023 12:55:16 PM
+</ADDRESS>
+</BODY>
+</HTML>

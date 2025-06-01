@@ -1,0 +1,167 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2018.3 (Released July 19, 2018) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>Running the code</TITLE>
+<META NAME="description" CONTENT="Running the code">
+<META NAME="keywords" CONTENT="manual">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131198421-1"><
+/script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-131198421-1');
+</script>
+
+<LINK REL="STYLESHEET" HREF="manual.css">
+
+<LINK REL="next" HREF="node23.html">
+<LINK REL="previous" HREF="node21.html">
+<LINK REL="next" HREF="node23.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node23.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node20.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node21.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node23.html">Output of MAPS</A>
+<B> Up:</B> <A
+ HREF="node20.html">Cluster expansion construction using</A>
+<B> Previous:</B> <A
+ HREF="node21.html">Input files</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H2><A ID="SECTION00532000000000000000">
+Running the code</A>
+</H2>
+
+<P>
+The <SPAN style="font-family:monospace">maps</SPAN> code is started using the command
+<table width="90%"><tr><td valign="top">&nbsp;<SPAN style="font-family:monospace">maps -d &amp;</SPAN></td></tr></table>
+
+where the option <SPAN style="font-family:monospace">-d</SPAN> indicates that all default values of the input parameters should be used, which is what most users
+will ever need. (The optional parameters can be displayed by typing <SPAN style="font-family:monospace">maps</SPAN> by itself and further help is available via the command
+<SPAN style="font-family:monospace">maps -h</SPAN>.) The trailing <SPAN style="font-family:monospace">&amp;</SPAN> character cause the command
+to execute in &ldquo;background&rdquo; mode. In this fashion, <SPAN style="font-family:monospace">maps</SPAN> can continuously be on the lookout, responding to various &ldquo;signals&rdquo;, while 
+the user performs other tasks. (The ongoing discussion assumes that the code is run under a UNIX
+environment within a shell such as <SPAN style="font-family:monospace">sh</SPAN>, <SPAN style="font-family:monospace">csh</SPAN>, <SPAN style="font-family:monospace">tcsh</SPAN> or <SPAN style="font-family:monospace">bash</SPAN>.)
+
+<P>
+The process of constructing a cluster expansion from first-principles calculations can be summarized as follows.
+
+<OL>
+<LI>Determine the parameters of the first-principles code that provide the desired accuracy.
+</LI>
+<LI>Let <SPAN style="font-family:monospace">maps</SPAN> refine the cluster expansion.
+</LI>
+<LI>Decide when the cluster expansion is sufficiently accurate.
+</LI>
+</OL>
+
+<P>
+Typically, one calibrates the accuracy of the first-principles calculations using the &ldquo;pure&rdquo;<A ID="tex2html36"
+  HREF="footnode.html#foot1332"><SUP><SPAN CLASS="arabic">5</SPAN>.<SPAN CLASS="arabic">1</SPAN></SUP></A> structures of the alloy system of interest.
+To generate the two &ldquo;pure&rdquo; structures, type
+<table width="90%"><tr><td valign="top">&nbsp;<SPAN style="font-family:monospace">touch ready</SPAN></td></tr></table>
+
+This creates a file called <SPAN style="font-family:monospace">ready</SPAN> which tells <SPAN style="font-family:monospace">maps</SPAN> that you are ready to calculate the energy of a structure.
+Within 10 seconds, <SPAN style="font-family:monospace">maps</SPAN> replies with
+<table width="90%"><tr><td valign="top">&nbsp;<SPAN style="font-family:monospace">Finding best structure...</SPAN></td></tr>
+<tr><td valign="top">&nbsp;<SPAN style="font-family:monospace">done!</SPAN>
+</td></tr></table>
+
+<SPAN style="font-family:monospace">maps</SPAN> has just created a directory called <SPAN style="font-family:monospace">0</SPAN> and, within it, a file called <SPAN style="font-family:monospace">str.out</SPAN> that contains the geometry of one of the two &ldquo;pure&rdquo; structures.
+If you type <SPAN style="font-family:monospace">touch ready</SPAN> once more, the other &ldquo;pure&rdquo; structure is written to <SPAN style="font-family:monospace">1/str.out</SPAN>.
+You now need to launch the first-principles code to calculate the energy of each structure.
+Type
+<table width="90%"><tr><td valign="top">&nbsp;<SPAN style="font-family:monospace">cd 0</SPAN></td></tr></table>
+
+to go into the directory of the first structure. Assuming that your first-principles code is called <SPAN style="font-family:monospace">xxxx</SPAN>, type
+<table width="90%"><tr><td valign="top">&nbsp;<SPAN style="font-family:monospace">runstruct_xxxx &amp;</SPAN></td></tr></table>
+
+After this command has successfully terminated, display the energy of that structure and
+go back to the initial directory
+<table width="90%"><tr><td valign="top">&nbsp;<SPAN style="font-family:monospace">cat energy</SPAN></td></tr>
+<tr><td valign="top">&nbsp;<SPAN style="font-family:monospace">cd ..</SPAN>
+</td></tr></table>
+
+and edit the file defining the first-principles code parameters
+<table width="90%"><tr><td valign="top">&nbsp;<SPAN style="font-family:monospace">emacs xxxx.wrap &amp;</SPAN></td></tr></table>
+
+so that the precision of the calculation is increased (<I>e.g.</I> increase the
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.68ex; vertical-align: -0.12ex; " SRC="img21.png"
+ ALT="$k$"></SPAN>-point density or the cut-off of the plane-wave energy). Then you rerun
+the calculations to check by how much the calculated energy has changed:
+<table width="90%"><tr><td valign="top">&nbsp;<SPAN style="font-family:monospace">cd 0</SPAN></td></tr>
+<tr><td valign="top">&nbsp;<SPAN style="font-family:monospace">runstruct_xxxx &amp;</SPAN></td></tr>
+<tr><td valign="top">&nbsp;<SPAN style="font-family:monospace">cat energy</SPAN> (After the calculations are completed)</td></tr>
+<tr><td valign="top">&nbsp;<SPAN style="font-family:monospace">cd ..</SPAN>
+</td></tr></table>
+
+This process is repeated until the user is satisfied with the precision of the calculation
+(that is, if the energy has become insensitive to changes in the input parameters within
+the desired accuracy).<A ID="tex2html37"
+  HREF="footnode.html#foot1354"><SUP><SPAN CLASS="arabic">5</SPAN>.<SPAN CLASS="arabic">2</SPAN></SUP></A>A similar study should also be performed for the other &ldquo;pure&rdquo; structure (labeled structure
+<SPAN style="font-family:monospace">1</SPAN>) and, if one is really concerned with precision, for a few structures with
+intermediate concentrations.
+
+<P>
+Once the appropriate <I>ab initio</I> code parameters have been determined, the fully automated
+process can begin. From within the directory where <SPAN style="font-family:monospace">maps</SPAN> was started,
+type
+<table width="90%"><tr><td valign="top">&nbsp;<SPAN style="font-family:monospace">pollmach runstruct_xxxx</SPAN></td></tr></table>
+
+to start the job manager that will monitor the load on your local network of workstations and ask <SPAN style="font-family:monospace">maps</SPAN>
+to generate new structures (<I>i.e.</I> atomic arrangements) whenever a processor becomes available.
+Note that the first time the command is run, instructions will appear on screen
+that explain how to configure the job dispatching system in accordance to your local
+computing environment. Once this configuration is complete, the above command should
+be invoked in the background by appending a &ldquo;<SPAN style="font-family:monospace">&amp;</SPAN>&rdquo; to it.
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A
+ HREF="node23.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node20.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node21.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node23.html">Output of MAPS</A>
+<B> Up:</B> <A
+ HREF="node20.html">Cluster expansion construction using</A>
+<B> Previous:</B> <A
+ HREF="node21.html">Input files</A></DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+avdw@alum.mit.edu Wed, Dec  6, 2023 12:55:16 PM
+</ADDRESS>
+</BODY>
+</HTML>

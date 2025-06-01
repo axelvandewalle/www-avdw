@@ -1,0 +1,96 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2018.3 (Released July 19, 2018) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>Installation</TITLE>
+<META NAME="description" CONTENT="Installation">
+<META NAME="keywords" CONTENT="manual">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131198421-1"><
+/script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-131198421-1');
+</script>
+
+<LINK REL="STYLESHEET" HREF="manual.css">
+
+<LINK REL="next" HREF="node10.html">
+<LINK REL="previous" HREF="node8.html">
+<LINK REL="next" HREF="node10.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node10.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node7.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node8.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node10.html">Test MAPS with a</A>
+<B> Up:</B> <A
+ HREF="node7.html">Getting started</A>
+<B> Previous:</B> <A
+ HREF="node8.html">Requirements</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H2><A ID="SECTION00302000000000000000">
+Installation</A>
+</H2>
+
+<P>
+If you have an earlier version of <SPAN style="font-family:monospace">ATAT</SPAN> installed, please delete or rename the former <SPAN style="font-family:monospace">atat</SPAN> directory before proceeding, e.g.,
+<table width="90%"><tr><td valign="top">&nbsp;<SPAN style="font-family:monospace">mv atat atatold</SPAN>
+</td></tr></table>
+
+Then, type
+<table width="90%"><tr><td valign="top">&nbsp;<SPAN style="font-family:monospace">gunzip atatX_XX.tar.gz</SPAN></td></tr>
+<tr><td valign="top">&nbsp;<SPAN style="font-family:monospace">tar -xvf atatX_XX.tar.gz</SPAN>
+</td></tr></table>
+
+where <SPAN style="font-family:monospace">X_XX</SPAN> is the current version number.
+These commands create a directory called atat in the current directory.
+It contains the whole package. For future reference, I'll call the whole
+access path to this directory <SPAN style="font-family:monospace">atat</SPAN>.
+
+<P>
+Type
+<table width="90%"><tr><td valign="top">&nbsp;<SPAN style="font-family:monospace">cd atat</SPAN></td></tr></table>
+
+and open the file <SPAN style="font-family:monospace">makefile</SPAN> with a text editor and look for the line
+<SPAN style="font-family:monospace">BINDIR=$(HOME)/bin/</SPAN>. Change <SPAN style="font-family:monospace">$(HOME)/bin/</SPAN> to point wherever
+you want to put the executables. Type
+<table width="90%"><tr><td valign="top">&nbsp;<SPAN style="font-family:monospace">make</SPAN>
+</td></tr></table>
+
+If no error message appears, proceed with the next steps, otherwise consult
+Chapter <A HREF="node125.html#troubles">8</A>.
+<table width="90%"><tr><td valign="top">&nbsp;<SPAN style="font-family:monospace">make install</SPAN></td></tr>
+<tr><td valign="top">&nbsp;<SPAN style="font-family:monospace">rehash</SPAN> (not necessary with bash shell)
+</td></tr></table>
+
+<P>
+<BR><HR>
+<ADDRESS>
+avdw@alum.mit.edu Wed, Dec  6, 2023 12:55:16 PM
+</ADDRESS>
+</BODY>
+</HTML>

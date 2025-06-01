@@ -1,0 +1,274 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2018.3 (Released July 19, 2018) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>Theoretical Background</TITLE>
+<META NAME="description" CONTENT="Theoretical Background">
+<META NAME="keywords" CONTENT="manual">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131198421-1"><
+/script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-131198421-1');
+</script>
+
+<LINK REL="STYLESHEET" HREF="manual.css">
+
+<LINK REL="next" HREF="node20.html">
+<LINK REL="previous" HREF="node18.html">
+<LINK REL="next" HREF="node20.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node20.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node17.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node18.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node20.html">Cluster expansion construction using</A>
+<B> Up:</B> <A
+ HREF="node17.html">User guide</A>
+<B> Previous:</B> <A
+ HREF="node18.html">Introduction</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A ID="SECTION00520000000000000000">
+Theoretical Background</A>
+</H1>
+
+<P>
+While there exist numerous methodologies that enable the calculation of thermodynamic properties
+from first principles, we will focus on the following two-step approach (see Figure
+<A HREF="#mapsemc2">5.1</A>).
+First, a compact representation of the energetics of an alloy, known as the cluster expansion
+[<A
+ HREF="node30.html#sanchez:cexp">18</A>,<A
+ HREF="node30.html#ducastelle:book">6</A>,<A
+ HREF="node30.html#fontaine:clusapp">5</A>,<A
+ HREF="node30.html#zunger:NATO">28</A>], is constructed using first-principles calculations of the formation energies
+of various atomic arrangements. Second, the cluster expansion is used as a Hamiltonian
+for Monte Carlo simulations [<A
+ HREF="node30.html#newman:mc">16</A>,<A
+ HREF="node30.html#binder:mc">2</A>,<A
+ HREF="node30.html#dunweg:mc">8</A>,<A
+ HREF="node30.html#laradji:mc">15</A>] that can provide the thermodynamic properties of interest,
+such as the free energy of a phase or short-range-order parameters as a function of temperature
+and concentration. This two-step approach is essential, because the calculation of thermodynamic quantities
+through Monte Carlo involves averaging the property of interest over many different atomic configurations and it would be infeasible to calculate the
+energy of each of these configurations from first principles. The cluster expansion enables the prediction of the energy of any configuration
+from the knowledge of the energies of a small number of configurations (typically between 30 and 50), thus making the procedure
+amenable to the use of first-principles methods.
+
+<P>
+Formally, the cluster expansion is defined by first assigning 
+occupation variables <SPAN CLASS="MATH"><IMG STYLE="height: 1.47ex; vertical-align: -0.46ex; " SRC="img4.png"
+ ALT="$\sigma_{i}$"></SPAN> to each site <SPAN CLASS="MATH"><IMG STYLE="height: 1.61ex; vertical-align: -0.12ex; " SRC="img5.png"
+ ALT="$i$"></SPAN> of the <SPAN  CLASS="textit">parent lattice</SPAN>,
+which is defined as the set of all the atomic sites that can be occupied by one of
+a few possible atomic species. In the common case of a binary alloy system, 
+the occupation variables <SPAN CLASS="MATH"><IMG STYLE="height: 1.47ex; vertical-align: -0.46ex; " SRC="img4.png"
+ ALT="$\sigma_{i}$"></SPAN> take the value <SPAN CLASS="MATH"><IMG STYLE="height: 1.54ex; vertical-align: -0.31ex; " SRC="img6.png"
+ ALT="$-1$"></SPAN> or <SPAN CLASS="MATH"><IMG STYLE="height: 1.75ex; vertical-align: -0.31ex; " SRC="img7.png"
+ ALT="$+1$"></SPAN> depending
+on the type of atom occupying the site. A particular arrangement of these &ldquo;spins&rdquo; on
+the parent lattice is called a <SPAN  CLASS="textit">configuration</SPAN> and can be represented
+by a vector <!-- MATH
+ $\mathbf{\sigma }$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.12ex; vertical-align: -0.12ex; " SRC="img8.png"
+ ALT="$\mathbf{\sigma }$"></SPAN> containing the value of the occupation
+variable for each site in the parent lattice. Although we focus here on the
+case of binary alloys, this framework can be extended to arbitrary
+multicomponent alloys (the appropriate formalism is presented in [<A
+ HREF="node30.html#sanchez:cexp">18</A>]).
+
+<P>
+The cluster expansion then parametrizes the energy (per atom) of the alloy as a polynomial in
+the occupation variables: 
+
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+E(\mathbf{\sigma })=\sum_{\alpha }m_{\alpha }J_{\alpha }\left\langle
+\prod_{i\in \alpha ^{\prime }}\sigma _{i}\right\rangle
+\end{equation}
+ -->
+ &nbsp;  <A ID="eq_ce"></A><IMG STYLE="height: 6.99ex; vertical-align: -3.25ex; " SRC="img9.png"
+ ALT="$\displaystyle E(\mathbf{\sigma })=\sum_{\alpha }m_{\alpha }J_{\alpha }\left\langle
+\prod_{i\in \alpha ^{\prime }}\sigma _{i}\right\rangle
+$"> 
+
+(<SPAN CLASS="arabic">5</SPAN>.<SPAN CLASS="arabic">1</SPAN>)
+</DIV>
+where <SPAN CLASS="MATH"><IMG STYLE="height: 1.12ex; vertical-align: -0.12ex; " SRC="img10.png"
+ ALT="$\alpha $"></SPAN> is a cluster (a set of sites <SPAN CLASS="MATH"><IMG STYLE="height: 1.61ex; vertical-align: -0.12ex; " SRC="img5.png"
+ ALT="$i$"></SPAN>). The sum is taken over all
+clusters <SPAN CLASS="MATH"><IMG STYLE="height: 1.12ex; vertical-align: -0.12ex; " SRC="img10.png"
+ ALT="$\alpha $"></SPAN> that are not equivalent by a symmetry operation of the
+space group of the parent lattice, while the average is taken over all
+clusters <!-- MATH
+ $\alpha ^{\prime }$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.82ex; vertical-align: -0.12ex; " SRC="img11.png"
+ ALT="$\alpha ^{\prime }$"></SPAN> that are equivalent to <SPAN CLASS="MATH"><IMG STYLE="height: 1.12ex; vertical-align: -0.12ex; " SRC="img10.png"
+ ALT="$\alpha $"></SPAN> by symmetry.
+The coefficients <SPAN CLASS="MATH"><IMG STYLE="height: 2.03ex; vertical-align: -0.46ex; " SRC="img12.png"
+ ALT="$J_{\alpha }$"></SPAN> in this expansion embody the information
+regarding the energetics of the alloy and are called the effective cluster
+interaction (ECI). The <SPAN  CLASS="textit">multiplicities</SPAN> <SPAN CLASS="MATH"><IMG STYLE="height: 1.47ex; vertical-align: -0.46ex; " SRC="img13.png"
+ ALT="$m_{\alpha }$"></SPAN> indicate the
+number of clusters that are equivalent by symmetry to <SPAN CLASS="MATH"><IMG STYLE="height: 1.12ex; vertical-align: -0.12ex; " SRC="img10.png"
+ ALT="$\alpha $"></SPAN> (divided by
+the number of lattice sites).
+
+<P>
+It can be shown that when <SPAN  CLASS="textit">all</SPAN> clusters <SPAN CLASS="MATH"><IMG STYLE="height: 1.12ex; vertical-align: -0.12ex; " SRC="img10.png"
+ ALT="$\alpha $"></SPAN> are considered in
+the sum, the cluster expansion is able to represent any function <!-- MATH
+ $E\left(
+\mathbf{\sigma }\right)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.38ex; vertical-align: -0.70ex; " SRC="img14.png"
+ ALT="$E\left(
+\mathbf{\sigma }\right) $"></SPAN> of configuration <!-- MATH
+ $\mathbf{\sigma }$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.12ex; vertical-align: -0.12ex; " SRC="img8.png"
+ ALT="$\mathbf{\sigma }$"></SPAN> by an
+appropriate selection of the values of <SPAN CLASS="MATH"><IMG STYLE="height: 2.03ex; vertical-align: -0.46ex; " SRC="img12.png"
+ ALT="$J_{\alpha }$"></SPAN>. However, the real
+advantage of the cluster expansion is that, in practice, it is found to
+converge rapidly. An accuracy that is sufficient for phase diagram
+calculations can be achieved by keeping only clusters <SPAN CLASS="MATH"><IMG STYLE="height: 1.12ex; vertical-align: -0.12ex; " SRC="img10.png"
+ ALT="$\alpha $"></SPAN> that are
+relatively compact (<SPAN  CLASS="textit">e.g.</SPAN> short-range pairs or small triplets). The
+unknown parameters of the cluster expansion (the ECI) can then be determined by
+fitting them to the energy of a relatively small number of configurations
+obtained through first-principles computations. This approach
+is known as the Structure Inversion Method (SIM) or the Collony-Williams 
+[<A
+ HREF="node30.html#collwill:fit">4</A>] method.
+
+<P>
+The cluster expansion thus presents an extremely concise and practical way
+to model the configurational dependence of an alloy's energy. A typical well-converged cluster
+expansion of the energy of an alloy consists of about 10 to 20 ECI and
+necessitates the calculation of the energy of around 30 to 50 ordered
+structures (see, for instance, [<A
+ HREF="node30.html#vanderven:licoo2">25</A>,<A
+ HREF="node30.html#gdg:linfit">9</A>,<A
+ HREF="node30.html#ozolins:noble">17</A>]).
+Once the cluster expansion has been constructed, the energy of any configuration can be
+calculated using Equation <A HREF="#eq_ce">5.1</A> at a very small computational cost.
+This enables the use of various statistical mechanical techniques such as Monte Carlo
+simulations [<A
+ HREF="node30.html#binder:mc">2</A>], the low-temperature expansion (LTE) [<A
+ HREF="node30.html#afk:lte">11</A>,<A
+ HREF="node30.html#ducastelle:book">6</A>],
+the high-temperature expansion (HTE) [<A
+ HREF="node30.html#ducastelle:book">6</A>], or the cluster variation method (CVM)
+[<A
+ HREF="node30.html#kikuchi:cvm">10</A>,<A
+ HREF="node30.html#ducastelle:book">6</A>] to calculate thermodynamic properties and
+phase diagrams. The <SPAN style="font-family:monospace">atat</SPAN> software implements Monte Carlo simulations, the LTE and the HTE.
+
+<P>
+
+<DIV class="CENTER"><A ID="mapsemc2"></A><A ID="1586"></A>
+<TABLE>
+<CAPTION class="BOTTOM"><STRONG>Figure 5.1:</STRONG>
+Methodology implemented in <SPAN style="font-family:monospace">atat</SPAN> for the computation of thermodynamic properties from first principles.
+The automated construction of
+the cluster expansion is performed by the <SPAN style="font-family:monospace">maps</SPAN> code. Whenever needed, <SPAN style="font-family:monospace">maps</SPAN> requests the calculation of
+the formation energy of various atomic configurations by a first-principles code (such as <SPAN style="font-family:monospace">vasp</SPAN>).
+The necessary input files are created and the resulting output files are parsed without requiring user intervention.
+The output of <SPAN style="font-family:monospace">maps</SPAN> is a set of effective cluster interactions that define a computationally efficient Hamiltonian
+that can be used to perform
+Monte Carlo simulations with the <SPAN style="font-family:monospace">emc2</SPAN> code. These simulations provide thermodynamic properties and phase diagrams
+that can be used to create thermodynamic databases or supplement existing ones.
+</CAPTION>
+<TR><TD>
+<DIV CLASS="centerline" ID="par5339" ALIGN="CENTER">
+<IMG STYLE=""
+ SRC="img15.png"
+ ALT="\includegraphics[width=1.0\textwidth]{mapsemc2}"></DIV></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+Paralleling the two-step approach described in the previous section, <SPAN style="font-family:monospace">atat</SPAN> consists of two main computer programs
+(see Figure <A HREF="#mapsemc2">5.1</A>).
+The cluster expansion construction is performed by the MIT <I>Ab initio</I> Phase Stability (MAPS) code [<A
+ HREF="node30.html#avdw:maps">24</A>],
+while the Monte Carlo simulations are driven by the Easy Monte
+Carlo Code (EMC2), developed at Northwestern University [<A
+ HREF="node30.html#avdw:emc2">22</A>]. Each of these codes will be discussed in turn.
+
+<P>
+While the present user guide describes how the <SPAN style="font-family:monospace">atat</SPAN> software can be used to carry out
+all the steps necessary for the calculation of thermodynamic properties
+from first principles, it must be emphasized that each part of the toolkit can be used as
+a stand-alone code. For instance, many users may have access to an existing cluster expansion 
+obtained through the SIM or other popular methods, such as concentration-wave-based methods
+(see, for instance, [<A
+ HREF="node30.html#ducastelle:gpm">7</A>,<A
+ HREF="node30.html#ducastelle:book">6</A>,<A
+ HREF="node30.html#turchi:gpm">21</A>]).
+It is then staightforward to setup the appropriate input files to run the <SPAN style="font-family:monospace">emc2</SPAN> Monte Carlo code.
+Alternatively, after obtaining a cluster expansion using the <SPAN style="font-family:monospace">maps</SPAN> code,
+users could choose to calculate thermodynamic properties with the cluster variation method (CVM)
+[<A
+ HREF="node30.html#kikuchi:cvm">10</A>,<A
+ HREF="node30.html#ducastelle:book">6</A>], as implemented in the <SPAN style="font-family:monospace">IMR-CVM</SPAN> code [<A
+ HREF="node30.html#sluiter:cvmcode">20</A>].
+The modularity of the toolkit actually extends below the level of the <SPAN style="font-family:monospace">maps</SPAN> and <SPAN style="font-family:monospace">emc2</SPAN> codes -- many
+of the subroutines underlying these codes can be accessed through stand-alone utilities [<A
+ HREF="node30.html#avdw:atat">23</A>].
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A
+ HREF="node20.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node17.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node18.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node20.html">Cluster expansion construction using</A>
+<B> Up:</B> <A
+ HREF="node17.html">User guide</A>
+<B> Previous:</B> <A
+ HREF="node18.html">Introduction</A></DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+avdw@alum.mit.edu Wed, Dec  6, 2023 12:55:16 PM
+</ADDRESS>
+</BODY>
+</HTML>

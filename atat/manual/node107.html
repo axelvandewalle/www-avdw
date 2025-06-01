@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2018.3 (Released July 19, 2018) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>ocplotpd</TITLE>
+<META NAME="description" CONTENT="ocplotpd">
+<META NAME="keywords" CONTENT="manual">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131198421-1"><
+/script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-131198421-1');
+</script>
+
+<LINK REL="STYLESHEET" HREF="manual.css">
+
+<LINK REL="next" HREF="node108.html">
+<LINK REL="previous" HREF="node106.html">
+<LINK REL="next" HREF="node108.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node108.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node55.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node106.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node108.html">getvalue</A>
+<B> Up:</B> <A
+ HREF="node55.html">Command line options</A>
+<B> Previous:</B> <A
+ HREF="node106.html">symbrklib</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H2><A ID="SECTION008252000000000000000">
+ocplotpd</A>
+</H2>
+<PRE>
+A front-end to OpenCalphad for PLOTting Phase Diagrams.
+Usage: ocplotpd [-ha] [-nt] [-tlf=fraction] [-1f] [-vtk] [-rmax=r_max] [-rmin=r_min] 
+                     [-np=nb_of_proc] -tdb=tdbfile -n=nb_of_samples -T0=min_temperature -T1=max_temperature -e=element,element,...
+
+Mandatory parameters:
+ tdbfile: name of the Thermodynamic DataBase (TDB) file to use
+ element,element,... : a list of the elements (and associated phases) to extract from the TDB file
+ nb_of_samples: Number of phase equilibria sampled to generate the phase diagram
+ min_temperature: lower bound on the temperature axis
+ max_temperature: upper bound on the temperature axis (if min_temperature=max_temperature, a cross 
+                     section is plotted)
+ 
+optional parameters:
+ -ha:   high accuracy calculations
+ -nt:   no tie lines
+ -tlf:  fraction of tie lines displayed (between 0.0 and 1.0)
+ -1f:   generate a single gnuplot file
+ -vtk:  generate vtk files (instead of gnuplot)
+ -rmax: max distance between points in triangulation
+ -rmin: discard points closer to each other than this cutoff
+ -np:   launch nb_of_proc copies of opencalphad
+ -noc:  do not run OpenCalphad - just create the graphs from the *.dat files
+ -nd:   general n-dimensional phase diagram (generate input files for ndviewer - experimental)
+ -debug:do not delete temporary files
+ -mpi:  use mpi for simplexize code (experimental)
+</PRE>
+<BR><HR>
+<ADDRESS>
+avdw@alum.mit.edu Wed, Dec  6, 2023 12:55:16 PM
+</ADDRESS>
+</BODY>
+</HTML>

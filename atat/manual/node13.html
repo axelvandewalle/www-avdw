@@ -1,0 +1,108 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2018.3 (Released July 19, 2018) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>With queueing systems</TITLE>
+<META NAME="description" CONTENT="With queueing systems">
+<META NAME="keywords" CONTENT="manual">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131198421-1"><
+/script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-131198421-1');
+</script>
+
+<LINK REL="STYLESHEET" HREF="manual.css">
+
+<LINK REL="next" HREF="node14.html">
+<LINK REL="previous" HREF="node12.html">
+<LINK REL="next" HREF="node14.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node14.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node12.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node12.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node14.html">Without queueing systems</A>
+<B> Up:</B> <A
+ HREF="node12.html">Install and test the</A>
+<B> Previous:</B> <A
+ HREF="node12.html">Install and test the</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H2><A ID="SECTION00321000000000000000">
+With queueing systems</A>
+</H2>
+
+<P>
+Let's start with the simple and common case of a computer cluster with
+a queueing system. We don't give here the specific syntax of the job
+submission script, because it is highly system-dependent.
+In a nutshell, one would submit on job containing the following commands,
+assuming the system is using a standard implementation of MPI:
+<table width="90%"><tr><td valign="top">&nbsp;<SPAN style="font-family:monospace">[</SPAN>some header specifying the number of nodes etc.]</td></tr>
+<tr><td valign="top">&nbsp;<SPAN style="font-family:monospace">maps -d &amp;</SPAN> (note the <SPAN style="font-family:monospace">&amp;</SPAN> to run in the background.)</td></tr>
+<tr><td valign="top">&nbsp;<SPAN style="font-family:monospace">pollmach runstruct_vasp mpirun</SPAN> (you may need to specify the number of processors as <SPAN style="font-family:monospace">mpirun -np [number]</SPAN>)
+</td></tr></table>
+
+If your system does not allow a background commands in the script (or if this would be very inefficient),
+then you could put each command (without <SPAN style="font-family:monospace">&amp;</SPAN>) in a separate script, but
+making sure they run at the same time.
+Either way, parallelization occurs at the level of the <SPAN style="font-family:monospace">vasp</SPAN> command.
+If you wish to also parallelize by running multiple vasp commands simultaneously
+then you should submit yet another job script with
+<table width="90%"><tr><td valign="top">&nbsp;<SPAN style="font-family:monospace">[</SPAN>some header specifying the number of nodes etc.]</td></tr>
+<tr><td valign="top">&nbsp;<SPAN style="font-family:monospace">pollmach runstruct_vasp mpirun</SPAN>
+</td></tr></table>
+
+repeating this process as many times as you the number of simultaneous <SPAN style="font-family:monospace">vasp</SPAN> processes
+you want (note that there is still only one copy of <SPAN style="font-family:monospace">maps</SPAN> running).
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A
+ HREF="node14.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node12.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node12.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node14.html">Without queueing systems</A>
+<B> Up:</B> <A
+ HREF="node12.html">Install and test the</A>
+<B> Previous:</B> <A
+ HREF="node12.html">Install and test the</A></DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+avdw@alum.mit.edu Wed, Dec  6, 2023 12:55:16 PM
+</ADDRESS>
+</BODY>
+</HTML>

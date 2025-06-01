@@ -1,0 +1,128 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2018.3 (Released July 19, 2018) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>fitfc</TITLE>
+<META NAME="description" CONTENT="fitfc">
+<META NAME="keywords" CONTENT="manual">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131198421-1"><
+/script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-131198421-1');
+</script>
+
+<LINK REL="STYLESHEET" HREF="manual.css">
+
+<LINK REL="next" HREF="node67.html">
+<LINK REL="previous" HREF="node65.html">
+<LINK REL="next" HREF="node67.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node67.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node55.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node65.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node67.html">fitsvsl</A>
+<B> Up:</B> <A
+ HREF="node55.html">Command line options</A>
+<B> Previous:</B> <A
+ HREF="node65.html">felec</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H2><A ID="SECTION008211000000000000000">
+fitfc</A>
+</H2>
+<PRE>
+FIT Force Constants 3.48, by Axel van de Walle
+   -f            Fit force constants (otherwise, generate pertubations) (Default: Off)
+  -si=[string]   Input file defining the ideal structure (default: str.out)
+  -sr=[string]   Input file defining the relaxed structure (default: str_relax.out)
+  -er=[real]     Minimum distance between displaced atoms (Default: 0)
+-ernn=[real]     Minimum distance between displaced atoms in multiple of nearest neighbor distance 
+                     (Default: 0)
+  -fr=[real]     Force constant range (Default: 0)
+-frnn=[real]     Force constant range (in multiple of nearest neighbor distance) (Default: 0)
+  -dr=[real]     Displacement of the perturbed atom (default: 0.2)
+  -ms=[real]     Strain of the maximum volume sampled (default: 0.01)
+  -dv            Specified strain above is volumetric (Default: Off)
+  -ns=[int]      Number of volume sample (default: 2)
+  -iu            Include Unperturbed structure in generated structures (Default: Off)
+ -nrr            Do not rerelax structures at each new volume (Default: Off)
+  -cs            Check for Singular matrix in fit (Default: Off)
+ -ncs            No check for singular matrix in fit (this is the default, option included for 
+                     backward compatibility) (Default: Off)
+  -wm            Write fitting Matrices (Default: Off)
+  -sf=[string]   Extra strain file (Default: )
+   -m=[string]   Input file defining the atomic masses (default: ${atatdir}/data/masses.in)
+  -T0=[real]     Minimum temperature (default: 0) 
+  -T1=[real]     Maximum temperature (default: 2000)
+  -dT=[real]     Temperature step (default: 100)
+   -P=[real]     Pressure (in GPa, default: 0)
+  -kp=[real]     Number of k-points per reciprocal atom (default: 1000)
+  -kx=[int]      k-point mesh (along 1st recip lat. vect.) if &lt;&gt;0 then overrides -kp=... (Default: 
+                     0)
+  -ky=[int]      k-point mesh (along 2nd recip lat. vect.) (Default: 0)
+  -kz=[int]      k-point mesh (along 3rd recip lat. vect.) (Default: 0)
+  -fp=[int]      Power of polynomial to fit free energy (Default: -1)
+  -s0            Use a gamma-centered k-point mesh (default shift: 1/2 1/2 1/2) (Default: Off)
+  -sx=[real]     k-point shift (along 1st recip lat. vect.) (Default: 0.5)
+  -sy=[real]     k-point shift (along 2nd recip lat. vect.) (Default: 0.5)
+  -sz=[real]     k-point shift (along 3rd recip lat. vect.) (Default: 0.5)
+  -df=[string]   Phonon dispersion curve calculation input file. (Default: )
+  -hp=[real]     Planck's constant (default in (eV s))
+  -kb=[real]     Boltzman's constant (default in eV/K)
+ -cfk=[real]     Conversion factor for force constants into energy/dist^2 (default: converts eV/A^2 
+                     into J/m^2)
+  -mu=[real]     Mass units (default: converts a.u. mass into kg)
+  -rl=[real]     Robust Length algorithm parameter for soft modes (beta) (Default: 0)
+ -rls=[real]     Quadratic strain-dependence of robust length for positive strain (beta) (Default: 
+                     0)
+  -cP=[real]     Conversion factor from pressure*volume into eV (Default: 0.00624151)
+  -pa            Output free energy per atom instead of per unit cell (Default: Off)
+  -pe            Print energy in 3rd column of fitfc.out (Default: Off)
+  -sc=[real]     Correction factor if spectator ion are present (default: 1)
+ -me0            Subtract energy at 0K (Default: Off)
+  -no            Print number of atom in supercell only (Default: Off)
+  -w1            Flag first perturbation wait1 instead of wait file (Default: Off)
+  -w2            Flag negative perturbation directions with wait2 instead of wait file (Default: 
+                     Off)
+  -fn            Force continuation of calculations even if unstable (Default: Off)
+  -fu            Find unstable modes (Default: Off)
+  -gu=[int]      Generate unstable modes number n (Default: 0)
+  -gn            Also Generate Negative displacements for mode specified by -gu=... (Default: Off)
+ -mau=[int]      Maximum number of atom per supercell for unstable mode generation (Default: 64)
+ -sfc=[int]      Simplify force constants: 1=streching+bending, 2=symmetric (Default: 0)
+ -apd            Atom-Projected DOS (Default: Off)
+ -sig=[int]      Number of significant digits printed (default: 5)
+   -z=[real]     Tolerance for finding symmetry operations (default: 1e-3)
+   -h            Display more help (Default: Off)
+</PRE>
+<BR><HR>
+<ADDRESS>
+avdw@alum.mit.edu Wed, Dec  6, 2023 12:55:16 PM
+</ADDRESS>
+</BODY>
+</HTML>

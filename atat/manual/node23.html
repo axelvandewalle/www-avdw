@@ -1,0 +1,270 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2018.3 (Released July 19, 2018) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>Output of MAPS</TITLE>
+<META NAME="description" CONTENT="Output of MAPS">
+<META NAME="keywords" CONTENT="manual">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131198421-1"><
+/script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-131198421-1');
+</script>
+
+<LINK REL="STYLESHEET" HREF="manual.css">
+
+<LINK REL="previous" HREF="node22.html">
+<LINK REL="next" HREF="node24.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node24.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node20.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node22.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node24.html">Monte Carlo simulations</A>
+<B> Up:</B> <A
+ HREF="node20.html">Cluster expansion construction using</A>
+<B> Previous:</B> <A
+ HREF="node22.html">Running the code</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H2><A ID="SECTION00533000000000000000">
+Output of MAPS</A>
+</H2>
+
+<P>
+While the calculations are running, you can check on the status of the best cluster
+expansion obtained so far. The file <SPAN style="font-family:monospace">log.out</SPAN> contains a brief description of the
+status of the calculations, such as the accuracy of the cluster expansion and various
+warning messages. Most of the messages pertains to the accurate prediction
+of the so-called ground states of the alloy system. The ground states, which are the structures that
+have the lowest energy for each given concentration, are extremely important to predict accurately
+because they determine which phases will appear on the phase diagram.
+The four possible messages are described below.
+
+<UL>
+<LI><SPAN style="font-family:monospace">Not enough known energies to fit CE.</SPAN> 
+Before displaying any results, <SPAN style="font-family:monospace">maps</SPAN> waits until enough structural energies are known
+to fit a minimal cluster expansion containing only nearest-neighbor pair interactions
+and test its accuracy. Thus, the first cluster expansion is typically constructed
+after at least 4 structural energies have been computed (this number may vary as a function
+of the symmetry of the lattice). 
+</LI>
+<LI><SPAN style="font-family:monospace">Among structures of known energy, true ground states differ from fitted ground
+<BR>
+states.</SPAN> 
+The current cluster expansion incorrectly predicts which structures have the lowest
+ energy for given concentrations, among structures whose first-principles energy is known.
+The code has built-in checks to avoid this.
+However, in rare instances, it may be mathematically impossible to satisfy all the constraints 
+that the code imposes for a cluster expansion to be acceptable.
+ This problem becomes increasingly unlikely as the number of calculated structural energies increases, 
+so the user should just wait until the problem fixes itself. 
+</LI>
+<LI><SPAN style="font-family:monospace">Among structures of known energy, true and predicted ground states agree.</SPAN> 
+Opposite of the previous message. When this message is displayed, <SPAN style="font-family:monospace">maps</SPAN> also displays either one of
+the following two messages.
+</LI>
+<LI><SPAN style="font-family:monospace">New ground states of volume less or equal to</SPAN> <SPAN CLASS="MATH"><IMG STYLE="height: 1.12ex; vertical-align: -0.12ex; " SRC="img22.png"
+ ALT="$n$"></SPAN> <SPAN style="font-family:monospace">predicted, see predstr.out.</SPAN> 
+This indicates that the cluster expansion predicts that, at some concentration, there exist other structures 
+that should have an energy even lower than the one of the structures whose energy has been calculated 
+from first principles. In this case, <SPAN style="font-family:monospace">maps</SPAN>
+will investigate the matter by generating those structures and requesting that their energy be
+calculated. Once again, the user should just wait for the problem to fix itself.
+The predicted ground states are flagged by a <SPAN style="font-family:monospace">g</SPAN> in the <SPAN style="font-family:monospace">predstr.out</SPAN> file, so
+that you can display their energy by typing <table width="90%"><tr><td valign="top">&nbsp;<SPAN style="font-family:monospace">grep g predstr.out</SPAN></td></tr></table>
+
+</LI>
+<LI><SPAN style="font-family:monospace">No other ground states of</SPAN> <SPAN CLASS="MATH"><IMG STYLE="height: 1.12ex; vertical-align: -0.12ex; " SRC="img22.png"
+ ALT="$n$"></SPAN> <SPAN style="font-family:monospace">atoms/unit cell or less exist.</SPAN>
+The energies of all ground states predicted by the cluster expansion have been confirmed by first-principles calculations. Because it can be computationally intensive to perform a full
+ground state search when interactions extend beyond the nearest-neighbor shell [<A
+ HREF="node30.html#ducastelle:book">6</A>], <SPAN style="font-family:monospace">maps</SPAN> uses a search algorithm that merely enumerates every possible
+structures having <SPAN CLASS="MATH"><IMG STYLE="height: 1.12ex; vertical-align: -0.12ex; " SRC="img22.png"
+ ALT="$n$"></SPAN> atoms or less per unit cell and uses the cluster expansion to predict their energies. The upper limit <SPAN CLASS="MATH"><IMG STYLE="height: 1.12ex; vertical-align: -0.12ex; " SRC="img22.png"
+ ALT="$n$"></SPAN> increases automatically as calculations
+progress.
+</LI>
+</UL>
+
+<P>
+The <SPAN style="font-family:monospace">log.out</SPAN> file also contains two other pieces of information:
+
+<UL>
+<LI><SPAN style="font-family:monospace">Concentration range used for ground state checking: [</SPAN><SPAN CLASS="MATH"><IMG STYLE="height: 1.12ex; vertical-align: -0.12ex; " SRC="img16.png"
+ ALT="$a$"></SPAN>,<SPAN CLASS="MATH"><IMG STYLE="height: 1.68ex; vertical-align: -0.12ex; " SRC="img17.png"
+ ALT="$b$"></SPAN><SPAN style="font-family:monospace">]</SPAN> This displays the user-selected range of concentration over which ground state checking is performed (which can be specified as a command-line option of the <SPAN style="font-family:monospace">maps</SPAN> command: 
+<SPAN style="font-family:monospace">-c0=</SPAN><SPAN CLASS="MATH"><IMG STYLE="height: 1.12ex; vertical-align: -0.12ex; " SRC="img16.png"
+ ALT="$a$"></SPAN> <SPAN style="font-family:monospace">-c1=</SPAN><SPAN CLASS="MATH"><IMG STYLE="height: 1.68ex; vertical-align: -0.12ex; " SRC="img17.png"
+ ALT="$b$"></SPAN>).
+It may be useful to relax the constraints that ground states be correctly reproduced over the whole
+concentration range when it is known that other parent lattices are stable in some concentration range. In this fashion, the code can focus on providing a higher accuracy in the concentration range where the user needs it.
+</LI>
+<LI><SPAN style="font-family:monospace">Crossvalidation score:</SPAN> <SPAN CLASS="MATH"><IMG STYLE="height: 1.12ex; vertical-align: -0.12ex; " SRC="img23.png"
+ ALT="$s$"></SPAN>. This provides the predictive power of the cluster
+expansion. It is analogous to the root mean square error, except that it is specifically
+designed to estimate the error made in predicting the energy for structures not included
+in the least-squares fit [<A
+ HREF="node30.html#avdw:maps">24</A>]. It is defined as
+<BR><P></P>
+<DIV CLASS="mathdisplay">
+<!-- MATH
+ \begin{displaymath}
+CV=\left( \frac{1}{n}\sum_{i=1}^{n}\left( E_{i}-\hat{E}_{\left( i\right) }\right)^{2} \right)^{1/2}
+\end{displaymath}
+ -->
+
+<IMG STYLE=""
+ SRC="img24.png"
+ ALT="\begin{displaymath}
+CV=\left( \frac{1}{n}\sum_{i=1}^{n}\left( E_{i}-\hat{E}_{\left( i\right) }\right)^{2} \right)^{1/2}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+where <SPAN CLASS="MATH"><IMG STYLE="height: 2.03ex; vertical-align: -0.46ex; " SRC="img25.png"
+ ALT="$E_{i}$"></SPAN> is the calculated energy of structure <SPAN CLASS="MATH"><IMG STYLE="height: 1.61ex; vertical-align: -0.12ex; " SRC="img5.png"
+ ALT="$i$"></SPAN>, while <!-- MATH
+ $\hat{E}%
+_{\left( i\right) }$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 3.08ex; vertical-align: -0.94ex; " SRC="img26.png"
+ ALT="$\hat{E}%
+_{\left( i\right) }$"></SPAN> is the predicted value of the energy of structure <SPAN CLASS="MATH"><IMG STYLE="height: 1.61ex; vertical-align: -0.12ex; " SRC="img5.png"
+ ALT="$i$"></SPAN>
+obtained from a least-squares fit to the <!-- MATH
+ $\left( n-1\right)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.38ex; vertical-align: -0.70ex; " SRC="img27.png"
+ ALT="$\left( n-1\right) $"></SPAN> other
+structural energies. 
+</LI>
+</UL>
+The <SPAN style="font-family:monospace">maps</SPAN> code also outputs quantitative data in various output files. The simplest
+way to analyze this data is by typing
+<table width="90%"><tr><td valign="top">&nbsp;<SPAN style="font-family:monospace">mapsrep</SPAN></td></tr></table>
+
+As illustrated in Figure <A HREF="#mapsrep">5.2</A>, this command displays, in turn
+
+<UL>
+<LI>The <SPAN style="font-family:monospace">log.out</SPAN> file described earlier.
+</LI>
+<LI>The formation energy of all structures whose energy is known from first-principles calculations,
+as well as the predicted energy of all structures <SPAN style="font-family:monospace">maps</SPAN> has in memory. The convex hull of the ground states among structures of known energy is overlaid
+while the new predicted ground states (if any) are marked by an &ldquo;<SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.31ex; " SRC="img28.png"
+ ALT="$\times$"></SPAN>&rdquo;.
+(Note that this ground state line is only meaningful if the <SPAN style="font-family:monospace">log.out</SPAN> file contains &ldquo;<SPAN style="font-family:monospace">Among structures of known energy, true and predicted ground states agree.</SPAN>&rdquo;)
+</LI>
+<LI>The formation energy of all structures calculated from first principles and associated ground state line.
+</LI>
+<LI>A plot of the magnitude of the Effective Cluster Interactions (ECI) as a function of the diameter of their associated cluster (defined as the
+maximum distance between any two sites in the cluster). Pairs, triplets, etc. are plotted
+consecutively. This plot is useful to assess the convergence of the cluster expansion.
+When the magnitude of the ECI for the larger clusters has clearly decayed to a negligible value 
+(relative to the nearest-neighbor pair ECI), this is indicative of a well-converged
+cluster expansion.
+</LI>
+<LI>A plot of the residuals of the fit (<I>i.e.</I> the fitting error) for each structure. This
+information is useful to locate potential problems in the first-principles calculations.
+Indeed, when first-principles calculations exhibit numerical problems, this typically results in calculated energies that are poorly reproduced by the cluster expansion.
+</LI>
+</UL>
+
+<P>
+
+<DIV class="CENTER"><A ID="mapsrep"></A><A ID="1798"></A>
+<TABLE>
+<CAPTION class="BOTTOM"><STRONG>Figure 5.2:</STRONG>
+Output of the <SPAN style="font-family:monospace">maps</SPAN> Code, as reported by the <SPAN style="font-family:monospace">mapsrep</SPAN> command.
+a) Energies predicted from the cluster expansion as a function of composition for each structure generated.
+&ldquo;<SPAN style="font-family:monospace">known str</SPAN>&rdquo; denotes structures whose energy has been calculated from first principles.
+&ldquo;<SPAN style="font-family:monospace">known gs</SPAN>&rdquo; indicate the ground states that have so far been confirmed by first-principles calculations and the dashed line
+outlines the convex hull of the ground states, which serves as a threshold to detect other candidate ground states.
+&ldquo;<SPAN style="font-family:monospace">predicted</SPAN>&rdquo; denotes structures whose energy has <EM>not yet</EM> been calculated from first principles.
+&ldquo;<SPAN style="font-family:monospace">predicted gs</SPAN>&rdquo; are structures that are predicted by the cluster expansion to be ground states, although this prediction has not yet been confirmed
+by first-principles calculations.
+b) Energies calculated from first principles. &ldquo;<SPAN style="font-family:monospace">known str</SPAN>&rdquo; and &ldquo;<SPAN style="font-family:monospace">known gs</SPAN>&rdquo; are as in a), except that the energy calculated from first principles is reported.
+c) Effective Cluster Interaction (ECI) as a function of the diameter of the associated cluster and as a function of the number of sites in the cluster (<I>i.e.</I> pair, triplet, etc.).
+d) Residuals of the fit, that is, the difference between the first-principles energies and the energies predicted from the cluster expansion. (The abscissa refers
+to the line number within the output file <SPAN style="font-family:monospace">fit.out</SPAN> listing all the structures with known energies.)</CAPTION>
+<TR><TD>
+<DIV CLASS="centerline" ID="par5464" ALIGN="CENTER">
+<IMG STYLE=""
+ SRC="img29.png"
+ ALT="\includegraphics[width=1.0\textwidth]{mapsrep}"></DIV></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+When the user is satisfied with the results (which are constantly updated), 
+<SPAN style="font-family:monospace">maps</SPAN> can be stopped by creating a file called <SPAN style="font-family:monospace">stop</SPAN> in the current directory
+using the command:
+<table width="90%"><tr><td valign="top">&nbsp;<SPAN style="font-family:monospace">touch stop</SPAN></td></tr></table>
+
+while the job dispatching system can be stopped by typing:
+<table width="90%"><tr><td valign="top">&nbsp;<SPAN style="font-family:monospace">touch stoppoll</SPAN></td></tr></table>
+
+A cluster expansion can be considered satisfactory when
+
+<OL>
+<LI>All ground states are correctly reproduced and no new ground states are predicted.
+(The <SPAN style="font-family:monospace">log.out</SPAN> file would then indicate that <SPAN style="font-family:monospace">Among structures of known energy, true and predicted ground states agree. No other ground states of</SPAN> <SPAN CLASS="MATH"><IMG STYLE="height: 1.12ex; vertical-align: -0.12ex; " SRC="img22.png"
+ ALT="$n$"></SPAN> <SPAN style="font-family:monospace">atoms/unit cell or less exist.</SPAN>)
+</LI>
+<LI>The crossvalidation score, as given in the <SPAN style="font-family:monospace">log.out</SPAN> file, is small (typically less than 0.025 eV).
+</LI>
+<LI>Optionally, it is instructive to verify that the magnitude of the ECI decays as a function of the diameter of the corresponding cluster and as a function of the number
+of sites it contains.
+</LI>
+</OL>
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A
+ HREF="node24.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node20.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node22.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node24.html">Monte Carlo simulations</A>
+<B> Up:</B> <A
+ HREF="node20.html">Cluster expansion construction using</A>
+<B> Previous:</B> <A
+ HREF="node22.html">Running the code</A></DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+avdw@alum.mit.edu Wed, Dec  6, 2023 12:55:16 PM
+</ADDRESS>
+</BODY>
+</HTML>

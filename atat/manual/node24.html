@@ -1,0 +1,93 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2018.3 (Released July 19, 2018) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>Monte Carlo simulations</TITLE>
+<META NAME="description" CONTENT="Monte Carlo simulations">
+<META NAME="keywords" CONTENT="manual">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131198421-1"><
+/script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-131198421-1');
+</script>
+
+<LINK REL="STYLESHEET" HREF="manual.css">
+
+<LINK REL="next" HREF="node28.html">
+<LINK REL="previous" HREF="node20.html">
+<LINK REL="next" HREF="node25.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node25.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node17.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node23.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node25.html">General input parameters</A>
+<B> Up:</B> <A
+ HREF="node17.html">User guide</A>
+<B> Previous:</B> <A
+ HREF="node23.html">Output of MAPS</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A ID="SECTION00540000000000000000">
+Monte Carlo simulations</A>
+</H1>
+
+<P>
+The <SPAN style="font-family:monospace">emc2</SPAN> code implements semi-grand canonical Monte Carlo simulations [<A
+ HREF="node30.html#newman:mc">16</A>,<A
+ HREF="node30.html#binder:mc">2</A>,<A
+ HREF="node30.html#dunweg:mc">8</A>,<A
+ HREF="node30.html#laradji:mc">15</A>], where the total number
+of atoms is kept fixed, while the concentration is allowed to adapt to an externally imposed difference in the chemical potential of the two types of atoms. The chemical potential
+difference will be simply referred to as the &ldquo;chemical potential&rdquo; in what follows.
+This ensemble offers the advantage that, for any imposed chemical potential, the equilibrium
+state of the system is a single phase equilibrium, free of interfaces.<A ID="tex2html39"
+  HREF="footnode.html#foot1427"><SUP><SPAN CLASS="arabic">5</SPAN>.<SPAN CLASS="arabic">3</SPAN></SUP></A>It also simplifies the process of calculating free energies through thermodynamic integration.
+While a detailed description of the algorithm underlying this code can be found in [<A
+ HREF="node30.html#avdw:emc2">22</A>],
+the current section focuses on the practical usage of the code.
+
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A ID="CHILD_LINKS"><STRONG>Subsections</STRONG></A>
+
+<UL CLASS="ChildLinks">
+<LI><A ID="tex2html203"
+  HREF="node25.html">General input parameters</A>
+<LI><A ID="tex2html204"
+  HREF="node26.html">Examples</A>
+<LI><A ID="tex2html205"
+  HREF="node27.html">Interpreting the output files</A>
+</UL>
+<!--End of Table of Child-Links-->
+<BR><HR>
+<ADDRESS>
+avdw@alum.mit.edu Wed, Dec  6, 2023 12:55:16 PM
+</ADDRESS>
+</BODY>
+</HTML>

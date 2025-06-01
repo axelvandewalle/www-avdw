@@ -1,0 +1,59 @@
+<html>
+<head>
+<title>
+Alloy Theoretic Automated Toolkit (ATAT) Home Page
+</title>
+</head>
+<body>
+<H1>Alloy Theoretic Automated Toolkit (ATAT) Home Page</H1>
+
+<IMG SRC="atat.gif" ALT="[ATAT logo]" ALIGN=middle><P>
+
+ATAT is a generic name that refers to a collection of alloy theory tools
+developped by <A HREF="http://alum.mit.edu/www/avdw">Axel van de Walle</A>, in collaboration with various <A HREF="SUB:collaborators">research groups</A> and
+with various sources of <A HREF="SUB:finan">financial support</A>.<P>
+
+<a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nd/4.0/88x31.png" /></a><br />
+This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/">Creative Commons Attribution-NoDerivatives 4.0 International License</a>.
+More details regarding how the generic license terms applies in specific context of ATAT can be found <a href="SUB:licen">here</a>.<P>
+
+New!
+<UL>
+<LI> <A HREF="https://matsci.org/c/atat/67"><B>ATAT forum</B></A>
+<LI> <A HREF="https://alum.mit.edu/www/avdw/tdbdb.html"><B>The Thermodynamic DataBase DataBase (TDBDB)</B></A>: A search engine for openly available TDB (Thermodynamic DataBase) files.
+<LI> <B>New <a href="https://doi.org/10.1016/j.calphad.2017.05.005">software tool for high-throughput CALPHAD</a> (CALculation of PHAse Diagram) from first-principles: sqs2tdb</B> (included in ATAT).
+<LI> <A HREF="https://alum.mit.edu/www/avdw/sluschi.html">
+<B>New code for efficiently calculating melting points with ab initio methods: Solid Liquid in Ultra-Small Coexistence with Hovering Interface (SLUSCHI)</B></A>
+<LI> <A HREF="https://alum.mit.edu/www/avdw/sisyphus.html">
+<B>New accelerated molecular dynamics code: Stochastic Iterations to Strengthen Yield of Path Hopping over Upper States (SISYPHUS)</B></A>
+</UL>
+
+Download:
+<UL>
+<LI> <A HREF="SUB:atatstable"><B>Whole toolkit (Stable version)</B></A>
+<LI> <A HREF="SUB:atatrecent">Beta version of the latest update</A>
+<LI> Manual: <A HREF="manual/manual.html">[html]</A> <A HREF="manual.pdf">[pdf]</A> <A HREF="manual.dvi">[dvi]</A>
+<LI> Papers describing the algorithms in ATAT and its use:
+<UL>
+<LI><a href="https://doi.org/10.1016/j.calphad.2017.05.005">[New sqs2tdb tool for CALPHAD-type calculations]</a>
+<LI><a href="http://arxiv.org/abs/0906.1608">[New functionalities of ATAT]</a> 
+<LI><a href="http://arxiv.org/abs/cond-mat/0212159">[Overview of ATAT]</a> 
+<LI><a href="http://arxiv.org/abs/cond-mat/0201511">[the maps code]</a> 
+<LI><a href="http://arxiv.org/abs/cond-mat/0201473">[the emc2 code]</a>
+<LI><a href="http://dx.doi.org/10.1016/j.calphad.2013.06.006">[the mcsqs code]</a>
+<LI><a href="https://doi.org/10.1016/j.calphad.2017.05.005">[the sqs2tdb code]</a>
+</UL>
+<LI> References about ATAT <a href="references.bib">BibTeX file</a>.
+<LI> Slides of
+<UL>
+<LI> an invited talk at the <A HREF="atattalk.pdf">2002</A> TMS annual meetings,
+<LI> an invited talk at the <A HREF="ddf.ppt">2004</A> TMS annual meetings and 
+<LI> a plenary talk at the <a href="rappd06.pptx">2017 CALPHAD</a> meeting.
+</UL>
+<LI> A short <A HREF="tutorial">tutorial</A>.
+</UL>
+
+Report bugs, questions and suggestions to the new <A HREF="http://alum.mit.edu/www/avdw/forum">ATAT Forum</A>
+
+</body>
+</html>

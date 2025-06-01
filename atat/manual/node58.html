@@ -1,0 +1,105 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2018.3 (Released July 19, 2018) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>cellcvrt</TITLE>
+<META NAME="description" CONTENT="cellcvrt">
+<META NAME="keywords" CONTENT="manual">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131198421-1"><
+/script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-131198421-1');
+</script>
+
+<LINK REL="STYLESHEET" HREF="manual.css">
+
+<LINK REL="next" HREF="node59.html">
+<LINK REL="previous" HREF="node57.html">
+<LINK REL="next" HREF="node59.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node59.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node55.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node57.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node59.html">checkcell</A>
+<B> Up:</B> <A
+ HREF="node55.html">Command line options</A>
+<B> Previous:</B> <A
+ HREF="node57.html">apb</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H2><A ID="SECTION00823000000000000000">
+cellcvrt</A>
+</H2>
+<PRE>
+cellcvrt 3.48, by Axel van de Walle
+Performs various conversions/changes on structure (or lattices).
+Reads from stdin, writes to stdout.
+    -c            Use cartesian coordinates (Default: Off)
+    -f            Use fractional coordinates (Default: Off)
+   -cc            Find conventional cell and use it as coordinate system (Default: Off)
+  -abc            Use a b c alpha beta gamma format to specify axes (Default: Off)
+-noabc            Use cartesian format to specify the axes (the default) (Default: Off)
+   -ro            Read fractional Occupation (Default: Off)
+    -u=[string]   User-specified coordinate system input file (optional) (Default: )
+  -uss=[string]   User-specified supercell (Default: )
+   -ss=[int]      Simple supercell (multiple of axes in all directions) (Default: 0)
+   -fc            Fix cell (to make it as symmetric as possible) (Default: Off)
+    -s            Look for smaller unit cell (Default: Off)
+   -sh=[string]   Shift all atoms (default 0,0,0).
+   -ja=[real]     Jitter all atoms positions by a random amount less than specified (Default: 0)
+   -jc=[real]     Jitter all cell parameters by a random amount less than the fraction specified 
+                     (Default: 0)
+   -sd=[int]      Seed for random number generation (default: use clock)
+   -sg=[string]   Space group file (Default: )
+  -gsg            Generate Space Group (Default: Off)
+   -wi            Wrap all atoms inside unit cell (Default: Off)
+  -wiu            Wrap all atoms inside unit cell and undo shift (Default: Off)
+   -rr            Remove redundant atoms (Default: Off)
+  -rra            Remove redundant atoms and average (Default: Off)
+   -ar            Add redundant atoms (Default: Off)
+  -osf=[string]   Original setting file (optional) (Default: )
+  -fsf=[string]   Final setting file (optional) (Default: )
+    -r            Print reciprocal unit cell (Default: Off)
+   -fs=[int]      Index of first structure to process (default: 1)
+   -ns=[int]      Number of structures to process (Default: 2147483647)
+  -slf=[string]   Structure list file (Default: )
+   -pn            Print the number of atoms in the structure only (Default: Off)
+   -pv            Print volume of cell only (Default: Off)
+  -sym            Print spacegroup (Default: Off)
+  -ppg            Print point group name (Default: Off)
+  -pbv            Print Bravais Lattice name (Default: Off)
+   -sc=[real]     Scale factor (default: 1)
+  -sig=[int]      Number of significant digits to print in output files (Default: 6)
+    -z=[real]     Tolerance for checking overlap (Default 1e-3)
+</PRE>
+<BR><HR>
+<ADDRESS>
+avdw@alum.mit.edu Wed, Dec  6, 2023 12:55:16 PM
+</ADDRESS>
+</BODY>
+</HTML>

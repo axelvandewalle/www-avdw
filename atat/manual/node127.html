@@ -1,0 +1,171 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2018.3 (Released July 19, 2018) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>FAQ</TITLE>
+<META NAME="description" CONTENT="FAQ">
+<META NAME="keywords" CONTENT="manual">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131198421-1"><
+/script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-131198421-1');
+</script>
+
+<LINK REL="STYLESHEET" HREF="manual.css">
+
+<LINK REL="next" HREF="node128.html">
+<LINK REL="previous" HREF="node126.html">
+<LINK REL="next" HREF="node128.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node128.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node125.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node126.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node128.html">Common mistakes</A>
+<B> Up:</B> <A
+ HREF="node125.html">Troubleshooting</A>
+<B> Previous:</B> <A
+ HREF="node126.html">Forum</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A ID="SECTION00920000000000000000">
+FAQ</A>
+</H1>
+
+<P>
+<B>Q. </B>I can do a least-squares by hand with a much lower mean square error (MSE) than MAPS can. Yet, you claim that MAPS
+is &ldquo;optimal&rdquo;. How is this possible?
+
+<P>
+<B>A. </B>The MSE is not a very good measure of the predictive power of a cluster expansion.
+It can be made arbitrarily close to zero but merely including enough ECI in the fit!
+But having a small MSE is no guarantee that the error on the predicted energy of structures not inlcuded
+in the fit is small. The cross-validation (CV) score, which is used in MAPS, is a better measure of the predictive
+power of a least-squares fit. The CV score does not systematically decrease as the number of ECI increases
+and it has been shown that choosing the number of ECI such that the CV score is minimized is an asymptotically
+optimal strategy. Researchers often have a tendency to use too many ECI because this appears to reduce the error, but this
+is a illusion. MAPS gives you an unbiased estimaqte of the prediction error, and the magnitude of that number is larger
+than many would like to believe.
+
+<P>
+<B>Q. </B>MAPS is frozen. What is going on?
+
+<P>
+<B>A. </B>MAPS sometimes needs a few minutes to generates new clusters or structures. This is a complex operation, be patient.
+This generation can occur in the middle of the calculations (finding the best cluster expansion or the best structures)
+because MAPS only generates these clusters or structures when they are needed.
+
+<P>
+<B>Q. </B>Where are the results?
+
+<P>
+<B>A. </B>In a variety of files whose descriptions you can view by typing <SPAN style="font-family:monospace">maps -h | more</SPAN>. A utility called <SPAN style="font-family:monospace">mapsrep</SPAN>
+lets you display the most useful output data using <SPAN style="font-family:monospace">gnuplot</SPAN>.
+
+<P>
+<B>Q. </B>What files do I need to get started with MAPS?
+
+<P>
+<B>A. </B>A <SPAN style="font-family:monospace">lat.in</SPAN> files to specify the geometry of the lattice and a &ldquo;wrapping&rdquo; file that specifies the parameters
+of the first-principles code. If you are using vasp, this file is usually called <SPAN style="font-family:monospace">vasp.wrap</SPAN>. Examples of those
+files can be found in the <SPAN style="font-family:monospace">example</SPAN> directory.
+
+<P>
+<B>Q. </B>I already have structures and energies. What if I just want to fit them?
+
+<P>
+<B>A. </B>You need a <SPAN style="font-family:monospace">lat.in</SPAN> files to specify the geometry of the lattice and you need to create
+one subdirectory for each structure (name them as you which). In each subdirectory, you need a
+<SPAN style="font-family:monospace">str.out</SPAN> file to specify the geometry of the structure and an <SPAN style="font-family:monospace">energy</SPAN> file to indicate the
+energy of that structure. For the format of those files, type <SPAN style="font-family:monospace">maps -h | more</SPAN>. Note that the
+energy must per unit cell of the structure (not the lattice).
+
+<P>
+<B>Q. </B>When I type <SPAN style="font-family:monospace">maps</SPAN> I only get the command line option help. How can I run it?
+
+<P>
+<B>A. </B>Type <SPAN style="font-family:monospace">maps -d</SPAN> to use all the default options. You can also specify any option you want.
+Either way, the help message will not be displayed and the code will run.
+If the help is still displayed, it is because there is an error in the options you specified.
+
+<P>
+<B>Q. </B>When I superimpose the energies of <SPAN style="font-family:monospace">fit.out</SPAN> with the energies obtained from the Monte Carlo code, I can see
+that they don't match. What is happening?
+
+<P>
+<B>A. </B>The &ldquo;energies&rdquo; given by the Monte Carlo code are in fact <SPAN CLASS="MATH"><IMG STYLE="height: 2.17ex; vertical-align: -0.57ex; " SRC="img69.png"
+ ALT="$E-\mu x$"></SPAN> so you need to add <SPAN CLASS="MATH"><IMG STYLE="height: 1.61ex; vertical-align: -0.57ex; " SRC="img62.png"
+ ALT="$\mu x$"></SPAN> to get the true energy. Use the <SPAN style="font-family:monospace">-g2c</SPAN> option to tell the Monte Carlo code to output the true energy.
+
+<P>
+<B>Q. </B>How can I verify that the structures do not relax to a superstructure of a different type of lattice (e.g. fcc becoming bcc)?
+
+<P>
+<B>A. </B>Run the utility called <SPAN style="font-family:monospace">checkrelax</SPAN>. It will give you a list all structures along with a measure of the strain they each experienced
+during relaxation.
+
+<P>
+<B>Q. </B>When I look at the calculated and fitted energies in the <SPAN style="font-family:monospace">fit.out</SPAN> file there are structures where the difference
+is very large.
+
+<P>
+<B>A. </B>Make sure that these structures have properly relaxed. A common problem is to start the first-principles calculations
+with an unrelaxed geometry where the atoms are too close to one another. Restart the energy calculations of the offending structures
+by using larger starting volumes.
+
+<P>
+<B>Q. </B>My input files seem correct but ATAT utilities crash while reading them.
+
+<P>
+<B>A. </B>Make sure your files have unix-style end-of-lines. The <SPAN style="font-family:monospace">fixeol -u yourinputfile</SPAN> command should fix that issue.
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A
+ HREF="node128.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node125.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node126.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node128.html">Common mistakes</A>
+<B> Up:</B> <A
+ HREF="node125.html">Troubleshooting</A>
+<B> Previous:</B> <A
+ HREF="node126.html">Forum</A></DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+avdw@alum.mit.edu Wed, Dec  6, 2023 12:55:16 PM
+</ADDRESS>
+</BODY>
+</HTML>

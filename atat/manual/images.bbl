@@ -1,0 +1,168 @@
+\begin{thebibliography}{10}
+
+\bibitem{asta:fppheq}
+M.~Asta, V.~Ozolins, and C.~Woodward.
+\newblock A first-principles approach to modeling alloy phase equilibria.
+\newblock {\em JOM - Journal of the Minerals Metals {\&} Materials Society},
+  53:16, 2001.
+
+\bibitem{binder:mc}
+K.~Binder and D.~W. Heermann.
+\newblock {\em Monte Carlo Simulation in Statistical Physics}.
+\newblock Springer-Verlag, New York, 1988.
+
+\bibitem{ceder:oxides}
+G.~Ceder, A.~van~der Ven, C.~Marianetti, and D.~Morgan.
+\newblock First-principles alloy theory in oxides.
+\newblock {\em Modelling Simul. Mater Sci Eng.}, 8:311, 2000.
+
+\bibitem{collwill:fit}
+J.~W. Connolly and A.~R. Williams.
+\newblock Density-functional theory applied to phase transformations in
+  transition-metal alloys.
+\newblock {\em Phys. Rev. B}, 27(8):5169, 1983.
+
+\bibitem{fontaine:clusapp}
+D.~de~Fontaine.
+\newblock Cluster approach to order-disorder transformation in alloys.
+\newblock {\em Solid State Phys.}, 47:33, 1994.
+
+\bibitem{ducastelle:book}
+F.~Ducastelle.
+\newblock {\em Order and Phase Stability in Alloys}.
+\newblock Elsevier Science, New York, 1991.
+
+\bibitem{ducastelle:gpm}
+F.~Ducastelle and F.~Gautier.
+\newblock Generalized perturbation-theory in disordered transitional alloys ---
+  application to calculation of ordering energies.
+\newblock {\em Journal of Physics F --- Metal Physics}, 6:2039, 1976.
+
+\bibitem{dunweg:mc}
+B.~D{\"u}nweg and D.~P. Landau.
+\newblock Phase diagram and critical behavior of the si-ge unmixing transition:
+  A monte carlo study of a model with elastic degrees of freedom.
+\newblock {\em Phys. Rev. B}, 48:14182, 1993.
+
+\bibitem{gdg:linfit}
+G.~D. Garbulksy and G.~Ceder.
+\newblock Linear-programming method for obtaining effective cluster
+  interactions in alloys from total-energy calculations: application to the fcc
+  pd-v system.
+\newblock {\em Phys. Rev. B}, 51(1):67, 1995.
+
+\bibitem{kikuchi:cvm}
+R.~Kikuchi.
+\newblock A theory of cooperative phenomena.
+\newblock {\em Phys. Rev.}, 81:988, 1951.
+
+\bibitem{afk:lte}
+A.~F. Kohan, P.~D. Tepesch, G.~Ceder, and C.~Wolverton.
+\newblock Computation of alloy phase diagrams at low temperatures.
+\newblock {\em Comput. Mater. Sci.}, 9:389, 1998.
+
+\bibitem{kresse:vasp2}
+G.~Kresse and J.~Furthm{\"u}ller.
+\newblock Efficiency of ab-initio total energy calculations for metals and
+  semiconductors using a plane-wave basis set.
+\newblock {\em Comput. Mater. Sci.}, 6:15, 1996.
+
+\bibitem{kresse:vasp1}
+G.~Kresse and J.~Furthm{\"u}ller.
+\newblock Efficient iterative schemes for ab initio total-energy calculations
+  using a plane-wave basis set.
+\newblock {\em Phys. Rev. B}, 54:11169, 1996.
+
+\bibitem{laks:recip}
+D.~B. Laks, L.~G. Ferreira, S.~Froyen, and A.~Zunger.
+\newblock Efficient cluster expansion for substitutional systems.
+\newblock {\em Physical Review B}, 46:12587, 1992.
+
+\bibitem{laradji:mc}
+M.~Laradji, D.~P. Landau, and B.~D{\"u}nweg.
+\newblock Structural properties of {Si$_{1-x}$Ge$_x$} alloys: A monte carlo
+  simulation with the stillinger-weber potential.
+\newblock {\em Phys. Rev. B}, 51:4894, 1995.
+
+\bibitem{newman:mc}
+M.~E.~J. Newman and G.~T. Barkema.
+\newblock {\em Monte Carlo Methods in Statistical Physics}.
+\newblock Clarendon Press, Oxford, 1999.
+
+\bibitem{ozolins:noble}
+V.~Ozoli{\c{n}}{\v{s}}, C.~Wolverton, and A.~Zunger.
+\newblock Cu-au, ag-au, cu-ag, and ni-au intermetallics: First-principles study
+  of temperature-composition phase diagrams and structures.
+\newblock {\em Phys. Rev. B}, 57:6427, 1998.
+
+\bibitem{sanchez:cexp}
+J.~M. Sanchez, F.~Ducastelle, and D.~Gratias.
+\newblock Generalized cluster description of multicomponent systems.
+\newblock {\em Physica}, 128A:334, 1984.
+
+\bibitem{singleton:fft}
+R.C. Singleton.
+\newblock An algorithm for computing the mixed radix fast fourier transform.
+\newblock {\em {IEEE} Transactions On Audio And Electroacoustics}, AU-17:93,
+  1969.
+
+\bibitem{sluiter:cvmcode}
+M.~H. Sluiter.
+\newblock Imr-cvm code, 2000.
+\newblock http://www-lab.imr.tohoku.ac.jp/\~{ }marcel/cvm/cvm.html.
+
+\bibitem{turchi:gpm}
+P.~E.~A Turchi.
+\newblock In J.~H. Westbrook and R.~L. Fleisher, editors, {\em Intermetallic
+  Compounds: Principles and Practice}, volume~1, page~21, New York, 1995. John
+  Wiley.
+
+\bibitem{avdw:emc2}
+A.~van~de Walle and M.~D. Asta.
+\newblock Self-driven lattice-model monte carlo simulations of alloy
+  thermodynamic properties and phase diagrams.
+\newblock {\em Model. Simul. Mater. Sc.}, 10:521, 2002.
+
+\bibitem{avdw:atat}
+A.~van~de Walle, M.~D. Asta, and G.~Ceder.
+\newblock {{}}{T}he {A}lloy {T}heoretic {A}utomated {T}oolkit: {A} user guide.
+\newblock {\em Calphad}, 26:539--553, 2002.
+
+\bibitem{avdw:maps}
+A.~van~de Walle and G.~Ceder.
+\newblock Automating first-principles phase diagram calculations.
+\newblock {\em J. Phase Equilib.}, 23:348--359, 2002.
+
+\bibitem{vanderven:licoo2}
+A.~van~der Ven, M.~K. Aydinol, G.~Ceder, G.~Kresse, and J.~Hafner.
+\newblock First-principles investigation of phase stability in
+  li{$_x$}coo{$_2$}.
+\newblock {\em Phys. Rev. B}, 58:2975, 1998.
+
+\bibitem{wolverton:srorev}
+C.~Wolverton, V.~Ozoli{\c{n}}{\v{s}}, and A.~Zunger.
+\newblock Short-range-order types in binary alloys: a reflection of coherent
+  phase stability.
+\newblock {\em J. Phys.: Condens. Matter}, 12:2749, 2000.
+
+\bibitem{woodward:sgce}
+C.~Woodward, M.~Asta, G.~Kresse, and J.~Hafner.
+\newblock Density of constitutional and thermal point defects in {L1$_{2}$}
+  {Al$_{3}$Sc}.
+\newblock {\em Phys. Rev. B}, 63:094103, 2001.
+
+\bibitem{zunger:NATO}
+A.~Zunger.
+\newblock First principles statistical mechanics of semiconductor alloys and
+  intermetallic compounds.
+\newblock In P.~E. Turchi and A.~Gonis, editors, {\em NATO ASI on Statics and
+  Dynamics of Alloy Phase Transformation}, volume 319, page 361, New York,
+  1994. Plenum Press.
+
+\bibitem{zunger:scord}
+A.~Zunger.
+\newblock Spontaneous atomic ordering in semiconductor alloys: Causes,
+  carriers, and consequences.
+\newblock {\em MRS Bull.}, 22:20, 1997.
+
+\end{thebibliography}

@@ -1,0 +1,192 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2018.3 (Released July 19, 2018) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>Examples</TITLE>
+<META NAME="description" CONTENT="Examples">
+<META NAME="keywords" CONTENT="manual">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131198421-1"><
+/script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-131198421-1');
+</script>
+
+<LINK REL="STYLESHEET" HREF="manual.css">
+
+<LINK REL="next" HREF="node27.html">
+<LINK REL="previous" HREF="node25.html">
+<LINK REL="next" HREF="node27.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node27.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node24.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node25.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node27.html">Interpreting the output files</A>
+<B> Up:</B> <A
+ HREF="node24.html">Monte Carlo simulations</A>
+<B> Previous:</B> <A
+ HREF="node25.html">General input parameters</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H2><A ID="SECTION00542000000000000000">
+Examples</A>
+</H2>
+
+<P>
+We now give simple examples of the usage of these commands. Consider the calculation
+of the free energy of the phase associated with ground state number <SPAN CLASS="MATH"><IMG STYLE="height: 1.54ex; vertical-align: -0.12ex; " SRC="img55.png"
+ ALT="$1$"></SPAN> as a function of concentration and temperature. Then, the required commands could, for instance, be
+<table width="90%"><tr><td valign="top">&nbsp;<SPAN style="font-family:monospace">emc2 -gs=1 -mu0=1.5 -mu1=0.5 -dmu=0.04 -T0=300 -T1=5000 -dT=50 -k=8.617e-5 -dx=1e-3 -er=50 -innerT -o=mc10.out</SPAN></td></tr>
+<tr><td valign="top">&nbsp;<SPAN style="font-family:monospace">emc2 -gs=1 -mu0=1.5 -mu1=2.5 -dmu=0.04 -T0=300 -T1=5000 -dT=50 -k=8.617e-5 -dx=1e-3 -er=50 -innerT -o=mc12.out</SPAN>
+</td></tr></table>
+
+(The only difference in the two command lines is the value of <SPAN style="font-family:monospace">-mu1</SPAN> and the
+output file name, specified by the <SPAN style="font-family:monospace">-o</SPAN> option.)
+These commands separately compute the two &ldquo;halfs&rdquo; of the free energy surface, corresponding to
+the values of the chemical potential below and above the &ldquo;middle&rdquo; value of <SPAN CLASS="MATH"><IMG STYLE="height: 1.61ex; vertical-align: -0.12ex; " SRC="img56.png"
+ ALT="$1.5$"></SPAN> 
+which stabilizes ground state <SPAN CLASS="MATH"><IMG STYLE="height: 1.54ex; vertical-align: -0.12ex; " SRC="img55.png"
+ ALT="$1$"></SPAN> at absolute zero. 
+This natural separation allows you to run each half calculation on a separate processor
+and obtain the results in half the time.
+The values of <SPAN style="font-family:monospace">-dmu</SPAN>, <SPAN style="font-family:monospace">-dT</SPAN>, <SPAN style="font-family:monospace">-dx</SPAN> and <SPAN style="font-family:monospace">-er</SPAN> given here are typical
+values. The user should ensure that these values are such that the results are converged.
+Note that, thanks to the way these precisions parameters are input, if satisfying values
+have been found for one simulation, the same values will provide a comparable accuracy
+for other simulations of the same system.
+The option <SPAN style="font-family:monospace">-innerT</SPAN> indicates that the inner loop of the sequence of simulations scans the temperature axis while the outer loop scans the chemical potential.
+In this fashion, the point of highest temperature in the region of stability of the phase will be known early during the calculations.
+If the user is more interested in obtaining solubility limits early on, this option can be omitted and the inner loop with scan the chemical potential axis.
+In either cases, the code exits the inner loop (and the outer loop, if appropriate) when it encounters a phase transition.
+
+<P>
+The <SPAN style="font-family:monospace">emc2</SPAN> code thus enables the automated calculation of the whole free energy surface of a given phase,
+as illustrated in Figure <A HREF="#mcout">5.4</A>a. Such free energy surfaces can be used as an input to construct thermodynamic databases or supplement
+existing ones. To facilitate this process, a utility that converts the output of <SPAN style="font-family:monospace">emc2</SPAN> into input files for the fitting module of ThermoCalc is provided.
+
+<P>
+
+<DIV class="CENTER"><A ID="mcout"></A><A ID="1964"></A>
+<TABLE>
+<CAPTION class="BOTTOM"><STRONG>Figure 5.4:</STRONG>
+Output of Monte Carlo codes. a) The <SPAN style="font-family:monospace">emc2</SPAN> provides free energy surfaces as a function of temperature <SPAN CLASS="MATH"><IMG STYLE="height: 1.61ex; vertical-align: -0.12ex; " SRC="img1.png"
+ ALT="$T$"></SPAN> and composition <SPAN CLASS="MATH"><IMG STYLE="height: 1.12ex; vertical-align: -0.12ex; " SRC="img2.png"
+ ALT="$x$"></SPAN>.
+(For clarity, the common tangent construction (thick lines) is drawn over the calculated free energy.)
+b) The <SPAN style="font-family:monospace">phb</SPAN> command generates temperature-composition phase diagrams. The calculational details
+underlying these results can be found in [<A
+ HREF="node30.html#avdw:maps">24</A>,<A
+ HREF="node30.html#avdw:emc2">22</A>]</CAPTION>
+<TR><TD>
+<DIV CLASS="centerline" ID="par5560" ALIGN="CENTER">
+<IMG STYLE=""
+ SRC="img57.png"
+ ALT="\includegraphics[width=1.0\textwidth]{mcout}"></DIV></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+While the above examples focus on the calculation of a phase's thermodynamic
+properties over its whole region of stability, one may be interested in directly computing
+the temperature-composition phase boundary without first constructing a full free energy surface. To accomplish this task, a typical command-line for the <SPAN style="font-family:monospace">phb</SPAN> program would be
+<table width="90%"><tr><td valign="top">&nbsp;<SPAN style="font-family:monospace">phb -gs1=0 -gs2=1 -dT=25 -dx=1e-3 -er=50 -k=8.617e-5 -ltep=5e-3 -o=ph01.out</SPAN></td></tr></table>
+
+This command computes the two phase equilibrium between phase 0 and phase 1,
+starting at absolute zero and incrementing temperature in steps of <SPAN CLASS="MATH"><IMG STYLE="height: 1.61ex; vertical-align: -0.12ex; " SRC="img58.png"
+ ALT="$25$"></SPAN> K.
+(The <SPAN style="font-family:monospace">-ltep</SPAN> option indicates that a Low Temperature Expansion (LTE)
+should be used instead of Monte Carlo simulation whenever its precision is 
+better than <!-- MATH
+ $5\times 10^{-3}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.03ex; vertical-align: -0.31ex; " SRC="img59.png"
+ ALT="$5\times 10^{-3}$"></SPAN> eV.)
+The output file <SPAN style="font-family:monospace">ph01.out</SPAN> contains the temperature-composition phase boundary
+of interest, as well as the chemical potential stabilizing the two-phase equilibrium
+as a function of temperature. This output can be used to generate phase diagrams,
+as illustrated in Figure <A HREF="#mcout">5.4</A>b.
+
+<P>
+The program automatically terminates when the &ldquo;end&rdquo;
+of the two-phase equilibrium has been reached. If the two-phase equilibrium disappears because
+of the appearance of a third phase, two new two-phase equilibria have to be separately
+calculated. To do so, one uses the final temperature <SPAN CLASS="MATH"><IMG STYLE="height: 1.61ex; vertical-align: -0.12ex; " SRC="img1.png"
+ ALT="$T$"></SPAN> and chemical potential <SPAN CLASS="MATH"><IMG STYLE="height: 1.61ex; vertical-align: -0.57ex; " SRC="img54.png"
+ ALT="$\mu$"></SPAN> given in
+the output file as a starting point for two new <SPAN style="font-family:monospace">phb</SPAN> runs:
+<table width="90%"><tr><td valign="top">&nbsp;<SPAN style="font-family:monospace">phb -T=</SPAN><SPAN CLASS="MATH"><IMG STYLE="height: 1.61ex; vertical-align: -0.12ex; " SRC="img1.png"
+ ALT="$T$"></SPAN> <SPAN style="font-family:monospace">-mu=</SPAN><SPAN CLASS="MATH"><IMG STYLE="height: 1.61ex; vertical-align: -0.57ex; " SRC="img54.png"
+ ALT="$\mu$"></SPAN><SPAN style="font-family:monospace">-gs1=0 -gs2=-1 -dT=25 -dx=1e-3 -er=50 -k=8.617e-5 -o=ph0d.out</SPAN></td></tr>
+<tr><td valign="top">&nbsp;<SPAN style="font-family:monospace">phb -T=</SPAN><SPAN CLASS="MATH"><IMG STYLE="height: 1.61ex; vertical-align: -0.12ex; " SRC="img1.png"
+ ALT="$T$"></SPAN> <SPAN style="font-family:monospace">-mu=</SPAN><SPAN CLASS="MATH"><IMG STYLE="height: 1.61ex; vertical-align: -0.57ex; " SRC="img54.png"
+ ALT="$\mu$"></SPAN><SPAN style="font-family:monospace">-gs1=-1 -gs2=1 -dT=25 -dx=1e-3 -er=50 -k=8.617e-5 -o=phd1.out</SPAN>
+</td></tr></table>
+
+In the above example, it is assumed that the new phase appearing is the disordered phase (indicated by the number <SPAN CLASS="MATH"><IMG STYLE="height: 1.54ex; vertical-align: -0.31ex; " SRC="img6.png"
+ ALT="$-1$"></SPAN>), which will usually be the case.
+Of course, it is also possible that a given two-phase equilibrium terminates because one of the
+two phases disappears. In this case, only one new calculation needs to be started, as in
+the following example:
+<table width="90%"><tr><td valign="top">&nbsp;<SPAN style="font-family:monospace">phb -T=</SPAN><SPAN CLASS="MATH"><IMG STYLE="height: 1.61ex; vertical-align: -0.12ex; " SRC="img1.png"
+ ALT="$T$"></SPAN><SPAN style="font-family:monospace">-mu=</SPAN><SPAN CLASS="MATH"><IMG STYLE="height: 1.61ex; vertical-align: -0.57ex; " SRC="img54.png"
+ ALT="$\mu$"></SPAN><SPAN style="font-family:monospace">-gs1=0 -gs2=2 -dT=25 -dx=1e-3 -er=50 -k=8.617e-5 -o=phd1.out</SPAN>
+</td></tr></table>
+
+Note that phase <SPAN CLASS="MATH"><IMG STYLE="height: 1.54ex; vertical-align: -0.12ex; " SRC="img55.png"
+ ALT="$1$"></SPAN> has been replaced by phase <SPAN CLASS="MATH"><IMG STYLE="height: 1.54ex; vertical-align: -0.12ex; " SRC="img48.png"
+ ALT="$2$"></SPAN>. Finally, it is also possible that the two-phase equilibrium
+terminates because the concentration of each phase converges to the same value, a situation
+which requires no further calculations.
+The user can easily distinguish these three cases by merely comparing the
+final composition of each phase.
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A
+ HREF="node27.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node24.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node25.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node27.html">Interpreting the output files</A>
+<B> Up:</B> <A
+ HREF="node24.html">Monte Carlo simulations</A>
+<B> Previous:</B> <A
+ HREF="node25.html">General input parameters</A></DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+avdw@alum.mit.edu Wed, Dec  6, 2023 12:55:16 PM
+</ADDRESS>
+</BODY>
+</HTML>

@@ -1,0 +1,144 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2018.3 (Released July 19, 2018) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>cvmclus</TITLE>
+<META NAME="description" CONTENT="cvmclus">
+<META NAME="keywords" CONTENT="manual">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131198421-1"><
+/script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-131198421-1');
+</script>
+
+<LINK REL="STYLESHEET" HREF="manual.css">
+
+<LINK REL="next" HREF="node38.html">
+<LINK REL="previous" HREF="node36.html">
+<LINK REL="next" HREF="node38.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node38.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node33.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node36.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node38.html">emc2</A>
+<B> Up:</B> <A
+ HREF="node33.html">Man pages</A>
+<B> Previous:</B> <A
+ HREF="node36.html">cv</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H2><A ID="SECTION00814000000000000000"></A><A ID="mancvmclus"></A>
+<BR>
+cvmclus
+</H2>
+<PRE>
+This code generates all the input coefficients needed to construct the CVM (Cluster Variation Method) entropy expression.
+
+S= - k_Boltzmann sum_c k_c sum_j m_{j,c} rho_{j,c} ln(rho_{j,c})
+
+where
+   rho_{.,c} = V_c xi (this is a matrix * vector multiplication)
+   
+and where
+  c: symmetrically distinct clusters (a cluster is just a set of sites)
+  j: symmetrically distinct configurations on c
+  k_c: Kikuchi-Barker coefficients for cluster c
+  m_{j,c}: multiplicity for configuration j on cluster c.
+  rho_{j,c}: probability for configuration j on cluster c.
+  rho_{.,c}: vector of rho_{j,c} for a fixed c.
+  V_c: v-matrix for cluster c
+  xi: vector of all correlations for all clusters considered
+       (including possible functions on each sites for systems beyond binary).
+
+It takes as an input
+(1) a lattice (by default in lat.in) in a format identical to (m)maps.
+    (See corrdump -h for a description.)
+(2) a maximal cluster (by default in maxclus.in) defined by a list of sites,
+    expressed in the coordinate system defined by the first lines of lat.in.
+    Multiple maximal clusters can be specified, separated by a line containing
+    only the word 'end'.
+
+It produces as an output:
+(1) clusters.out, the list of all symmetrically distinct subclusters of the maximal cluster,
+     in the standard ATAT format (See corrdump -h for a description.)
+     These include not only the set of sites but also, for systems beyond binaries, possible functions
+     on each sites of the subclusters, so one set of sites may appear more than once.
+
+(2) clusmult.out, the multiplicities (per unit cell) for each clusters given in (i).
+    The file starts with the number of clusters and then lists their multiplicities.
+    (That information in in (i) too, but they are separated out here for convenience.
+    This is not needed for the CVM entropy, only for the energy expression:
+        E = sum_q J_q mu_q xi_q
+      where q is a cluster with functions (for beyond binary)
+            J_q are the Effective Cluster Interations (not provided by this code)
+	    xi_q is the correlation associated with q (one element of xi_q)
+	    mu_q are in clusmult.out
+    
+(3) config.out, the list of all configurations on each of the clusters.
+    (Note that there may be fewer clusters than in clusters.out because, here, we only consider
+    sets of sites without possible different functions acting on them.)
+    Format:
+     [nb of clusters n]
+     repeated for each of the n clusters:
+      [nb of config c for current cluster]
+      repeat for each of the c config:
+       [number of sites in the cluster]
+       repeat for each site:
+        [coordinates of the site] [occupation: as a integer in {0,...,k-1}] [k]
+     (indentation is for clarity - the actual file is not indented.)	
+
+(4)  vmat.out, the `v-matrix'. There is one v-matrix per cluster and
+     each v-matrix has different correlations along columns and different configurations along rows
+     the order is the same as in clusters.out and config.out. Format:
+     [nb of clusters n]
+     repeated for each of the n clusters:
+      [number of rows (config)] [number of columns (clusters)]
+      [vmatrix, each column separated by space and each row separated by newlines]
+
+(5)  configmult.out, the multiplicities of the configurations on each cluster. Format:
+     [number of clusters n]
+     repeat for each of the n clusters:
+      [number of config c on current cluster]
+      for each of the c config:
+       [the multiplicity of the current config]
+     Note: the same order as in config.out is used.
+
+(6)  configkb.out, the Kikuchi-Barker coefficients of each cluster. Format:
+     [number of clusters n]
+     repeat for each of the n clusters:
+       [Kikuchi-Barker coefficient]
+     Note: the same order as in config.out is used.
+</PRE>
+
+<P>
+<BR><HR>
+<ADDRESS>
+avdw@alum.mit.edu Wed, Dec  6, 2023 12:55:16 PM
+</ADDRESS>
+</BODY>
+</HTML>

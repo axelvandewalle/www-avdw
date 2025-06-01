@@ -1,0 +1,100 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2018.3 (Released July 19, 2018) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>Version History and Bugs</TITLE>
+<META NAME="description" CONTENT="Version History and Bugs">
+<META NAME="keywords" CONTENT="manual">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131198421-1"><
+/script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-131198421-1');
+</script>
+
+<LINK REL="STYLESHEET" HREF="manual.css">
+
+<LINK REL="next" HREF="node17.html">
+<LINK REL="previous" HREF="node7.html">
+<LINK REL="next" HREF="node17.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node17.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="manual.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node15.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node17.html">User guide</A>
+<B> Up:</B> <A
+ HREF="manual.html">The Alloy-Theoretic Automated Toolkit</A>
+<B> Previous:</B> <A
+ HREF="node15.html">Interfacing MAPS with other</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A ID="SECTION00400000000000000000">
+Version History and Bugs</A>
+</H1>
+<PRE>
+1.50:
+	constituent strain
+	allow any structure names
+	allow new structures to be added at all times
+
+1.66:
+	unit cell in 'symmetric' form, ready for ab-initio codes
+	constituent strain fitting code
+	temperature-dependent ECI in Monte Carlo code
+	manual in tex/html
+	reciprocal space Monte-Carlo (BETA)
+	easy-to-configure job control scripts
+
+2.03:
+	vibrational and electronic entropy included.
+
+2.50:
+	mixed canonical/grandcanonical multicomponent monte carlo
+
+2.53:
+	reciprocal space multicomponent monte carlo (for electrostatics)
+
+2.54:
+	automated patching system for c++ language qwirks
+
+2.70:
+	tensorial/generalized cluster expansion (gce utility)
+
+2.71:
+	fixed bug in multisublattice structure enumeration routine
+	(only affects cases where a pure translation maps one sublattice onto another:
+	omits some structures with lattice vector equal to one of the unit cell lattice vectors
+	cluster expansions not affected, but perhaps missed ground states or SQS, but unlikely)
+</PRE>
+
+<P>
+<BR><HR>
+<ADDRESS>
+avdw@alum.mit.edu Wed, Dec  6, 2023 12:55:16 PM
+</ADDRESS>
+</BODY>
+</HTML>

@@ -1,0 +1,200 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2018.3 (Released July 19, 2018) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>Without queueing systems</TITLE>
+<META NAME="description" CONTENT="Without queueing systems">
+<META NAME="keywords" CONTENT="manual">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131198421-1"><
+/script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-131198421-1');
+</script>
+
+<LINK REL="STYLESHEET" HREF="manual.css">
+
+<LINK REL="previous" HREF="node13.html">
+<LINK REL="next" HREF="node15.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node15.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node12.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node13.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node15.html">Interfacing MAPS with other</A>
+<B> Up:</B> <A
+ HREF="node12.html">Install and test the</A>
+<B> Previous:</B> <A
+ HREF="node13.html">With queueing systems</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H2><A ID="SECTION00322000000000000000">
+Without queueing systems</A>
+</H2>
+
+<P>
+We now cover the case where there is no queueing system and the user has
+full power to run on any of the nodes in the cluster.
+
+<P>
+Networking problems can be tricky and we will test various thing as we
+go along.  You only need to perform this installation on your "master"
+machine that will run maps.  All other machine (which we be called the
+&ldquo;remote&rdquo; machines) only need to have VASP (or any other ab-initio
+code).
+
+<P>
+Before you start, you must first make sure that it is possible to login from
+the master machine to the remote machines without entering a
+password. This is essential for the program to be able to run on its
+own, without your intervention.  Don't worry it is generally possible
+to do this without compromising the security of your system.
+Two commands allow you to run a command on a remote machine.
+If the master and remote machines are connected through a secure network
+(e.g. a beowolf cluster having its own local network)
+or if you don't care about security (for now), you can use <SPAN style="font-family:monospace">rsh</SPAN>.
+Otherwise, <SPAN style="font-family:monospace">ssh</SPAN> provides a secure way to command a machine remotely.
+
+<P>
+To set up <SPAN style="font-family:monospace">rsh</SPAN> so that you can login without typing a password, you
+must have the appropriate <SPAN style="font-family:monospace">.rhosts</SPAN> file on the remote machine.
+For more information, consult the <SPAN style="font-family:monospace">rsh</SPAN> man page. (One important
+issue, often not mentioned in the man pages, its that you need to set the file permissions
+of the <SPAN style="font-family:monospace">.rhosts</SPAN> file so that noone else but you has &ldquo;write&rdquo; permission:
+<SPAN style="font-family:monospace">chmod og-w ~/.rhosts</SPAN>).
+
+<P>
+To set up <SPAN style="font-family:monospace">ssh</SPAN> so that you can login without typing a password, consult the <SPAN style="font-family:monospace">ssh</SPAN> man page, especially the
+section on &ldquo;RSA-based host authentication&rdquo;. (This is the feature that makes
+the login secure even if no password is needed.) In general, setting this up
+involves creating a <SPAN style="font-family:monospace">.shosts</SPAN> file and generating a public key files to be
+copied onto the remote machines.
+
+<P>
+If your username is different on the remote machine and if you use <SPAN style="font-family:monospace">ssh</SPAN>, use the
+syntax <SPAN style="font-family:monospace">node username@host</SPAN> instead. If you use <SPAN style="font-family:monospace">rsh</SPAN>, use the syntax <SPAN style="font-family:monospace">node -l username host</SPAN>.
+
+<P>
+Once you are able to run either <SPAN style="font-family:monospace">rsh node2 ls</SPAN> or <SPAN style="font-family:monospace">ssh node2 ls</SPAN> and get the content of your
+home directory on the remote machine (assuming that you have a remote machine called <SPAN style="font-family:monospace">node2</SPAN>),
+you can proceed to the next step. Do you have the same home directory on the master and remote machines
+and does it have the same access path? To check this, <SPAN style="font-family:monospace">cd</SPAN> to some arbitrary subdirectory and type:
+<table width="90%"><tr><td valign="top">&nbsp;<SPAN style="font-family:monospace">node node2 ls</SPAN></td></tr></table>
+
+where <SPAN style="font-family:monospace">node</SPAN> is a command provided with ATAT and node2 is the name of the remote machine.
+If you want to use <SPAN style="font-family:monospace">ssh</SPAN> instead, type
+<table width="90%"><tr><td valign="top">&nbsp;<SPAN style="font-family:monospace">node -s node2 ls</SPAN></td></tr></table>
+
+This should print the content of the <EM>current</EM> directory on the master machine (not your home directory).
+If you get an error message or if you get the content of another directory, you will
+need to check if the following works. Make sure you are in a directory that does not contain
+too many files. If you want to use <SPAN style="font-family:monospace">rsh</SPAN>, type:
+<table width="90%"><tr><td valign="top">&nbsp;<SPAN style="font-family:monospace">node -r node2 ls</SPAN></td></tr></table>
+
+while if you want to use <SPAN style="font-family:monospace">ssh</SPAN>
+<table width="90%"><tr><td valign="top">&nbsp;<SPAN style="font-family:monospace">node -s -r node2 ls</SPAN></td></tr></table>
+
+In either case, you should get the content of the current directory before continuing on.
+The <SPAN style="font-family:monospace">node -r</SPAN> command works by copying the content of the current directory on the remote machine
+in a temporary directory. Once the command has terminated, the new content is copied back and the remote
+temporary directory is deleted.
+
+<P>
+We are now ready to automate the calculations. Type
+<table width="90%"><tr><td valign="top">&nbsp;<SPAN style="font-family:monospace">chl</SPAN></td></tr></table>
+
+and, as indicated on the screen, open the file <SPAN style="font-family:monospace">~/.machines.rc</SPAN> with a text editor.
+This file contains numerous comment lines explaining the format of the file and
+a few examples.
+
+<P>
+The commands in the first column (before the <SPAN style="font-family:monospace">+</SPAN>) must print a single number
+indicating the load of the machine. It is a good check to copy and paste each
+of these command, one at the time, into a shell window to see if the output is a single number.
+In order to extract a single number out of a complicated output, the command <SPAN style="font-family:monospace">getvalue</SPAN> is
+provided. It extracts the single number following the token given as an argument.
+The first entry, with the <SPAN style="font-family:monospace">none</SPAN> keyword after the <SPAN style="font-family:monospace">+</SPAN> indicates the threshold
+load above which a machine is considered too busy to be usable. Note that the
+load checking commands may quite elaborate if, for instance, you need to &ldquo;rescale&rdquo; the load
+of some machines because they have a different reporting scheme or if you want to tweak the
+priority given to each machine.
+
+<P>
+The second column (after the <SPAN style="font-family:monospace">+</SPAN>) give the command prefix needed to run on each
+remote machine. These prefix will usually consist of the command <SPAN style="font-family:monospace">node</SPAN>
+described above. It is very important that the command prefix be such that the current
+directory in the remote machine when the command is run is the same as on the
+local machine. The best way to test that is to try the prefix in front of the <SPAN style="font-family:monospace">ls</SPAN>
+command and verify that what is printed is indeed the content of the current local directory.
+
+<P>
+Once you are done with entering the information for each of your machines (you can also enter only a
+few and come back later to add the remaining ones), make sure to comment out the examples provided (placing
+a <SPAN style="font-family:monospace">#</SPAN> at the beginning of the unwanted line). Do not comment out the first line which contains
+the <SPAN style="font-family:monospace">none</SPAN> keyword.
+
+<P>
+Once you have edited the <SPAN style="font-family:monospace">~/.machines.rc</SPAN> file, type <SPAN style="font-family:monospace">chl</SPAN>.
+This should give a list of the load
+of all machines in the first column and a list of command prefix in the second.
+Next, try the command <SPAN style="font-family:monospace">minload</SPAN>. It should give the command prefix that let
+you access the machine with the minimum load or <SPAN style="font-family:monospace">none</SPAN> if no machine is available.
+To check, once again, that the command prefix are
+correct, type <SPAN style="font-family:monospace">`minload` ls</SPAN> (make sure you use backward quotes!). This should print the content of the current
+directory (unless there are no machines available).
+
+<P>
+This approach could also be used with a queueing system, but this is much more advanced and requires good knowledge of scripting languages.
+You could read the &ldquo;node list file&rdquo; the queueing system assigned to the job and create a local <SPAN style="font-family:monospace">.machine.rc</SPAN> file on-the-fly.
+The <SPAN style="font-family:monospace">-s</SPAN> option of <SPAN style="font-family:monospace">pollmach</SPAN> could prove helpful to ensure two vasp runs do run on the same processors, and avoids the need
+for load balancing code.
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A
+ HREF="node15.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node12.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node13.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node15.html">Interfacing MAPS with other</A>
+<B> Up:</B> <A
+ HREF="node12.html">Install and test the</A>
+<B> Previous:</B> <A
+ HREF="node13.html">With queueing systems</A></DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+avdw@alum.mit.edu Wed, Dec  6, 2023 12:55:16 PM
+</ADDRESS>
+</BODY>
+</HTML>

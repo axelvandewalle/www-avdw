@@ -1,0 +1,189 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2018.3 (Released July 19, 2018) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>ezvasp</TITLE>
+<META NAME="description" CONTENT="ezvasp">
+<META NAME="keywords" CONTENT="manual">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131198421-1"><
+/script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-131198421-1');
+</script>
+
+<LINK REL="STYLESHEET" HREF="manual.css">
+
+<LINK REL="next" HREF="node123.html">
+<LINK REL="previous" HREF="node121.html">
+<LINK REL="next" HREF="node123.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node123.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node55.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node121.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node123.html">robustrelax-vasp</A>
+<B> Up:</B> <A
+ HREF="node55.html">Command line options</A>
+<B> Previous:</B> <A
+ HREF="node121.html">runstruct-vasp</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H2><A ID="SECTION008267000000000000000">
+ezvasp</A>
+</H2>
+<PRE>
+Syntax: ezvasp [-c] [-s] [-n] [-p "..."] input_file
+
+-c: Cell patch. This option will convert the cell you entered into a cell that has the symmetry 
+                     needed for
+    vasp to work properly. The atom positions are altered correspondingly.
+
+-s: Static run. After the relaxations are completed, this option makes vasp start again, turning off 
+                     relaxations
+    and turning on tetrahedron integration with bloech correction. Can acheive the same effect by
+    including DOSTATIC in the INCAR portion of the input file.
+
+-n: do Not run vasp. If you want to create the input files now and run them later, perhaps on 
+                     another machine.
+
+-p: name of the vasp command ("vasp" by default). You can include addition prefix such as:
+    ezvasp -p "rsh remote.machine nice +5 /usr/local/bin/vasp" vasp.in
+
+Here is an example of input file:
+
+[INCAR]
+SYSTEM = FeNi
+ISPIN = 2
+PREC = HIGH
+ISMEAR = 1
+NSW=41
+SIGMA = 0.1
+IBRION = 2
+ISIF = 3
+ENMAX = 400
+EDIFF = 1e-6
+EDIFFG = 1e-4
+KPPRA = 1000
+USEPOT = PAWGGA
+DOSTATIC
+SUBATOM = s/Fe$/Fe_h/g
+KSCHEME = GAMMA
+MAGATOM =
+
+[POSCAR]
+ SOME TITLE
+ 3.55
+  -.500000000     -.500000000    -1.000000000   
+   .500000000    -1.000000000     -.500000000   
+  -.500000000      .500000000     1.000000000   
+ 1 2
+ Direct
+  .33333     .33333     .00000     Fe+5
+  .00000     .00000     .00000     Vac
+  .66667     .66667     .00000     Fe-5
+
+End of example.
+
+Note that there 6 new tokens in the INCAR section.
+
+1) KPPRA stands for "K-Point Per Reciprocal Atom". This is a way to automatically set the k-point 
+                     mesh for
+   a number of similar systems. Here is how it works. If you know that you need 500 k-points for a 
+                     2-atom
+   structure, then you type in 1000. If you now try a similar structure with 4 atoms, the code 
+                     automatically
+   use 250 k-points. The mesh along the three axes is automatically chosen to make the mesh as 
+                     uniform as possible.
+   (For the algorithm, see atat/src/kmesh.c++).
+   You can also specify KPPRA = UPDIR which indicates that the KPOINTS file
+   found one directory above should be used.
+   (This is useful for cell distorsions used in elastic constant calculations of constituent strain 
+                     runs).
+   If this token is ommited, you need to specify a [KPOINT] section in the input file that contains 
+                     what
+   you want the KPOINT file to be.
+
+2) DOSTATIC indicates that a static run must be done after the relaxation run (NSW tag is removed 
+                     and the ISIF and IBRION
+   token are ajusted accordingly). The output files named *.relax contain the result of the (first)
+   relaxation run while the files named *.static contain the results of the (second) static run.
+   When DOSTATIC is not specified, all output files are named *.static , whether the VASP input 
+                     parameters
+   allow relaxations or not.
+
+3) KSCHEME specifies the type mesh to use: Gamma shift or Monkorst-Pack. The default is Gamma if 
+                     KSCHEME is ommited. You can
+   also specify (on a separate line) KZ1 to force one k-point along the 3rd axis, which is useful 
+                     for slabs.
+
+4) MAGATOM is similar to the usual token MAGMOM used to specify the moment on each atom. The novelty 
+                     is that you specify the
+   moments in the POSCAR section. (In version 3.15 and above, this token can be ommited. Having 
+                     spins specified in the POSCAR
+   section turns this on automatically. It also set ISPIN=2 automatically.)
+   The usual MAGMOM token is still available (but you cannot use both MAGMOM and MAGATOM).
+
+5) USEPOT 
+   selects the potentials used: LDA GGA PAWLDA PAWGGA PAWPBE (or any other potential defined in 
+                     .ezvasp.rc)
+   By default, LDA (without PAW) is used.
+   For backward compatibility, you can also use the tag DOGGA instead of USEPOT = GGA
+
+6) The SUBATOM token lets you specify a sed-like substitution command to be
+   applied to the name of the atomic species.
+   For instance, SUBATOM= s/Fe$/Fe_h/g  will cause ezvasp to use the Fe_h
+   pseudopotential instead of the Fe one. Multiple SUBATOM token can be given,
+   one for each substitution. Don't forget the s/ and /g and the $ after the first element name
+   (to avoid F matching Fe, or Y matching Yb).
+
+There are also familiar VASP tokens that are robustified. For instance ISTART = 2 does not work 
+                     unless you force
+the FFT grid size to match the earlier run.
+To help with this, ezvasp fetches the right NGX,NGY,NGZ from the previous run's OUTCAR or CHGCAR in 
+                     the current directory.
+
+There are new features in the POSCAR section as well.
+1) The line that specify the number of atoms (here 1 2) can be ommited (it is ignored).
+2) The atomic species are specified to the right of the atom positions.
+   The corresponding POTCAR are automatically copied. You can specify pseudopotentials like Li_h or 
+                     O_s.
+3) The number following the species is the magnetic moment on the atom (if MAGMOM is in the INCAR 
+                     section).
+   Identical species with different moments will be considered symmetrically distinct to allow for
+   symmetry-breaking relaxations.
+4) Do not specify "selective dynamics". It will be written to the INCAR file
+   automatically if you include T's and F's after the atom species, e.g.:
+    0.5 0.5 0.5 Al T T F
+5) The element "Vac" or "Va" stands for vacancy. It is ignored for everything but
+   to compute the k-point mesh with the KPPRA option.
+</PRE>
+<BR><HR>
+<ADDRESS>
+avdw@alum.mit.edu Wed, Dec  6, 2023 12:55:16 PM
+</ADDRESS>
+</BODY>
+</HTML>

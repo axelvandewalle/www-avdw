@@ -1,0 +1,239 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2018.3 (Released July 19, 2018) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>Input files</TITLE>
+<META NAME="description" CONTENT="Input files">
+<META NAME="keywords" CONTENT="manual">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131198421-1"><
+/script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-131198421-1');
+</script>
+
+<LINK REL="STYLESHEET" HREF="manual.css">
+
+<LINK REL="next" HREF="node22.html">
+<LINK REL="previous" HREF="node20.html">
+<LINK REL="next" HREF="node22.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node22.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node20.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node20.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node22.html">Running the code</A>
+<B> Up:</B> <A
+ HREF="node20.html">Cluster expansion construction using</A>
+<B> Previous:</B> <A
+ HREF="node20.html">Cluster expansion construction using</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H2><A ID="SECTION00531000000000000000">
+Input files</A>
+</H2>
+
+<P>
+The <SPAN style="font-family:monospace">maps</SPAN> code needs two input files: one that specifies the
+geometry of the parent lattice (<SPAN style="font-family:monospace">lat.in</SPAN>) and one that provides
+the parameters of the first-principles calculations (<SPAN style="font-family:monospace">xxxx.wrap</SPAN>,
+where <SPAN style="font-family:monospace">xxxx</SPAN> is the name of the first-principles code used).  The
+clear separation between the thermodynamic and first-principles
+calculations is a distinguishing feature of <SPAN style="font-family:monospace">atat</SPAN> that enables the
+package to be easily interfaced with any first-principles code.  Table
+<A HREF="#exlatin">5.1</A> gives two annotated examples of a lattice geometry input
+file.  The package includes ready-made lattice files for the common
+lattice types (<I>e.g.</I>  bcc, fcc, hcp). It also includes an utility that
+automatically constructs multiple lattice geometry input files for
+common lattices. For instance,
+<table width="90%"><tr><td valign="top">&nbsp;<SPAN style="font-family:monospace">makelat Al,Ti fcc,bcc,hcp</SPAN></td></tr></table>
+
+creates 3 subdirectories containing the appropriate input files for each specified lattice.
+
+<P>
+<BR><P></P>
+<DIV class="CENTER">
+
+<P>
+Example 1: hcp Ti-Al system
+
+<P>
+<DIV class="CENTER">
+<A ID="1556"></A>
+<TABLE class="PAD  BORDER" style="">
+<CAPTION><STRONG>Table 5.1:</STRONG>
+Examples of lattice geometry input file <SPAN style="font-family:monospace">lat.in</SPAN>. Typically, the coordinate system
+entry is used to define the conventional unit cell so that all other entries can be
+specified in the normalized coordinates that are the most natural for the symmetry
+of the lattice. The input lattice parameters do not need to be exact, as the first-principles
+code will optimize them.</CAPTION>
+<TR><TD CLASS="LEFT"><SPAN style="font-family:monospace">3.1 3.1 5.062 90 90 120       </SPAN></TD>
+<TD CLASS="LEFT">(Coordinate system: <SPAN CLASS="MATH"><IMG STYLE="height: 1.12ex; vertical-align: -0.12ex; " SRC="img16.png"
+ ALT="$a$"></SPAN> <SPAN CLASS="MATH"><IMG STYLE="height: 1.68ex; vertical-align: -0.12ex; " SRC="img17.png"
+ ALT="$b$"></SPAN> <SPAN CLASS="MATH"><IMG STYLE="height: 1.12ex; vertical-align: -0.12ex; " SRC="img18.png"
+ ALT="$c$"></SPAN> <SPAN CLASS="MATH"><IMG STYLE="height: 1.12ex; vertical-align: -0.12ex; " SRC="img10.png"
+ ALT="$\alpha $"></SPAN> <SPAN CLASS="MATH"><IMG STYLE="height: 2.17ex; vertical-align: -0.57ex; " SRC="img19.png"
+ ALT="$\beta$"></SPAN> <SPAN CLASS="MATH"><IMG STYLE="height: 1.54ex; vertical-align: -0.57ex; " SRC="img20.png"
+ ALT="$\gamma$"></SPAN> notation)</TD>
+</TR>
+<TR><TD CLASS="LEFT"><SPAN style="font-family:monospace">1 0 0                         </SPAN></TD>
+<TD CLASS="LEFT">(Primitive unit cell: one vector per line</TD>
+</TR>
+<TR><TD CLASS="LEFT"><SPAN style="font-family:monospace">0 1 0                         </SPAN></TD>
+<TD CLASS="LEFT">expressed in multiples of the above coordinate</TD>
+</TR>
+<TR><TD CLASS="LEFT"><SPAN style="font-family:monospace">0 0 1                         </SPAN></TD>
+<TD CLASS="LEFT">system vectors)</TD>
+</TR>
+<TR><TD CLASS="LEFT"><SPAN style="font-family:monospace">0         0         0   Al,Ti </SPAN></TD>
+<TD CLASS="LEFT">(Atoms in the lattice)</TD>
+</TR>
+<TR><TD CLASS="LEFT"><SPAN style="font-family:monospace">0.6666666 0.3333333 0.5 Al,Ti </SPAN></TD>
+<TD CLASS="LEFT">&nbsp;</TD>
+</TR>
+</TABLE>
+</DIV>
+
+<P>
+<BR>
+
+<P>
+Example 2: rocksalt CaO-MgO pseudobinary system
+<DIV class="CENTER">
+<TABLE class="PAD  BORDER" style=">
+<TR><TD CLASS="LEFT"><SPAN style="font-family:monospace">4.1 4.1 4.1 90 90 90</SPAN></TD>
+<TD CLASS="LEFT">&nbsp;</TD>
+</TR>
+<TR><TD CLASS="LEFT"><SPAN style="font-family:monospace">0   0.5 0.5</SPAN></TD>
+<TD CLASS="LEFT">&nbsp;</TD>
+</TR>
+<TR><TD CLASS="LEFT"><SPAN style="font-family:monospace">0.5 0 0.5</SPAN></TD>
+<TD CLASS="LEFT">&nbsp;</TD>
+</TR>
+<TR><TD CLASS="LEFT"><SPAN style="font-family:monospace">0.5 0.5 0</SPAN></TD>
+<TD CLASS="LEFT">&nbsp;</TD>
+</TR>
+<TR><TD CLASS="LEFT"><SPAN style="font-family:monospace">0 0 0 Ca,Mg  </SPAN></TD>
+<TD CLASS="LEFT">(&ldquo;Active&rdquo; atoms in the lattice)</TD>
+</TR>
+<TR><TD CLASS="LEFT"><SPAN style="font-family:monospace">0.5 0.5 0.5 O</SPAN></TD>
+<TD CLASS="LEFT">(&ldquo;spectator&rdquo; ion)</TD>
+</TR>
+</TABLE>
+</DIV>
+</DIV>
+<BR>
+
+<P>
+The first-principles input file is usually less than 10 lines long, thanks to
+the dramatic improvements in the user-friendliness of most modern first-principles codes.
+For instance, in the case of the widely used VASP code [<A
+ HREF="node30.html#kresse:vasp1">13</A>,<A
+ HREF="node30.html#kresse:vasp2">12</A>], a typical input file is given
+in Table <A HREF="#exvaspwrap">5.2</A>. Examples of such input files are provided with the package.
+Note that <SPAN style="font-family:monospace">atat</SPAN> contains a utility that enables the automatic construction of
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.68ex; vertical-align: -0.12ex; " SRC="img21.png"
+ ALT="$k$"></SPAN>-point meshes from a single parameter defining the desired target <SPAN CLASS="MATH"><IMG STYLE="height: 1.68ex; vertical-align: -0.12ex; " SRC="img21.png"
+ ALT="$k$"></SPAN>-point density, the number
+of <SPAN CLASS="MATH"><IMG STYLE="height: 1.68ex; vertical-align: -0.12ex; " SRC="img21.png"
+ ALT="$k$"></SPAN>-point per reciprocal atom (<SPAN style="font-family:monospace">KPPRA</SPAN>).
+
+<P>
+<BR><P></P>
+<DIV class="CENTER">
+
+<P>
+<DIV class="CENTER">
+<A ID="1557"></A>
+<TABLE class="PAD  BORDER" style="">
+<CAPTION><STRONG>Table 5.2:</STRONG>
+Examples of first-principles code input file (example given for the <SPAN style="font-family:monospace">vasp</SPAN> code).
+It is especially important to verify that the <SPAN style="font-family:monospace">KPPRA</SPAN> parameter is set sufficiently large for the system under study. </CAPTION>
+<TR><TD CLASS="LEFT"><SPAN style="font-family:monospace">[INCAR]</SPAN></TD>
+<TD CLASS="LEFT">&nbsp;</TD>
+</TR>
+<TR><TD CLASS="LEFT"><SPAN style="font-family:monospace">PREC = high</SPAN></TD>
+<TD CLASS="LEFT">&nbsp;</TD>
+</TR>
+<TR><TD CLASS="LEFT"><SPAN style="font-family:monospace">ENMAX = 200</SPAN></TD>
+<TD CLASS="LEFT">&nbsp;</TD>
+</TR>
+<TR><TD CLASS="LEFT"><SPAN style="font-family:monospace">ISMEAR = -1</SPAN></TD>
+<TD CLASS="LEFT">&nbsp;</TD>
+</TR>
+<TR><TD CLASS="LEFT"><SPAN style="font-family:monospace">SIGMA = 0.1</SPAN></TD>
+<TD CLASS="LEFT">&nbsp;</TD>
+</TR>
+<TR><TD CLASS="LEFT"><SPAN style="font-family:monospace">NSW=41</SPAN></TD>
+<TD CLASS="LEFT">&nbsp;</TD>
+</TR>
+<TR><TD CLASS="LEFT"><SPAN style="font-family:monospace">IBRION = 2</SPAN></TD>
+<TD CLASS="LEFT">&nbsp;</TD>
+</TR>
+<TR><TD CLASS="LEFT"><SPAN style="font-family:monospace">ISIF = 3</SPAN></TD>
+<TD CLASS="LEFT">(See <SPAN style="font-family:monospace">vasp</SPAN> manual for a description of the above 6 parameters.)</TD>
+</TR>
+<TR><TD CLASS="LEFT"><SPAN style="font-family:monospace">KPPRA = 1000</SPAN></TD>
+<TD CLASS="LEFT">(Sets the <SPAN CLASS="MATH"><IMG STYLE="height: 1.68ex; vertical-align: -0.12ex; " SRC="img21.png"
+ ALT="$k$"></SPAN>-point density (K Point Per Reciprocal Atom))</TD>
+</TR>
+<TR><TD CLASS="LEFT"><SPAN style="font-family:monospace">DOSTATIC</SPAN></TD>
+<TD CLASS="LEFT">(Performs a &ldquo;static run&rdquo; -- see <SPAN style="font-family:monospace">vasp</SPAN> manual)</TD>
+</TR>
+</TABLE>
+</DIV>
+
+<P>
+
+</DIV>
+<BR>
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A
+ HREF="node22.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node20.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node20.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node22.html">Running the code</A>
+<B> Up:</B> <A
+ HREF="node20.html">Cluster expansion construction using</A>
+<B> Previous:</B> <A
+ HREF="node20.html">Cluster expansion construction using</A></DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+avdw@alum.mit.edu Wed, Dec  6, 2023 12:55:16 PM
+</ADDRESS>
+</BODY>
+</HTML>

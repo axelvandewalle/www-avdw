@@ -1,0 +1,99 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2018.3 (Released July 19, 2018) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>svsl</TITLE>
+<META NAME="description" CONTENT="svsl">
+<META NAME="keywords" CONTENT="manual">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131198421-1"><
+/script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-131198421-1');
+</script>
+
+<LINK REL="STYLESHEET" HREF="manual.css">
+
+<LINK REL="next" HREF="node90.html">
+<LINK REL="previous" HREF="node88.html">
+<LINK REL="next" HREF="node90.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node90.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node55.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node88.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node90.html">triph</A>
+<B> Up:</B> <A
+ HREF="node55.html">Command line options</A>
+<B> Previous:</B> <A
+ HREF="node88.html">surfbond</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H2><A ID="SECTION008234000000000000000">
+svsl</A>
+</H2>
+<PRE>
+Vibrational free energy calculator using the Stiffness VS Length method 3.48, by Axel van de Walle
+  -l=[string]   Input file defining the lattice (defaults: lat.in, ../lat.in, str.out)
+ -us=[string]   Input file defining the unrelaxed structure (default: str.out)
+ -rs=[string]   Input file defining the   relaxed structure (default: str_relax.out)
+ -sp=[string]   Input file defining the springs (default: slspring.out)
+  -m=[string]   Input file defining the atomic masses (default: ${atatdir}/data/masses.in)
+  -b=[real]     Bulk modulus (Default: 0)
+ -bf=[string]   Bulk modulus file (Default: )
+ -ms=[real]     Maximum stretching of the lattice parameter (default: 0.05)
+ -ns=[int]      Number of lattice parameter stretching step (default: 1 =&gt; harmonic approximation)
+ -T0=[real]     Minimum temperature (default: 0) 
+ -T1=[real]     Maximum temperature (default: 2000)
+ -dT=[real]     Temperature step (default: 100)
+ -kp=[real]     Number of k-points per reciprocal atom (default: 1000)
+ -s0            Use a gamma-centered k-point mesh (default shift: 1/2 1/2 1/2) (Default: Off)
+ -sx=[real]     k-point shift (along 1st recip lat. vect.) (Default: 0.5)
+ -sy=[real]     k-point shift (along 2nd recip lat. vect.) (Default: 0.5)
+ -sz=[real]     k-point shift (along 3rd recip lat. vect.) (Default: 0.5)
+ -hp=[real]     Planck's constant (default in (eV s))
+ -kb=[real]     Boltzman's constant (default in eV/K)
+-cfk=[real]     Conversion factor for force constants into energy/dist^2 (default: converts eV/A^2 
+                     into J/m^2)
+ -mu=[real]     Mass units (default: converts a.u. mass into kg)
+ -rl=[real]     Robust Length algorithm parameter for soft modes (beta) (Default: 0)
+ -pa            Output free energy per atom instead of per unit cell (Default: Off)
+ -sc=[real]     Correction factor if spectator ion are present (default: 1)
+ -fn            Force continuation of calculations even if unstable (Default: Off)
+ -df=[string]   Phonon dispersion curve calculation input file. (Default: )
+ -sf=[string]   Extra strain file (Default: )
+-msl=[real]     Maximum spring length (Default: Off)
+-sig=[int]      Number of significant digits to print in output files (Default: 5)
+ -up=[string]   User-specified Potential Plug-in (optional) (Default: )
+  -d            Use all default values (Default: Off)
+  -h            Display more help (Default: Off)
+</PRE>
+<BR><HR>
+<ADDRESS>
+avdw@alum.mit.edu Wed, Dec  6, 2023 12:55:16 PM
+</ADDRESS>
+</BODY>
+</HTML>

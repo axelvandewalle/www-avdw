@@ -1,0 +1,132 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2018.3 (Released July 19, 2018) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>Install the interface between MAPS and VASP</TITLE>
+<META NAME="description" CONTENT="Install the interface between MAPS and VASP">
+<META NAME="keywords" CONTENT="manual">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131198421-1"><
+/script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-131198421-1');
+</script>
+
+<LINK REL="STYLESHEET" HREF="manual.css">
+
+<LINK REL="next" HREF="node12.html">
+<LINK REL="previous" HREF="node7.html">
+<LINK REL="next" HREF="node12.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node12.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node7.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node10.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node12.html">Install and test the</A>
+<B> Up:</B> <A
+ HREF="node7.html">Getting started</A>
+<B> Previous:</B> <A
+ HREF="node10.html">Test MAPS with a</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A ID="SECTION00310000000000000000">
+Install the interface between MAPS and VASP</A>
+</H1>
+
+<P>
+Type
+<table width="90%"><tr><td valign="top">&nbsp;<SPAN style="font-family:monospace">ezvasp</SPAN></td></tr></table>
+
+and follow the instructions posted on the screen to configure this command.
+
+<P>
+To test this interface, change to a directory of your choice and type
+<table width="90%"><tr><td valign="top">&nbsp;<SPAN style="font-family:monospace">maps -d &amp;</SPAN></td></tr></table>
+
+(unless maps is running already in that same directory).
+
+<P>
+While MAPS automatically create files that describe the geometry of the structures
+(called<SPAN style="font-family:monospace">n/str.out</SPAN>, where <SPAN style="font-family:monospace">n</SPAN> is the structure name),
+we need to provide a file containing all the other parameters needed by the first-principles
+code. Type:
+<table width="90%"><tr><td valign="top">&nbsp;<SPAN style="font-family:monospace">cp atat/glue/vasp/vasp.wrap .</SPAN></td></tr></table>
+
+to copy an example of such file in the current directory.
+For a description of these parameters, type:
+<table width="90%"><tr><td valign="top">&nbsp;<SPAN style="font-family:monospace">ezvasp -h | more</SPAN></td></tr></table>
+
+Let's say you have a new structure in directory <SPAN style="font-family:monospace">0</SPAN> (created by typing <SPAN style="font-family:monospace">touch ready</SPAN>).
+Type:
+<table width="90%"><tr><td valign="top">&nbsp;<SPAN style="font-family:monospace">cd 0</SPAN></td></tr>
+<tr><td valign="top">&nbsp;<SPAN style="font-family:monospace">runstruct_vasp</SPAN>
+</td></tr></table>
+
+When the command has terminated, the directory <SPAN style="font-family:monospace">0</SPAN> will contain a file <SPAN style="font-family:monospace">energy</SPAN>
+giving the energy of the structure. If error messages appear consult
+Chapter <A HREF="node125.html#troubles">8</A>.
+
+<P>
+If no error messages appear, you can proceed another level up in automation. Type
+<table width="90%"><tr><td valign="top">&nbsp;<SPAN style="font-family:monospace">cd ..</SPAN> (to go back into the main directory)</td></tr>
+<tr><td valign="top">&nbsp;<SPAN style="font-family:monospace">pollmach runstruct_vasp &amp;</SPAN>
+</td></tr></table>
+
+This script will automatically call the above command repeatedly.
+To stop it cleanly, type:
+<table width="90%"><tr><td valign="top">&nbsp;<SPAN style="font-family:monospace">touch stoppoll</SPAN></td></tr></table>
+
+(Disregard the warning message.)
+If you only have access to one machine, this is as good as it gets, if you have more than
+one machine, read the next section. If you want to use another code than VASP, read
+section <A HREF="node15.html#notvasp">3.3</A>.
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A
+ HREF="node12.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node7.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node10.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node12.html">Install and test the</A>
+<B> Up:</B> <A
+ HREF="node7.html">Getting started</A>
+<B> Previous:</B> <A
+ HREF="node10.html">Test MAPS with a</A></DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+avdw@alum.mit.edu Wed, Dec  6, 2023 12:55:16 PM
+</ADDRESS>
+</BODY>
+</HTML>

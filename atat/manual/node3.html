@@ -1,0 +1,178 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2018.3 (Released July 19, 2018) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>Collaborators and Credits</TITLE>
+<META NAME="description" CONTENT="Collaborators and Credits">
+<META NAME="keywords" CONTENT="manual">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131198421-1"><
+/script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-131198421-1');
+</script>
+
+<LINK REL="STYLESHEET" HREF="manual.css">
+
+<LINK REL="next" HREF="node4.html">
+<LINK REL="previous" HREF="node2.html">
+<LINK REL="next" HREF="node4.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node4.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node2.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node2.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node4.html">Financial Support</A>
+<B> Up:</B> <A
+ HREF="node2.html">Credits and Licence</A>
+<B> Previous:</B> <A
+ HREF="node2.html">Credits and Licence</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A ID="SECTION00210000000000000000">
+Collaborators and Credits</A>
+</H1>
+
+<P>
+The <A ID="tex2html3"
+  HREF="http://www.mit.edu/~avdw/maps">MAPS</A>
+(MIT Ab-initio Phase Stability) code, which automatically
+constructs a cluster expansion from the result of first-principles
+calculations, was developped by Axel van de Walle in collaboration with
+<A ID="tex2html4"
+  HREF="http://burgaz.mit.edu/">Prof. Gerd Ceder's group</A>
+from the Department of Materials Science and Engineering at
+the Massachusetts Institute of Technology. MAPS consists of the following codes:
+maps, corrdump, genstr, checkcell, kmesh, cv.
+
+<P>
+The EMC2 (Easy Monte Carlo Code), which automate the calculation of alloy
+thermodynamic properties via Monte Carlo simulations of lattice
+models, were developped by Axel van de Walle in collaboration with
+<A ID="tex2html5"
+  HREF="http://cms.northwestern.edu/">Prof. Mark Asta's group</A>
+from the Department of Materials Science and Engineering at
+Northwestern University. EMC2 consists of the following codes:
+emc2, phb.
+
+<P>
+The CSE (Constituent Strain Extension) to both the MAPS and EMC2
+codes, which implement the constituent strain formalism based on a
+reciprocal-space cluster expansion, was developped by Axel van de
+Walle in collaboration with <A ID="tex2html6"
+  HREF="http://www.sst.nrel.gov/">Alex Zunger's Solid
+State Theory Group</A>
+at the National
+Renewable Energy Laboratory in Golden, Colorado and in collaboration
+with <A ID="tex2html7"
+  HREF="http://www.phy.nau.edu/~hart/">Gus Hart</A>
+from
+the Department of Physics and Astronomy at Northern Arizona
+University. CSE conssists of the following files:
+csfit.cc predcs.cc, predrs.cc, kspacecs.cc.
+
+<P>
+Mayeul D'Avezac at NREL has provided all the changes needed for ATAT to compile with g++ versions 4.1 and later
+as well as intel's c++ compiler.
+
+<P>
+Volker Blum at NREL has contributed to improve the portability of the package
+by providing a <SPAN style="font-family:monospace">perl</SPAN> version of the <SPAN style="font-family:monospace">chl</SPAN> utility.
+
+<P>
+Dongwon Shin at Penn State has converted a large number of common lattices
+(found at the <A ID="tex2html8"
+  HREF="http://cst-www.nrl.navy.mil/lattice/">NRL navy web site</A>) into the <SPAN style="font-family:monospace">atat</SPAN> format. See directory <SPAN style="font-family:monospace">data/str</SPAN>.
+
+<P>
+Greg Pomrehn has improved the efficiency of the structure enumeration algorithm and contributed the script <SPAN style="font-family:monospace">mmapsrep</SPAN>.
+
+<P>
+Jesper Kristensen has been quite active on the ATAT forum, helping me answer queries. He also maintains some documentation
+on his <A ID="tex2html9"
+  HREF="http://www.jespertoftkristensen.com/">web site</A>
+<P>
+Ruoshi Sun has also answered many queries on the ATAT forum. He has also contributed the apb code.
+
+<P>
+Chiraag Nataraj has updated the apb code to allow for any number of species.
+
+<P>
+Martin B&#228;ker has written a simple and useful tutorial for ATAT's emc2 and phb tools for computing phase diagrams via Monte Carlo.
+He has also improved the routine allowing user-specified cluster choices in mmaps.
+
+<P>
+The FFT routines in the files fftn.cc and fftn.h were obtained from
+the package go/fft-olesen.tar.gz available from <A ID="tex2html10"
+  HREF="http://www.netlib.org/go/fft-olesen.tar.gz">Netlib</A>.
+The origin of these routines dates back to a FORTRAN code by 
+R. C. Singleton in 1968 [<A
+ HREF="node30.html#singleton:fft">19</A>], later converted to C and
+subsequently improved by Mark Olesen and John Beale in 1995.
+These routines are included in the <SPAN style="font-family:monospace">atat</SPAN> package for sole purpose of
+providing users with the convenience of avoiding a separate download.
+Axel van de Walle does not claim any ownership of them or intellectual credit for them.
+
+<P>
+Some of the basic numerical routines were inspired by Numerical Recipes in C, although they were completely re-written according to the ATAT
+code style conventions, for instance to use 0-indexed arrays and make better use of C++ features.
+
+<P>
+The Perl routines Permutor (written by Tom Phoenix) and PowerSet (written by David Landgren) were downloaded from
+the free software resource CPAN.org and included in this distribution simply to avoid users a separate download.
+
+<P>
+Gao Zhe has contributed an interface to PWSCF (aka Quantum Espresso) that can be found in atat/glue/qe
+
+<P>
+Matt Probert has contributed an interface to CASTEP that can be found in atat/glue/castep/
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A
+ HREF="node4.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node2.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node2.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node4.html">Financial Support</A>
+<B> Up:</B> <A
+ HREF="node2.html">Credits and Licence</A>
+<B> Previous:</B> <A
+ HREF="node2.html">Credits and Licence</A></DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+avdw@alum.mit.edu Wed, Dec  6, 2023 12:55:16 PM
+</ADDRESS>
+</BODY>
+</HTML>

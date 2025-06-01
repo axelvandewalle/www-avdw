@@ -1,0 +1,106 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2018.3 (Released July 19, 2018) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>emc2</TITLE>
+<META NAME="description" CONTENT="emc2">
+<META NAME="keywords" CONTENT="manual">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131198421-1"><
+/script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-131198421-1');
+</script>
+
+<LINK REL="STYLESHEET" HREF="manual.css">
+
+<LINK REL="next" HREF="node65.html">
+<LINK REL="previous" HREF="node63.html">
+<LINK REL="next" HREF="node65.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node65.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node55.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node63.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node65.html">felec</A>
+<B> Up:</B> <A
+ HREF="node55.html">Command line options</A>
+<B> Previous:</B> <A
+ HREF="node63.html">cvmclus</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H2><A ID="SECTION00829000000000000000">
+emc2</A>
+</H2>
+<PRE>
+Eazy Monte Carlo Code 3.48, by Axel van de Walle
+     -h            Help (Default: Off)
+   -mu0=[real]     initial chemical potential (Default: Off)
+    -T0=[real]     initial temperature (Default: Off)
+   -mu1=[real]     final chemical potential (Default: Off)
+    -T1=[real]     final temperature (Default: Off)
+   -dmu=[real]     chemical potential step (Default: Off)
+    -dT=[real]     temperature step (Default: Off)
+    -db=[real]     inverse temperature step (Default: Off)
+    -cm            Set Canonical mode (Default: Off)
+     -x=[real]     Set concentration (Default: Off)
+   -abs            take chemical potentials as absolute quantities (as in mc.out) (Default: Off)
+  -phi0=[real]     initial (grand) canonical potential (Default: Off)
+    -er=[real]     set the system  size so that a sphere of that radius must fit inside the 
+                     simulation cell (Default: 0)
+    -eq=[int]      number of equilibration passes (Default: -1)
+     -n=[int]      number of averaging passes (Default: -1)
+    -dx=[real]     Target precision for the average concentration (optional, replaces -n and -eq) 
+                     (Default: 0)
+    -aq=[int]      Alternative quantity that must meet the tolerance specified by -dx. 0: energy, 1: 
+                     concentration (default), 2: long-range order, 3- correlations
+    -gs=[int]      which ground state to use as initial config (-gs=-1 to use random state, c=1/2) 
+                     (Default: -2)
+-innerT            inner loop over T (Default: Off)
+ -tstat=[real]     Critical value of the test for discontinuity (Default: 3)
+-sigdig=[int]      Number of significant digits printed (Default: 6)
+     -q            Quiet (do not write to stdout) (Default: Off)
+     -o=[string]   Output file (default: mc.out)
+   -oss=[string]   Output snapshot file (default: mcsnapshot.out)
+  -opss=[string]   Output periodic snapshot files (default: do not write)
+     -k=[real]     Boltzman's constant (conversion factor from T to energy) (Default: 1)
+   -keV            Set Boltzman's constant to 8.617e-5 so that temperature is in K when energy is in 
+                     eV (Default: Off)
+    -sd=[int]      Seed for random number generation (default: use clock)
+    -dl            Drop the last data point of each inner loop (after the phase transition occured) 
+                     (Default: Off)
+   -g2c            Convert output to canonical rather than grand-canonical quantities (Default: 
+                     Off)
+    -is=[string]   File name containing a user-specified initial configuration (replaces -gs) 
+                     (Default: )
+    -ks=[string]   Specify how k space ECI are calculated (e.g. -ks=cs). (Default: )
+</PRE>
+<BR><HR>
+<ADDRESS>
+avdw@alum.mit.edu Wed, Dec  6, 2023 12:55:16 PM
+</ADDRESS>
+</BODY>
+</HTML>

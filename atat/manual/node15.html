@@ -1,0 +1,122 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2018.3 (Released July 19, 2018) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>Interfacing MAPS with other first-principles codes</TITLE>
+<META NAME="description" CONTENT="Interfacing MAPS with other first-principles codes">
+<META NAME="keywords" CONTENT="manual">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131198421-1"><
+/script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-131198421-1');
+</script>
+
+<LINK REL="STYLESHEET" HREF="manual.css">
+
+<LINK REL="previous" HREF="node12.html">
+<LINK REL="next" HREF="node16.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node16.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node7.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node14.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node16.html">Version History and Bugs</A>
+<B> Up:</B> <A
+ HREF="node7.html">Getting started</A>
+<B> Previous:</B> <A
+ HREF="node14.html">Without queueing systems</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A ID="SECTION00330000000000000000"></A>
+<A ID="notvasp"></A>
+<BR>
+Interfacing MAPS with other first-principles codes
+</H1>
+
+<P>
+You need to provide a command (e.g. a shell script) called <SPAN style="font-family:monospace">runstruct_xxxx</SPAN>, where xxxx
+is any name of your choice. This script should read, from the
+current directory , the file <SPAN style="font-family:monospace">str.out</SPAN> describing
+the geometry of the structure and create the appropriate input files for the first-principles
+code. It should then execute the command(s) needed to run the code.
+If a multiple machine environment is used, the script should use the first argument passed
+to the script (<SPAN style="font-family:monospace">$1</SPAN>) as command prefix to put in front of any command in order
+for them to be run on a remote machine. That is, if the first-principle code is called "myfp"
+the script should execute
+<table width="90%"><tr><td valign="top">&nbsp;<SPAN style="font-family:monospace">$1 myfp</SPAN></td></tr></table>
+
+Once the first-principles code has terminated, the script should
+
+<UL>
+<LI>Create a file called <SPAN style="font-family:monospace">energy</SPAN> containing the energy of the structure per unit
+cell of the structure (not the lattice) (this is what first-principles code usually give
+anyways).
+</LI>
+<LI>If the calculation fails, no <SPAN style="font-family:monospace">energy</SPAN> file should not be created.
+Instead, an empty file called <SPAN style="font-family:monospace">error</SPAN> should be created.
+</LI>
+</UL>
+The above files must all reside in the current directory (from where the script was
+invoked).
+To follow the philosophy of the package, the additional input parameters (besides
+the structure geometry) needed by the first-principles
+code should be contained in a file called <SPAN style="font-family:monospace">xxxx.wrap</SPAN> located one (or two) levels up in
+the directory hierarchy, relative to the current directory.
+
+<P>
+As a starting point to write this script, have a look at the file
+<SPAN style="font-family:monospace">atat/glue/vasp/runstruct_vasp</SPAN>.
+
+<P>
+At the moment, interfaces to Abinit, Castep, Quantum Espresso, Siesta, GULP are already included with the distribution in the subdirectory <SPAN style="font-family:monospace">atat/glue/</SPAN>. Examples of input files are also given.
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A
+ HREF="node16.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node7.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node14.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node16.html">Version History and Bugs</A>
+<B> Up:</B> <A
+ HREF="node7.html">Getting started</A>
+<B> Previous:</B> <A
+ HREF="node14.html">Without queueing systems</A></DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+avdw@alum.mit.edu Wed, Dec  6, 2023 12:55:16 PM
+</ADDRESS>
+</BODY>
+</HTML>

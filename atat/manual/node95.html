@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2018.3 (Released July 19, 2018) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>makelat</TITLE>
+<META NAME="description" CONTENT="makelat">
+<META NAME="keywords" CONTENT="manual">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131198421-1"><
+/script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-131198421-1');
+</script>
+
+<LINK REL="STYLESHEET" HREF="manual.css">
+
+<LINK REL="next" HREF="node96.html">
+<LINK REL="previous" HREF="node94.html">
+<LINK REL="next" HREF="node96.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node96.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node55.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node94.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node96.html">clusterexpand</A>
+<B> Up:</B> <A
+ HREF="node55.html">Command line options</A>
+<B> Previous:</B> <A
+ HREF="node94.html">str2xyz</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H2><A ID="SECTION008240000000000000000">
+makelat</A>
+</H2>
+<PRE>
+MAKE LATtice, by Axel van de Walle
+Utility setting up directories with maps input files for a given alloy system
+and for one or multiple lattices.
+
+Syntax: makelat [-o] [-s=scale] atom1,atom2,... lattice1,lattice2,...
+
+Make sure that there are commas but no spaces between atoms and similarly between the lattices.
+
+Examples:
+  makelat Al,Ni bcc,fcc
+  makelat Ca,Mg:O rocksalt
+
+  (note the : to separate sublattices)
+  The default scale is 1. It can be changed to allow for units other than angstroms.
+  The -o option outputs to strout.
+
+Lattices available:
+B2 bcc bcc-oct bcc-tet diamond fcc fcc-oct fcc-octtet fcc-tet hcp hcp-oct hcp-tet L11 rocksalt sc 
+                     wurtzite zincblende
+
+Other lattices can be added in the /home/avdw/avdw/atat/data/ directory or
+new atomic radius can be added in the /home/avdw/avdw/atat/data/radii.in file.
+</PRE>
+<BR><HR>
+<ADDRESS>
+avdw@alum.mit.edu Wed, Dec  6, 2023 12:55:16 PM
+</ADDRESS>
+</BODY>
+</HTML>

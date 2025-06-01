@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2018.3 (Released July 19, 2018) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>checkrelax</TITLE>
+<META NAME="description" CONTENT="checkrelax">
+<META NAME="keywords" CONTENT="manual">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131198421-1"><
+/script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-131198421-1');
+</script>
+
+<LINK REL="STYLESHEET" HREF="manual.css">
+
+<LINK REL="next" HREF="node100.html">
+<LINK REL="previous" HREF="node98.html">
+<LINK REL="next" HREF="node100.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node100.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node55.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node98.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node100.html">calcbulk</A>
+<B> Up:</B> <A
+ HREF="node55.html">Command line options</A>
+<B> Previous:</B> <A
+ HREF="node98.html">clusterpredict</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H2><A ID="SECTION008244000000000000000">
+checkrelax</A>
+</H2>
+<PRE>
+Prints the amount of relaxation each structure in */str_relax.out has
+undergone, relative to */str.out (or */str_sup.out if it exists)
+Typically, values above 0.1 are considered too much for the
+cluster expansion to be applicable and the offending structures
+should be disabled using the command:
+ touch structure_number/error
+where structure_number is the appropriate directory name.
+The option -1 (the number 1) checks relaxations for one structure only in the current directory.
+
+This command measures the magnitude of the strain that need to be applied
+to the unit cell of str.cell to get the unit cell of str_relax.out,
+neglecting (i) isotropic scaling and (ii) rigid rotation.
+The numbers reported are the sqrt of the sum of each element of the strain tensor squared.
+</PRE>
+<BR><HR>
+<ADDRESS>
+avdw@alum.mit.edu Wed, Dec  6, 2023 12:55:16 PM
+</ADDRESS>
+</BODY>
+</HTML>
