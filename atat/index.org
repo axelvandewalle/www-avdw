@@ -9,7 +9,7 @@ Alloy Theoretic Automated Toolkit (ATAT) Home Page
 
 <IMG SRC="atat.gif" ALT="[ATAT logo]" ALIGN=middle><P>
 
-ATAT is a generic name that refers to a collection of alloy theory tools
+ATAT refers to a collection of alloy theory tools
 developped by <A HREF="http://alum.mit.edu/www/avdw">Axel van de Walle</A>, in collaboration with various <A HREF="SUB:collaborators">research groups</A> and
 with various sources of <A HREF="SUB:finan">financial support</A>.<P>
 
@@ -45,11 +45,13 @@ Download:
 <LI> References about ATAT <a href="references.bib">BibTeX file</a>.
 <LI> Slides of
 <UL>
-<LI> an invited talk at the <A HREF="atattalk.pdf">2002</A> TMS annual meetings,
-<LI> an invited talk at the <A HREF="ddf.ppt">2004</A> TMS annual meetings and 
-<LI> a plenary talk at the <a href="rappd06.pptx">2017 CALPHAD</a> meeting.
+<LI> invited talks at the TMS <A HREF="atattalk.pdf">here</A> and <A HREF="ddf.ppt">here</A> ad
+<LI> a plenary talk at a <a href="rappd06.pptx">CALPHAD meeting</a>.
 </UL>
+Some tutorials:
+<UL>
 <LI> A short <A HREF="tutorial">tutorial</A>.
+<LI> A very nice <A HREF="https://arxiv.org/abs/1907.10151">tutorial</A> by Martin Baker.
 </UL>
 
 Report bugs, questions and suggestions to the new <A HREF="http://alum.mit.edu/www/avdw/forum">ATAT Forum</A>
