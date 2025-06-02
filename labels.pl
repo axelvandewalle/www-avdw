@@ -362,6 +362,10 @@ $key = q/cite_kadkhodaei:ptniti/;
 $external_labels{$key} = "$URL/" . q|node5.html|; 
 $noresave{$key} = "$nosave";
 
+$key = q/cite_kunselman:diffphase/;
+$external_labels{$key} = "$URL/" . q|node5.html|; 
+$noresave{$key} = "$nosave";
+
 $key = q/cite_kunselman:dotder/;
 $external_labels{$key} = "$URL/" . q|node5.html|; 
 $noresave{$key} = "$nosave";
@@ -379,6 +383,10 @@ $external_labels{$key} = "$URL/" . q|node5.html|;
 $noresave{$key} = "$nosave";
 
 $key = q/cite_liu:resuboxi/;
+$external_labels{$key} = "$URL/" . q|node5.html|; 
+$noresave{$key} = "$nosave";
+
+$key = q/cite_lund:asymshear/;
 $external_labels{$key} = "$URL/" . q|node5.html|; 
 $noresave{$key} = "$nosave";
 

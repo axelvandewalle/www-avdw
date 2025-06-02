@@ -362,6 +362,10 @@ $key = q/cite_kadkhodaei:ptniti/;
 $ref_files{$key} = "$dir".q|node5.html|; 
 $noresave{$key} = "$nosave";
 
+$key = q/cite_kunselman:diffphase/;
+$ref_files{$key} = "$dir".q|node5.html|; 
+$noresave{$key} = "$nosave";
+
 $key = q/cite_kunselman:dotder/;
 $ref_files{$key} = "$dir".q|node5.html|; 
 $noresave{$key} = "$nosave";
@@ -379,6 +383,10 @@ $ref_files{$key} = "$dir".q|node5.html|;
 $noresave{$key} = "$nosave";
 
 $key = q/cite_liu:resuboxi/;
+$ref_files{$key} = "$dir".q|node5.html|; 
+$noresave{$key} = "$nosave";
+
+$key = q/cite_lund:asymshear/;
 $ref_files{$key} = "$dir".q|node5.html|; 
 $noresave{$key} = "$nosave";
 
