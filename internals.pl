@@ -34,6 +34,10 @@ $key = q/cite_avdw:carbonblack/;
 $ref_files{$key} = "$dir".q|node5.html|; 
 $noresave{$key} = "$nosave";
 
+$key = q/cite_avdw:copilot/;
+$ref_files{$key} = "$dir".q|node5.html|; 
+$noresave{$key} = "$nosave";
+
 $key = q/cite_avdw:culi/;
 $ref_files{$key} = "$dir".q|node5.html|; 
 $noresave{$key} = "$nosave";
@@ -279,6 +283,10 @@ $ref_files{$key} = "$dir".q|node5.html|;
 $noresave{$key} = "$nosave";
 
 $key = q/cite_harish:soliq/;
+$ref_files{$key} = "$dir".q|node5.html|; 
+$noresave{$key} = "$nosave";
+
+$key = q/cite_hew:dfttk/;
 $ref_files{$key} = "$dir".q|node5.html|; 
 $noresave{$key} = "$nosave";
 

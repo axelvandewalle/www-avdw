@@ -1,5 +1,21 @@
 \begin{thebibliography}{100}
 
+\bibitem{avdw:copilot}
+A.~van~de Walle.
+\newblock Pilot-waves and copilot-particles: A novel approach to objective
+  collapse.
+\newblock {\em preprint}, 2025.
+\newblock Download:
+  \htmladdnormallink{[arXiv]}{https://arxiv.org/abs/2506.08168}.
+
+\bibitem{hew:dfttk}
+N.~L.~En Hew, L.~A. Myers, A.~van~de Walle, S.-L. Shang, and Z.-K. Liu.
+\newblock Density functional theory toolkit ({DFTTK}) to automate
+  first-principles thermodynamics via the quasiharmonic approximation.
+\newblock {\em submitted}, 2025.
+\newblock Download:
+  \htmladdnormallink{[arXiv]}{https://arxiv.org/abs/2504.17027}.
+
 \bibitem{chen:sgte}
 H.~Chen, Q.~Hong, A.~Navrotsky, and A.~van~de Walle.
 \newblock A computational free energy reference for mechanically unstable

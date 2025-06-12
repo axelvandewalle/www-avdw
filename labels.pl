@@ -34,6 +34,10 @@ $key = q/cite_avdw:carbonblack/;
 $external_labels{$key} = "$URL/" . q|node5.html|; 
 $noresave{$key} = "$nosave";
 
+$key = q/cite_avdw:copilot/;
+$external_labels{$key} = "$URL/" . q|node5.html|; 
+$noresave{$key} = "$nosave";
+
 $key = q/cite_avdw:culi/;
 $external_labels{$key} = "$URL/" . q|node5.html|; 
 $noresave{$key} = "$nosave";
@@ -279,6 +283,10 @@ $external_labels{$key} = "$URL/" . q|node5.html|;
 $noresave{$key} = "$nosave";
 
 $key = q/cite_harish:soliq/;
+$external_labels{$key} = "$URL/" . q|node5.html|; 
+$noresave{$key} = "$nosave";
+
+$key = q/cite_hew:dfttk/;
 $external_labels{$key} = "$URL/" . q|node5.html|; 
 $noresave{$key} = "$nosave";
 

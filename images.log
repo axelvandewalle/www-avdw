@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Cygwin) (preloaded format=pdflatex 2018.8.30)  1 JUN 2025 21:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Cygwin) (preloaded format=pdflatex 2018.8.30)  12 JUN 2025 00:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -253,6 +253,12 @@ LaTeX Info: Redefining \nameref on input line 140.
 \makeMPintoPDFobject=\count117
 \everyMPtoPDFconversion=\toks19
 ) (/cygdrive/c/avdw/job/cv/home.aux
+
+LaTeX Warning: Label `avdw:copilot' multiply defined.
+
+
+LaTeX Warning: Label `hew:dfttk' multiply defined.
+
 
 LaTeX Warning: Label `chen:sgte' multiply defined.
 
@@ -686,105 +692,105 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 171.
 
-:tex2html_wrap_inline2285:lthtmlCropMarkHeight:=9.01112pt
+:tex2html_wrap_inline2302:lthtmlCropMarkHeight:=9.01112pt
 
-:tex2html_wrap_inline2285:lthtmlCropMarkDepth:=1.49998pt:1ex:=4.30554pt
+:tex2html_wrap_inline2302:lthtmlCropMarkDepth:=1.49998pt:1ex:=4.30554pt
 Preview: Tightpage -32891 -32891 32891 32891
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 
-:tex2html_wrap_inline2287:lthtmlCropMarkHeight:=9.01112pt
+:tex2html_wrap_inline2304:lthtmlCropMarkHeight:=9.01112pt
 
-:tex2html_wrap_inline2287:lthtmlCropMarkDepth:=1.49998pt:1ex:=4.30554pt
+:tex2html_wrap_inline2304:lthtmlCropMarkDepth:=1.49998pt:1ex:=4.30554pt
 [2]
 
-:tex2html_wrap_inline2317:lthtmlCropMarkHeight:=13.5pt
+:tex2html_wrap_inline2334:lthtmlCropMarkHeight:=13.5pt
 
-:tex2html_wrap_inline2317:lthtmlCropMarkDepth:=2.5pt:1ex:=4.30554pt
+:tex2html_wrap_inline2334:lthtmlCropMarkDepth:=2.5pt:1ex:=4.30554pt
 [3]
 
-:tex2html_wrap_inline2319:lthtmlCropMarkHeight:=12.88586pt
+:tex2html_wrap_inline2336:lthtmlCropMarkHeight:=12.88586pt
 
-:tex2html_wrap_inline2319:lthtmlCropMarkDepth:=0.0pt:1ex:=4.30554pt
+:tex2html_wrap_inline2336:lthtmlCropMarkDepth:=0.0pt:1ex:=4.30554pt
 [4]
 
-:tex2html_wrap_inline2325:lthtmlCropMarkHeight:=9.01112pt
+:tex2html_wrap_inline2342:lthtmlCropMarkHeight:=9.01112pt
 
-:tex2html_wrap_inline2325:lthtmlCropMarkDepth:=1.49998pt:1ex:=4.30554pt
+:tex2html_wrap_inline2342:lthtmlCropMarkDepth:=1.49998pt:1ex:=4.30554pt
 [5]
 
-:tex2html_wrap_inline2333:lthtmlCropMarkHeight:=7.5139pt
+:tex2html_wrap_inline2350:lthtmlCropMarkHeight:=7.5139pt
 
-:tex2html_wrap_inline2333:lthtmlCropMarkDepth:=1.49998pt:1ex:=4.30554pt
+:tex2html_wrap_inline2350:lthtmlCropMarkDepth:=1.49998pt:1ex:=4.30554pt
 [6]
 
-:tex2html_wrap_inline2335:lthtmlCropMarkHeight:=13.5pt
+:tex2html_wrap_inline2352:lthtmlCropMarkHeight:=13.5pt
 
-:tex2html_wrap_inline2335:lthtmlCropMarkDepth:=2.5pt:1ex:=4.30554pt
+:tex2html_wrap_inline2352:lthtmlCropMarkDepth:=2.5pt:1ex:=4.30554pt
 [7]
 
-:tex2html_wrap_inline2337:lthtmlCropMarkHeight:=9.28336pt
+:tex2html_wrap_inline2354:lthtmlCropMarkHeight:=9.28336pt
 
-:tex2html_wrap_inline2337:lthtmlCropMarkDepth:=1.49998pt:1ex:=4.30554pt
+:tex2html_wrap_inline2354:lthtmlCropMarkDepth:=1.49998pt:1ex:=4.30554pt
 [8]
 
-:tex2html_wrap_inline2339:lthtmlCropMarkHeight:=13.5pt
+:tex2html_wrap_inline2356:lthtmlCropMarkHeight:=13.5pt
 
-:tex2html_wrap_inline2339:lthtmlCropMarkDepth:=2.5pt:1ex:=4.30554pt
+:tex2html_wrap_inline2356:lthtmlCropMarkDepth:=2.5pt:1ex:=4.30554pt
 [9]
 
-:tex2html_wrap_inline2341:lthtmlCropMarkHeight:=9.01112pt
+:tex2html_wrap_inline2358:lthtmlCropMarkHeight:=9.01112pt
 
-:tex2html_wrap_inline2341:lthtmlCropMarkDepth:=1.49998pt:1ex:=4.30554pt
+:tex2html_wrap_inline2358:lthtmlCropMarkDepth:=1.49998pt:1ex:=4.30554pt
 [10]
 
-:tex2html_wrap_inline2345:lthtmlCropMarkHeight:=9.01112pt
+:tex2html_wrap_inline2362:lthtmlCropMarkHeight:=9.01112pt
 
-:tex2html_wrap_inline2345:lthtmlCropMarkDepth:=1.49998pt:1ex:=4.30554pt
+:tex2html_wrap_inline2362:lthtmlCropMarkDepth:=1.49998pt:1ex:=4.30554pt
 [11]
 
-:tex2html_wrap_inline2349:lthtmlCropMarkHeight:=7.5139pt
+:tex2html_wrap_inline2366:lthtmlCropMarkHeight:=7.5139pt
 
-:tex2html_wrap_inline2349:lthtmlCropMarkDepth:=1.49998pt:1ex:=4.30554pt
+:tex2html_wrap_inline2366:lthtmlCropMarkDepth:=1.49998pt:1ex:=4.30554pt
 [12]
 
-:tex2html_wrap_inline2351:lthtmlCropMarkHeight:=7.5139pt
+:tex2html_wrap_inline2368:lthtmlCropMarkHeight:=7.5139pt
 
-:tex2html_wrap_inline2351:lthtmlCropMarkDepth:=2.86108pt:1ex:=4.30554pt
+:tex2html_wrap_inline2368:lthtmlCropMarkDepth:=2.86108pt:1ex:=4.30554pt
 [13]
 
-:tex2html_wrap_inline2353:lthtmlCropMarkHeight:=9.01112pt
+:tex2html_wrap_inline2370:lthtmlCropMarkHeight:=9.01112pt
 
-:tex2html_wrap_inline2353:lthtmlCropMarkDepth:=2.86108pt:1ex:=4.30554pt
+:tex2html_wrap_inline2370:lthtmlCropMarkDepth:=2.86108pt:1ex:=4.30554pt
 [14]
 
-:tex2html_wrap_inline2363:lthtmlCropMarkHeight:=9.01112pt
+:tex2html_wrap_inline2380:lthtmlCropMarkHeight:=9.01112pt
 
-:tex2html_wrap_inline2363:lthtmlCropMarkDepth:=1.49998pt:1ex:=4.30554pt
+:tex2html_wrap_inline2380:lthtmlCropMarkDepth:=1.49998pt:1ex:=4.30554pt
 [15]
 
-:tex2html_wrap_inline2365:lthtmlCropMarkHeight:=9.01112pt
+:tex2html_wrap_inline2382:lthtmlCropMarkHeight:=9.01112pt
 
-:tex2html_wrap_inline2365:lthtmlCropMarkDepth:=1.49998pt:1ex:=4.30554pt
+:tex2html_wrap_inline2382:lthtmlCropMarkDepth:=1.49998pt:1ex:=4.30554pt
 [16]
-
-:tex2html_wrap_inline588:lthtmlCropMarkHeight:=14.14003pt
-
-:tex2html_wrap_inline588:lthtmlCropMarkDepth:=0.0pt:1ex:=4.30554pt
-[17]
 
 :tex2html_wrap_inline590:lthtmlCropMarkHeight:=14.14003pt
 
 :tex2html_wrap_inline590:lthtmlCropMarkDepth:=0.0pt:1ex:=4.30554pt
-[18]
+[17]
 
 :tex2html_wrap_inline592:lthtmlCropMarkHeight:=14.14003pt
 
 :tex2html_wrap_inline592:lthtmlCropMarkDepth:=0.0pt:1ex:=4.30554pt
+[18]
+
+:tex2html_wrap_inline594:lthtmlCropMarkHeight:=14.14003pt
+
+:tex2html_wrap_inline594:lthtmlCropMarkDepth:=0.0pt:1ex:=4.30554pt
 [19]
 
-:tex2html_wrap_inline596:lthtmlCropMarkHeight:=13.5pt
+:tex2html_wrap_inline598:lthtmlCropMarkHeight:=13.5pt
 
-:tex2html_wrap_inline596:lthtmlCropMarkDepth:=2.5pt:1ex:=4.30554pt
+:tex2html_wrap_inline598:lthtmlCropMarkDepth:=2.5pt:1ex:=4.30554pt
 [20]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 293.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 293.
@@ -799,10 +805,10 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 293.
  ) 
 Here is how much of TeX's memory you used:
- 5803 strings out of 494590
- 82823 string characters out of 6178347
- 170028 words of memory out of 5000000
- 9421 multiletter control sequences out of 15000+600000
+ 5805 strings out of 494590
+ 82848 string characters out of 6178347
+ 170097 words of memory out of 5000000
+ 9423 multiletter control sequences out of 15000+600000
  3640 words of font info for 14 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  35i,5n,35p,224b,336s stack positions out of 5000i,500n,10000p,200000b,80000s
