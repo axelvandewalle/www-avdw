@@ -128,7 +128,7 @@ Input files
   epipos.out
 
 Final output files
-  cstr_relax.out  The optimized inflection point geometry at the end of the calculations.
+  cstr_relax.out  The optimized saddle point geometry at the end of the calculations.
   cenergy.out     The corresponding final energy.
   stdout          Log file (written to infdet.log if called by robustrelax_xxxx)
 
@@ -155,8 +155,8 @@ Intermediate input/output files
   str_relax.out   the atomic coordinate (same as str.out but perhaps re-ordered - forces will be re-ordered accordingly)
 
  As the optimization progresses, the current status is written to various files:
-  str_current.out   the current best approximation to the inflection point (in standard ATAT format)
-  epipos.out        the current best approximation to the inflection point (as a vector, in internal format)
+  str_current.out   the current best approximation to the saddle point (in standard ATAT format)
+  epipos.out        the current best approximation to the saddle point (as a vector, in internal format)
   epidir.out        the current direction of the epicycle (softest phonon mode)
                     Note that the whole history of these values are available in the log file, prefixed by
                     epipos= and epidir= , which can be used to restart an aborted or misbehaving run.
@@ -165,7 +165,7 @@ Intermediate input/output files
 <P>
 <BR><HR>
 <ADDRESS>
-avdw@alum.mit.edu Wed, Dec  6, 2023 12:55:16 PM
+avdw@alum.mit.edu Sat, Jun 21, 2025 12:31:12 AM
 </ADDRESS>
 </BODY>
 </HTML>

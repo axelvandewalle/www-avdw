@@ -56,7 +56,7 @@
 sqs2tdb</A>
 </H2>
 <PRE>
-sqs2tdb version 3.48 by Axel van de Walle and with contributions to the SQS database
+sqs2tdb version 3.50 by Axel van de Walle and with contributions to the SQS database
         from Ruoshi Sun, Qijun Hong and Sara Kadkhodaei.
 
 Usage: sqs2tdb [options]    where the available options are:
@@ -114,6 +114,8 @@ Usage: sqs2tdb [options]    where the available options are:
                       (otherwise read from species.in if it exists).
 -fit : Fit solution model from SQS energies (to be run within the desired lattice directory)
        The -sro option can also be specified (with -fit) to include short-range order effects.
+       The -ew=[real] option (default: 5) lets you set the increased weight given to endmembers in 
+                     the fit.
 -tdb : Combine solution models from one or multiple lattices into a single .tdb file.
        add the -oc (Open Calphad) option to generate a more portable tdb file.
 -mk  : Generate input file for SQS generation with mcsqs. (Usually not needed - only for experts.)
@@ -180,7 +182,9 @@ OPTIONAL input files (to placed in the topmost directory):
 
     exfromsgte.in : specify which phases should NOT be copied from SGTE database
                     (by default all phases for each relevant element are included,
-                    but you may want to use ab initio data for virtual phase)
+                    but you may want to use ab initio data for virtual phase).
+                    Phases are specified in the form: SGTE_[lattice]_[element]
+                    e.g. SGTE_BCC_A2_AL
     subref.sed    : substitution rule (sed command to be applied to final tdb file)
 
 OUTPUT FILES
@@ -225,7 +229,7 @@ ADVANCED FEATURES
 </PRE>
 <BR><HR>
 <ADDRESS>
-avdw@alum.mit.edu Wed, Dec  6, 2023 12:55:16 PM
+avdw@alum.mit.edu Sat, Jun 21, 2025 12:31:12 AM
 </ADDRESS>
 </BODY>
 </HTML>

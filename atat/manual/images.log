@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Cygwin) (preloaded format=pdflatex 2018.8.30)  6 DEC 2023 12:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Cygwin) (preloaded format=pdflatex 2018.8.30)  21 JUN 2025 00:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -356,10 +356,10 @@ Preview: Tightpage -32891 -32891 32891 32891
 :tex2html_wrap_inline5060:lthtmlCropMarkDepth:=0.0pt:1ex:=4.30554pt
 [2]
 Package epstopdf Info: Source file: <cc88x31.eps>
-(epstopdf)                    date: 2023-12-06 12:55:15
+(epstopdf)                    date: 2025-06-21 00:31:12
 (epstopdf)                    size: 17041 bytes
 (epstopdf)             Output file: <cc88x31-eps-converted-to.pdf>
-(epstopdf)                    date: 2023-12-05 20:30:16
+(epstopdf)                    date: 2023-12-06 12:55:26
 (epstopdf)                    size: 4319 bytes
 (epstopdf)             Command: <repstopdf --outfile=cc88x31-eps-converted-to.p
 df cc88x31.eps>
@@ -368,7 +368,7 @@ runsystem(repstopdf --outfile=cc88x31-eps-converted-to.pdf cc88x31.eps)...execu
 ted safely (allowed).
 
 Package epstopdf Info: Result file: <cc88x31-eps-converted-to.pdf>
-(epstopdf)                    date: 2023-12-06 12:55:26
+(epstopdf)                    date: 2025-06-21 00:31:18
 (epstopdf)                    size: 4319 bytes.
 <cc88x31-eps-converted-to.pdf, id=11, 85.31876pt x 30.1125pt>
 File: cc88x31-eps-converted-to.pdf Graphic file (type pdf)
@@ -436,10 +436,10 @@ Package pdftex.def Info: cc88x31-eps-converted-to.pdf  used on input line 171.
 :tex2html_wrap_inline2065:lthtmlCropMarkDepth:=2.5pt:1ex:=4.30554pt
 [14]
 Package epstopdf Info: Source file: <mapsemc2.eps>
-(epstopdf)                    date: 2023-12-06 12:55:15
+(epstopdf)                    date: 2025-06-21 00:31:12
 (epstopdf)                    size: 183308 bytes
 (epstopdf)             Output file: <mapsemc2-eps-converted-to.pdf>
-(epstopdf)                    date: 2023-12-05 20:30:17
+(epstopdf)                    date: 2023-12-06 12:55:28
 (epstopdf)                    size: 12287 bytes
 (epstopdf)             Command: <repstopdf --outfile=mapsemc2-eps-converted-to.
 pdf mapsemc2.eps>
@@ -448,7 +448,7 @@ runsystem(repstopdf --outfile=mapsemc2-eps-converted-to.pdf mapsemc2.eps)...exe
 cuted safely (allowed).
 
 Package epstopdf Info: Result file: <mapsemc2-eps-converted-to.pdf>
-(epstopdf)                    date: 2023-12-06 12:55:28
+(epstopdf)                    date: 2025-06-21 00:31:19
 (epstopdf)                    size: 12287 bytes.
 <mapsemc2-eps-converted-to.pdf, id=59, 262.9825pt x 266.9975pt>
 File: mapsemc2-eps-converted-to.pdf Graphic file (type pdf)
@@ -559,10 +559,10 @@ my insertion and my current dilemma will both disappear.
 :tex2html_wrap_inline2123:lthtmlCropMarkDepth:=0.83333pt:1ex:=4.30554pt
 [28]
 Package epstopdf Info: Source file: <mapsrep.eps>
-(epstopdf)                    date: 2023-12-06 12:55:15
+(epstopdf)                    date: 2025-06-21 00:31:12
 (epstopdf)                    size: 276744 bytes
 (epstopdf)             Output file: <mapsrep-eps-converted-to.pdf>
-(epstopdf)                    date: 2023-12-05 20:30:19
+(epstopdf)                    date: 2023-12-06 12:55:29
 (epstopdf)                    size: 24689 bytes
 (epstopdf)             Command: <repstopdf --outfile=mapsrep-eps-converted-to.p
 df mapsrep.eps>
@@ -571,7 +571,7 @@ runsystem(repstopdf --outfile=mapsrep-eps-converted-to.pdf mapsrep.eps)...execu
 ted safely (allowed).
 
 Package epstopdf Info: Result file: <mapsrep-eps-converted-to.pdf>
-(epstopdf)                    date: 2023-12-06 12:55:29
+(epstopdf)                    date: 2025-06-21 00:31:20
 (epstopdf)                    size: 24689 bytes.
 <mapsrep-eps-converted-to.pdf, id=114, 464.73625pt x 356.33125pt>
 File: mapsrep-eps-converted-to.pdf Graphic file (type pdf)
@@ -614,10 +614,10 @@ Package pdftex.def Info: mapsrep-eps-converted-to.pdf  used on input line 351.
 :tex2html_wrap_inline2149:lthtmlCropMarkDepth:=0.0pt:1ex:=4.30554pt
 [35]
 Package epstopdf Info: Source file: <mcparam.eps>
-(epstopdf)                    date: 2023-12-06 12:55:15
+(epstopdf)                    date: 2025-06-21 00:31:12
 (epstopdf)                    size: 181816 bytes
 (epstopdf)             Output file: <mcparam-eps-converted-to.pdf>
-(epstopdf)                    date: 2023-12-05 20:30:20
+(epstopdf)                    date: 2023-12-06 12:55:30
 (epstopdf)                    size: 12214 bytes
 (epstopdf)             Command: <repstopdf --outfile=mcparam-eps-converted-to.p
 df mcparam.eps>
@@ -626,7 +626,7 @@ runsystem(repstopdf --outfile=mcparam-eps-converted-to.pdf mcparam.eps)...execu
 ted safely (allowed).
 
 Package epstopdf Info: Result file: <mcparam-eps-converted-to.pdf>
-(epstopdf)                    date: 2023-12-06 12:55:30
+(epstopdf)                    date: 2025-06-21 00:31:21
 (epstopdf)                    size: 12214 bytes.
 <mcparam-eps-converted-to.pdf, id=142, 380.42125pt x 190.7125pt>
 File: mcparam-eps-converted-to.pdf Graphic file (type pdf)
@@ -739,10 +739,10 @@ Package pdftex.def Info: mcparam-eps-converted-to.pdf  used on input line 395.
 :tex2html_wrap_inline2211:lthtmlCropMarkDepth:=0.0pt:1ex:=4.30554pt
 [56]
 Package epstopdf Info: Source file: <mcout.eps>
-(epstopdf)                    date: 2023-12-06 12:55:15
+(epstopdf)                    date: 2025-06-21 00:31:12
 (epstopdf)                    size: 846566 bytes
 (epstopdf)             Output file: <mcout-eps-converted-to.pdf>
-(epstopdf)                    date: 2023-12-05 20:30:21
+(epstopdf)                    date: 2023-12-06 12:55:32
 (epstopdf)                    size: 118025 bytes
 (epstopdf)             Command: <repstopdf --outfile=mcout-eps-converted-to.pdf
  mcout.eps>
@@ -751,7 +751,7 @@ runsystem(repstopdf --outfile=mcout-eps-converted-to.pdf mcout.eps)...executed
 safely (allowed).
 
 Package epstopdf Info: Result file: <mcout-eps-converted-to.pdf>
-(epstopdf)                    date: 2023-12-06 12:55:32
+(epstopdf)                    date: 2025-06-21 00:31:22
 (epstopdf)                    size: 118025 bytes.
 <mcout-eps-converted-to.pdf, id=224, 483.8075pt x 186.6975pt>
 File: mcout-eps-converted-to.pdf Graphic file (type pdf)
