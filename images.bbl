@@ -4,7 +4,7 @@
 A.~van~de Walle.
 \newblock Pilot-waves and copilot-particles: A novel approach to objective
   collapse.
-\newblock {\em preprint}, 2025.
+\newblock {\em Foundations of Physics}, submitted, 2025.
 \newblock Download:
   \htmladdnormallink{[arXiv]}{https://arxiv.org/abs/2506.08168}.
 
@@ -12,15 +12,16 @@ A.~van~de Walle.
 N.~L.~En Hew, L.~A. Myers, A.~van~de Walle, S.-L. Shang, and Z.-K. Liu.
 \newblock Density functional theory toolkit ({DFTTK}) to automate
   first-principles thermodynamics via the quasiharmonic approximation.
-\newblock {\em submitted}, 2025.
+\newblock {\em Comp. Mater. Sci.}, 258:114072, 2025.
 \newblock Download:
-  \htmladdnormallink{[arXiv]}{https://arxiv.org/abs/2504.17027}.
+  \htmladdnormallink{[arXiv]}{https://arxiv.org/abs/2504.17027}
+  \doiref{10.1016/j.commatsci.2025.114072}.
 
 \bibitem{chen:sgte}
 H.~Chen, Q.~Hong, A.~Navrotsky, and A.~van~de Walle.
 \newblock A computational free energy reference for mechanically unstable
   phases.
-\newblock {\em Calphad}, submitted, 2025.
+\newblock {\em Calphad}, Revised and resubmitted, 2025.
 \newblock Download:
   \htmladdnormallink{[SSRN]}{https://dx.doi.org/10.2139/ssrn.5236216}.
 
@@ -37,7 +38,8 @@ B.~Sundman, F.~Miani, A.~van~de Walle, B.~Hallstedt, U.~R. Kattner, F.~Tang,
   T.~Abe, R.~Naraghi, E.~Povoden-Karadeniz, A.~Jacob, S.~Chen, R.~Otis,
   K.~Shobu, M.~Selleby, and A.~Pisch.
 \newblock {XTDB}, an {XML} based format for calphad databases.
-\newblock {\em Calphad}, submitted, 2025.
+\newblock {\em Calphad}, 90:102849, 2025.
+\newblock Download: \doiref{10.1016/j.calphad.2025.102849}.
 
 \bibitem{lund:asymshear}
 E.~Thomas Lund, S.~Sohn, A.~van~de Walle, S.~Curtarolo, D.~Hofmann, and
