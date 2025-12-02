@@ -1,12 +1,27 @@
 \begin{thebibliography}{100}
 
+\bibitem{lebeda:simplysqs}
+M.~Lebeda, J.~Drahokoupil, P.~Vlcak, S.~Svoboda, and A.~van~de Walle.
+\newblock Simplifying generation of special quasirandom structures with atat
+  using interactive online interface - simplysqs.
+\newblock {\em Journal of Chemical Theory and Computation}, submitted, 2025.
+
 \bibitem{avdw:copilot}
 A.~van~de Walle.
-\newblock Pilot-waves and copilot-particles: A novel approach to objective
-  collapse.
+\newblock Pilot-waves and copilot-particles: A nonstochastic approach to
+  objective wavefunction collapse.
 \newblock {\em Foundations of Physics}, submitted, 2025.
 \newblock Download:
   \htmladdnormallink{[arXiv]}{https://arxiv.org/abs/2506.08168}.
+
+\bibitem{han:phfgb}
+X.~Han and A.~van~de Walle.
+\newblock A non-local orientation-field phase-field model for misorientation-
+  and inclination-dependent grain boundaries.
+\newblock {\em Journal of the Mechanics and Physics of Solids}, submitted,
+  2025.
+\newblock Download:
+  \htmladdnormallink{[arXiv]}{https://arxiv.org/abs/2508.01688v1}.
 
 \bibitem{hew:dfttk}
 N.~L.~En Hew, L.~A. Myers, A.~van~de Walle, S.-L. Shang, and Z.-K. Liu.
@@ -21,8 +36,8 @@ N.~L.~En Hew, L.~A. Myers, A.~van~de Walle, S.-L. Shang, and Z.-K. Liu.
 H.~Chen, Q.~Hong, A.~Navrotsky, and A.~van~de Walle.
 \newblock A computational free energy reference for mechanically unstable
   phases.
-\newblock {\em Calphad}, Revised and resubmitted, 2025.
-\newblock Download:
+\newblock {\em Calphad}, 91:102869, 2025.
+\newblock Download: \doiref{10.1016/j.calphad.2025.102869}
   \htmladdnormallink{[SSRN]}{https://dx.doi.org/10.2139/ssrn.5236216}.
 
 \bibitem{zhu:glassdef}
@@ -63,7 +78,7 @@ S.~Curtarolo, H.~Eckert, S.~Kube, S.~Divilov, A.~Guest, A.~Zettel, D.~Hicks,
 S.~Samanta and A.~van~de Walle.
 \newblock Software tools for integrating special quasirandom structures and the
   cluster variation method into the calphad formalism.
-\newblock {\em J. of Phase Equilibria and Diffusion}, Sep, 2024.
+\newblock {\em J. of Phase Equilibria and Diffusion}, 45:1116, 2024.
 \newblock Download: \doiref{10.1007/s11669-024-01151-6}.
 
 \bibitem{ushakov:ErTmO}

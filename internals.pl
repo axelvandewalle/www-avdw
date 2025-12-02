@@ -282,6 +282,10 @@ $key = q/cite_ghosh:sqsce/;
 $ref_files{$key} = "$dir".q|node5.html|; 
 $noresave{$key} = "$nosave";
 
+$key = q/cite_han:phfgb/;
+$ref_files{$key} = "$dir".q|node5.html|; 
+$noresave{$key} = "$nosave";
+
 $key = q/cite_harish:soliq/;
 $ref_files{$key} = "$dir".q|node5.html|; 
 $noresave{$key} = "$nosave";
@@ -379,6 +383,10 @@ $ref_files{$key} = "$dir".q|node5.html|;
 $noresave{$key} = "$nosave";
 
 $key = q/cite_lanier:stoc6x2/;
+$ref_files{$key} = "$dir".q|node5.html|; 
+$noresave{$key} = "$nosave";
+
+$key = q/cite_lebeda:simplysqs/;
 $ref_files{$key} = "$dir".q|node5.html|; 
 $noresave{$key} = "$nosave";
 
