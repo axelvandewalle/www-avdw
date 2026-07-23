@@ -1,5 +1,13 @@
 \begin{thebibliography}{100}
 
+\bibitem{jalagam:coni}
+P.~Jalagam, Z.~Wu, J.~Lawson, and A.~van~de Walle.
+\newblock Magnetic contributions to phase stability in the co-ni binary: A
+  first-principles calphad study.
+\newblock {\em Calphad}, submitted, 2026.
+\newblock Download:
+  \htmladdnormallink{[arXiv]}{https://arxiv.org/abs/2607.12388}.
+
 \bibitem{lebeda:simplysqs}
 M.~Lebeda, J.~Drahokoupil, P.~Vlcak, S.~Svoboda, and A.~van~de Walle.
 \newblock Simplifying generation of special quasirandom structures with {ATAT}
@@ -46,7 +54,7 @@ H.~Chen, Q.~Hong, A.~Navrotsky, and A.~van~de Walle.
 S.~Zhu, H.~Eckert, S.~Curtarolo, J.~Schroers, and A.~van~de Walle.
 \newblock Computational study of density fluctuation-induced shear bands
   formation in bulk metallic glasses.
-\newblock {\em NPJ Comp. Mater. Sci.}, accepted, 2026.
+\newblock {\em NPJ Comp. Mater. Sci.}, 12:157, 2026.
 \newblock Download:
   \htmladdnormallink{[arXiv]}{https://arxiv.org/abs/2504.01229}.
 
