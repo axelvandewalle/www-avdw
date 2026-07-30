@@ -3,8 +3,8 @@
 <!--Converted with LaTeX2HTML 2018.3 (Released July 19, 2018) -->
 <HTML lang="EN">
 <HEAD>
-<TITLE>mkteci</TITLE>
-<META NAME="description" CONTENT="mkteci">
+<TITLE>makelat</TITLE>
+<META NAME="description" CONTENT="makelat">
 <META NAME="keywords" CONTENT="manual">
 <META NAME="resource-type" CONTENT="document">
 <META NAME="distribution" CONTENT="global">
@@ -36,37 +36,52 @@
  HREF="node98.html">
 <IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
 <A
- HREF="node55.html">
+ HREF="node56.html">
 <IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
 <A
  HREF="node96.html">
 <IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
 <BR>
 <B> Next:</B> <A
- HREF="node98.html">clusterpredict</A>
+ HREF="node98.html">clusterexpand</A>
 <B> Up:</B> <A
- HREF="node55.html">Command line options</A>
+ HREF="node56.html">Command line options</A>
 <B> Previous:</B> <A
- HREF="node96.html">clusterexpand</A>
+ HREF="node96.html">str2xyz</A>
 <BR>
 <BR></DIV>
 <!--End of Navigation Panel-->
 
-<H2><A ID="SECTION008242000000000000000">
-mkteci</A>
+<H2><A ID="SECTION008241000000000000000">
+makelat</A>
 </H2>
 <PRE>
-Syntax: mkteci file1.eci ...
- where file1.eci etc. is a list of T-dependent eci files obtained with
- the clusterexpand command, e.g. 
- clusterexpand fvib    in the case of vibrational free energy or
- clusterexpand felec   in the case of electronic free energy.
-Usually the file list is: fvib.eci felec.eci
-                          ^vibrational ^electronic free energy
+MAKE LATtice, by Axel van de Walle
+Utility setting up directories with maps input files for a given alloy system
+and for one or multiple lattices.
+
+Syntax: makelat [-o] [-s=scale] atom1,atom2,... lattice1,lattice2,...
+
+Make sure that there are commas but no spaces between atoms and similarly between the lattices.
+
+Examples:
+  makelat Al,Ni bcc,fcc
+  makelat Ca,Mg:O rocksalt
+
+  (note the : to separate sublattices)
+  The default scale is 1. It can be changed to allow for units other than angstroms.
+  The -o option outputs to strout.
+
+Lattices available:
+B2 bcc bcc-oct bcc-tet diamond fcc fcc-oct fcc-octtet fcc-tet hcp hcp-oct hcp-tet L11 rocksalt sc 
+                     wurtzite zincblende
+
+Other lattices can be added in the /home/avdw/avdw/atat/data/ directory or
+new atomic radius can be added in the /home/avdw/avdw/atat/data/radii.in file.
 </PRE>
 <BR><HR>
 <ADDRESS>
-avdw@alum.mit.edu Sat, Jun 21, 2025 12:31:12 AM
+avdw@alum.mit.edu Thu, Jul 30, 2026  5:11:12 PM
 </ADDRESS>
 </BODY>
 </HTML>

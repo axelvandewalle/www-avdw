@@ -3,8 +3,8 @@
 <!--Converted with LaTeX2HTML 2018.3 (Released July 19, 2018) -->
 <HTML lang="EN">
 <HEAD>
-<TITLE>getvalue</TITLE>
-<META NAME="description" CONTENT="getvalue">
+<TITLE>symbrklib</TITLE>
+<META NAME="description" CONTENT="symbrklib">
 <META NAME="keywords" CONTENT="manual">
 <META NAME="resource-type" CONTENT="document">
 <META NAME="distribution" CONTENT="global">
@@ -36,36 +36,35 @@
  HREF="node109.html">
 <IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
 <A
- HREF="node55.html">
+ HREF="node56.html">
 <IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
 <A
  HREF="node107.html">
 <IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
 <BR>
 <B> Next:</B> <A
- HREF="node109.html">getlines</A>
+ HREF="node109.html">ocplotpd</A>
 <B> Up:</B> <A
- HREF="node55.html">Command line options</A>
+ HREF="node56.html">Command line options</A>
 <B> Previous:</B> <A
- HREF="node107.html">ocplotpd</A>
+ HREF="node107.html">sqs2tdb</A>
 <BR>
 <BR></DIV>
 <!--End of Navigation Panel-->
 
-<H2><A ID="SECTION008253000000000000000">
-getvalue</A>
+<H2><A ID="SECTION008252000000000000000">
+symbrklib</A>
 </H2>
 <PRE>
-Syntax: getvalue [label]
-Script that scans standard input for a given label and
-write, to standard output, the numerical value following
-every occurence of that label.
-Any number of : = spaces or tabs can separate the label and the number.
-Example: getvalue "Final energy" &lt; gulp.output
+Usage: symbrklib [-s fraction] [element] [initial_structure] [final_structure]
+Currently, the initial and final structures can be one of bcc,fcc,hcp.
+The -s option (optional) indicates to just generate a small distortion (a given fraction along the 
+                     instability path).
+This command is intended to be run before robustrelax_xxxx
 </PRE>
 <BR><HR>
 <ADDRESS>
-avdw@alum.mit.edu Sat, Jun 21, 2025 12:31:12 AM
+avdw@alum.mit.edu Thu, Jul 30, 2026  5:11:12 PM
 </ADDRESS>
 </BODY>
 </HTML>

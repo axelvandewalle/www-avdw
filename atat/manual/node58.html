@@ -3,8 +3,8 @@
 <!--Converted with LaTeX2HTML 2018.3 (Released July 19, 2018) -->
 <HTML lang="EN">
 <HEAD>
-<TITLE>cellcvrt</TITLE>
-<META NAME="description" CONTENT="cellcvrt">
+<TITLE>apb</TITLE>
+<META NAME="description" CONTENT="apb">
 <META NAME="keywords" CONTENT="manual">
 <META NAME="resource-type" CONTENT="document">
 <META NAME="distribution" CONTENT="global">
@@ -36,70 +36,55 @@
  HREF="node59.html">
 <IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
 <A
- HREF="node55.html">
+ HREF="node56.html">
 <IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
 <A
  HREF="node57.html">
 <IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
 <BR>
 <B> Next:</B> <A
- HREF="node59.html">checkcell</A>
+ HREF="node59.html">cellcvrt</A>
 <B> Up:</B> <A
- HREF="node55.html">Command line options</A>
+ HREF="node56.html">Command line options</A>
 <B> Previous:</B> <A
- HREF="node57.html">apb</A>
+ HREF="node57.html">3d2gnu</A>
 <BR>
 <BR></DIV>
 <!--End of Navigation Panel-->
 
-<H2><A ID="SECTION00823000000000000000">
-cellcvrt</A>
+<H2><A ID="SECTION00822000000000000000">
+apb</A>
 </H2>
 <PRE>
-cellcvrt 3.50, by Axel van de Walle
-Performs various conversions/changes on structure (or lattices).
-Reads from stdin, writes to stdout.
-    -c            Use cartesian coordinates (Default: Off)
-    -f            Use fractional coordinates (Default: Off)
-   -cc            Find conventional cell and use it as coordinate system (Default: Off)
-  -abc            Use a b c alpha beta gamma format to specify axes (Default: Off)
--noabc            Use cartesian format to specify the axes (the default) (Default: Off)
-   -ro            Read fractional Occupation (Default: Off)
-    -u=[string]   User-specified coordinate system input file (optional) (Default: )
-  -uss=[string]   User-specified supercell (Default: )
-   -ss=[int]      Simple supercell (multiple of axes in all directions) (Default: 0)
-   -fc            Fix cell (to make it as symmetric as possible) (Default: Off)
-    -s            Look for smaller unit cell (Default: Off)
-   -sh=[string]   Shift all atoms (default 0,0,0).
-   -ja=[real]     Jitter all atoms positions by a random amount less than specified (Default: 0)
-   -jc=[real]     Jitter all cell parameters by a random amount less than the fraction specified 
-                     (Default: 0)
-   -sd=[int]      Seed for random number generation (default: use clock)
-   -sg=[string]   Space group file (Default: )
-  -gsg            Generate Space Group (Default: Off)
-   -wi            Wrap all atoms inside unit cell (Default: Off)
-  -wiu            Wrap all atoms inside unit cell and undo shift (Default: Off)
-   -rr            Remove redundant atoms (Default: Off)
-  -rra            Remove redundant atoms and average (Default: Off)
-   -ar            Add redundant atoms (Default: Off)
-  -osf=[string]   Original setting file (optional) (Default: )
-  -fsf=[string]   Final setting file (optional) (Default: )
-    -r            Print reciprocal unit cell (Default: Off)
-   -fs=[int]      Index of first structure to process (default: 1)
-   -ns=[int]      Number of structures to process (Default: 2147483647)
-  -slf=[string]   Structure list file (Default: )
-   -pn            Print the number of atoms in the structure only (Default: Off)
-   -pv            Print volume of cell only (Default: Off)
-  -sym            Print spacegroup (Default: Off)
-  -ppg            Print point group name (Default: Off)
-  -pbv            Print Bravais Lattice name (Default: Off)
-   -sc=[real]     Scale factor (default: 1)
-  -sig=[int]      Number of significant digits to print in output files (Default: 6)
-    -z=[real]     Tolerance for checking overlap (Default 1e-3)
+AntiPhase Boundary 3.52, by Ruoshi Sun and Axel van de Walle
+Automating impurity-enhanced antiphase boundary energy calculations from ab initio Monte Carlo,
+ Calphad 53, 20 (2016)
+
+File options:
+ -l=[string]   Input file: lattice   (Default: lat.in)
+ -s=[string]             : structure (Default: str.out)
+ -o=[string]   Output file: APB structure (Default: str_apb.out)
+-og=[string]              : energies      (Default: gamma_apb.out)
+
+APB options:
+ -f            Generate APB structure file and exit; do not compute APB energy (Default: Off)
+-sx=[real]     APB slip vector: x-component (Default: 0)
+-sy=[real]                    : y-component (Default: 0)
+-sz=[real]                    : z-component (Default: 0)
+
+Monte Carlo options:
+-mc            Run Monte Carlo (Default: Off)
+-eq=[int]      Number of: equilibration passes (Default: -1)
+ -n=[int]               : averaging passes     (Default: -1)
+ -T=[real]     Temperature (Default: 0)
+
+Other options:
+ -d            Use all default values (Default: Off)
+ -h            Display more help (Default: Off)
 </PRE>
 <BR><HR>
 <ADDRESS>
-avdw@alum.mit.edu Sat, Jun 21, 2025 12:31:12 AM
+avdw@alum.mit.edu Thu, Jul 30, 2026  5:11:12 PM
 </ADDRESS>
 </BODY>
 </HTML>

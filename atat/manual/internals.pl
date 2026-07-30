@@ -170,28 +170,32 @@ $key = q/mangensqs/;
 $ref_files{$key} = "$dir".q|node45.html|; 
 $noresave{$key} = "$nosave";
 
-$key = q/maninfdet/;
+$key = q/manicamag/;
 $ref_files{$key} = "$dir".q|node46.html|; 
 $noresave{$key} = "$nosave";
 
-$key = q/manmaps/;
+$key = q/maninfdet/;
 $ref_files{$key} = "$dir".q|node47.html|; 
 $noresave{$key} = "$nosave";
 
-$key = q/manmcsqs/;
+$key = q/manmaps/;
 $ref_files{$key} = "$dir".q|node48.html|; 
 $noresave{$key} = "$nosave";
 
-$key = q/manmemc2/;
+$key = q/manmcsqs/;
 $ref_files{$key} = "$dir".q|node49.html|; 
 $noresave{$key} = "$nosave";
 
-$key = q/manmindist/;
+$key = q/manmemc2/;
 $ref_files{$key} = "$dir".q|node50.html|; 
 $noresave{$key} = "$nosave";
 
-$key = q/manmmaps/;
+$key = q/manmindist/;
 $ref_files{$key} = "$dir".q|node51.html|; 
+$noresave{$key} = "$nosave";
+
+$key = q/manmmaps/;
+$ref_files{$key} = "$dir".q|node52.html|; 
 $noresave{$key} = "$nosave";
 
 $key = q/manpages/;
@@ -199,15 +203,15 @@ $ref_files{$key} = "$dir".q|node32.html|;
 $noresave{$key} = "$nosave";
 
 $key = q/manphb/;
-$ref_files{$key} = "$dir".q|node52.html|; 
-$noresave{$key} = "$nosave";
-
-$key = q/manpredcs/;
 $ref_files{$key} = "$dir".q|node53.html|; 
 $noresave{$key} = "$nosave";
 
-$key = q/mansvsl/;
+$key = q/manpredcs/;
 $ref_files{$key} = "$dir".q|node54.html|; 
+$noresave{$key} = "$nosave";
+
+$key = q/mansvsl/;
+$ref_files{$key} = "$dir".q|node55.html|; 
 $noresave{$key} = "$nosave";
 
 $key = q/mapsemc2/;
@@ -231,7 +235,7 @@ $ref_files{$key} = "$dir".q|node15.html|;
 $noresave{$key} = "$nosave";
 
 $key = q/troubles/;
-$ref_files{$key} = "$dir".q|node125.html|; 
+$ref_files{$key} = "$dir".q|node127.html|; 
 $noresave{$key} = "$nosave";
 
 1;

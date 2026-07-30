@@ -3,8 +3,8 @@
 <!--Converted with LaTeX2HTML 2018.3 (Released July 19, 2018) -->
 <HTML lang="EN">
 <HEAD>
-<TITLE>getlines</TITLE>
-<META NAME="description" CONTENT="getlines">
+<TITLE>ocplotpd</TITLE>
+<META NAME="description" CONTENT="ocplotpd">
 <META NAME="keywords" CONTENT="manual">
 <META NAME="resource-type" CONTENT="document">
 <META NAME="distribution" CONTENT="global">
@@ -36,41 +36,55 @@
  HREF="node110.html">
 <IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
 <A
- HREF="node55.html">
+ HREF="node56.html">
 <IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
 <A
  HREF="node108.html">
 <IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
 <BR>
 <B> Next:</B> <A
- HREF="node110.html">nltoblank</A>
+ HREF="node110.html">getvalue</A>
 <B> Up:</B> <A
- HREF="node55.html">Command line options</A>
+ HREF="node56.html">Command line options</A>
 <B> Previous:</B> <A
- HREF="node108.html">getvalue</A>
+ HREF="node108.html">symbrklib</A>
 <BR>
 <BR></DIV>
 <!--End of Navigation Panel-->
 
-<H2><A ID="SECTION008254000000000000000">
-getlines</A>
+<H2><A ID="SECTION008253000000000000000">
+ocplotpd</A>
 </H2>
 <PRE>
-Syntax: getlines [-h] [ -af | -bf | -bt | -jaf | -jbf | -bt ] string1 string2
-Copies selected lines of standard input to standard output.
--h   print this help.
--af  print all lines located *after* a line containing string1
--bf  print all lines located *before* a line containing string1
--bt  print all lines located between a line containing string1 and a line containing string2
-     (If there are multiple blocks of lines braketed by [begin string]
-      and [end string] they are all copied.)
-The prefix j means "just", indicating that the line(s) containing the matching string(s) is (are) 
-                     ommited.
-Don't forget to quote your strings if they contain spaces.
+A front-end to OpenCalphad for PLOTting Phase Diagrams.
+Usage: ocplotpd [-ha] [-nt] [-tlf=fraction] [-1f] [-vtk] [-rmax=r_max] [-rmin=r_min] 
+                     [-np=nb_of_proc] -tdb=tdbfile -n=nb_of_samples -T0=min_temperature -T1=max_temperature -e=element,element,...
+
+Mandatory parameters:
+ tdbfile: name of the Thermodynamic DataBase (TDB) file to use
+ element,element,... : a list of the elements (and associated phases) to extract from the TDB file
+ nb_of_samples: Number of phase equilibria sampled to generate the phase diagram
+ min_temperature: lower bound on the temperature axis
+ max_temperature: upper bound on the temperature axis (if min_temperature=max_temperature, a cross 
+                     section is plotted)
+ 
+optional parameters:
+ -ha:   high accuracy calculations
+ -nt:   no tie lines
+ -tlf:  fraction of tie lines displayed (between 0.0 and 1.0)
+ -1f:   generate a single gnuplot file
+ -vtk:  generate vtk files (instead of gnuplot)
+ -rmax: max distance between points in triangulation
+ -rmin: discard points closer to each other than this cutoff
+ -np:   launch nb_of_proc copies of opencalphad
+ -noc:  do not run OpenCalphad - just create the graphs from the *.dat files
+ -nd:   general n-dimensional phase diagram (generate input files for ndviewer - experimental)
+ -debug:do not delete temporary files
+ -mpi:  use mpi for simplexize code (experimental)
 </PRE>
 <BR><HR>
 <ADDRESS>
-avdw@alum.mit.edu Sat, Jun 21, 2025 12:31:12 AM
+avdw@alum.mit.edu Thu, Jul 30, 2026  5:11:12 PM
 </ADDRESS>
 </BODY>
 </HTML>

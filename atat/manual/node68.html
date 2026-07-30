@@ -3,8 +3,8 @@
 <!--Converted with LaTeX2HTML 2018.3 (Released July 19, 2018) -->
 <HTML lang="EN">
 <HEAD>
-<TITLE>fixcell</TITLE>
-<META NAME="description" CONTENT="fixcell">
+<TITLE>fitsvsl</TITLE>
+<META NAME="description" CONTENT="fitsvsl">
 <META NAME="keywords" CONTENT="manual">
 <META NAME="resource-type" CONTENT="document">
 <META NAME="distribution" CONTENT="global">
@@ -36,37 +36,50 @@
  HREF="node69.html">
 <IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
 <A
- HREF="node55.html">
+ HREF="node56.html">
 <IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
 <A
  HREF="node67.html">
 <IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
 <BR>
 <B> Next:</B> <A
- HREF="node69.html">gce</A>
+ HREF="node69.html">fixcell</A>
 <B> Up:</B> <A
- HREF="node55.html">Command line options</A>
+ HREF="node56.html">Command line options</A>
 <B> Previous:</B> <A
- HREF="node67.html">fitsvsl</A>
+ HREF="node67.html">fitfc</A>
 <BR>
 <BR></DIV>
 <!--End of Navigation Panel-->
 
-<H2><A ID="SECTION008213000000000000000">
-fixcell</A>
+<H2><A ID="SECTION008212000000000000000">
+fitsvsl</A>
 </H2>
 <PRE>
-fixcell 3.50, by Axel van de Walle
-  -d            Use all default values (Default: Off)
-  -c            read and print cell in cartesian only (no axes specified) (Default: Off)
+Fit Stiffness VS Length transferable force constants 3.52, by Axel van de Walle
+  -f            Fit force constants (otherwise, generate pertubations) (Default: Off)
+  -l=[string]   Input file defining the lattice (default: lat.in)
+ -dn=[string]   Input file listing the directories containing the structures used to calculate force 
+                     constants (default: strname.in)
+ -er=[real]     Minimum distance between displaced atoms (Default: 0)
+ -dr=[real]     Displacement of the perturbed atom (default: 0.2)
+ -ms=[real]     Strain of the maximum volume sampled (default: 0.01)
+ -ns=[int]      Number of volume sample (default: 2)
+ -op=[int]      Order of the polynomial used to fit stiffness vs length (Default: 1)
+ -dd            Use direction-dependent force constants (Default: Off)
+ -pc=[int]      Maximum power of composition used in fit (default: no composition dependence)
+-msl=[real]     Maximum spring length (Default: Off)
+ -sf=[string]   Extra strain file (Default: )
+-eqt=[real]     Tolerance for excluding force constants in plots. (Default: 2)
+-sig=[int]      Number of significant digits printed (default: 5)
   -z=[real]     Tolerance for finding symmetry operations (default: 1e-3)
-  -b            print bravais lattice type only and conventional (potentially not primitive) cell 
-                     (Default: Off)
--sig=[int]      Number of significant digits to print in output files (Default: 6)
+-ncs            No check for singular matrix in fit (Default: Off)
+ -od            Use older 1-level only directory tree (Default: Off)
+  -h            Display more help (Default: Off)
 </PRE>
 <BR><HR>
 <ADDRESS>
-avdw@alum.mit.edu Sat, Jun 21, 2025 12:31:12 AM
+avdw@alum.mit.edu Thu, Jul 30, 2026  5:11:12 PM
 </ADDRESS>
 </BODY>
 </HTML>

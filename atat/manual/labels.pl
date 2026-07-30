@@ -170,28 +170,32 @@ $key = q/mangensqs/;
 $external_labels{$key} = "$URL/" . q|node45.html|; 
 $noresave{$key} = "$nosave";
 
-$key = q/maninfdet/;
+$key = q/manicamag/;
 $external_labels{$key} = "$URL/" . q|node46.html|; 
 $noresave{$key} = "$nosave";
 
-$key = q/manmaps/;
+$key = q/maninfdet/;
 $external_labels{$key} = "$URL/" . q|node47.html|; 
 $noresave{$key} = "$nosave";
 
-$key = q/manmcsqs/;
+$key = q/manmaps/;
 $external_labels{$key} = "$URL/" . q|node48.html|; 
 $noresave{$key} = "$nosave";
 
-$key = q/manmemc2/;
+$key = q/manmcsqs/;
 $external_labels{$key} = "$URL/" . q|node49.html|; 
 $noresave{$key} = "$nosave";
 
-$key = q/manmindist/;
+$key = q/manmemc2/;
 $external_labels{$key} = "$URL/" . q|node50.html|; 
 $noresave{$key} = "$nosave";
 
-$key = q/manmmaps/;
+$key = q/manmindist/;
 $external_labels{$key} = "$URL/" . q|node51.html|; 
+$noresave{$key} = "$nosave";
+
+$key = q/manmmaps/;
+$external_labels{$key} = "$URL/" . q|node52.html|; 
 $noresave{$key} = "$nosave";
 
 $key = q/manpages/;
@@ -199,15 +203,15 @@ $external_labels{$key} = "$URL/" . q|node32.html|;
 $noresave{$key} = "$nosave";
 
 $key = q/manphb/;
-$external_labels{$key} = "$URL/" . q|node52.html|; 
-$noresave{$key} = "$nosave";
-
-$key = q/manpredcs/;
 $external_labels{$key} = "$URL/" . q|node53.html|; 
 $noresave{$key} = "$nosave";
 
-$key = q/mansvsl/;
+$key = q/manpredcs/;
 $external_labels{$key} = "$URL/" . q|node54.html|; 
+$noresave{$key} = "$nosave";
+
+$key = q/mansvsl/;
+$external_labels{$key} = "$URL/" . q|node55.html|; 
 $noresave{$key} = "$nosave";
 
 $key = q/mapsemc2/;
@@ -231,7 +235,7 @@ $external_labels{$key} = "$URL/" . q|node15.html|;
 $noresave{$key} = "$nosave";
 
 $key = q/troubles/;
-$external_labels{$key} = "$URL/" . q|node125.html|; 
+$external_labels{$key} = "$URL/" . q|node127.html|; 
 $noresave{$key} = "$nosave";
 
 1;
@@ -301,28 +305,32 @@ $key = q/mangensqs/;
 $external_latex_labels{$key} = q|7.1.12|; 
 $noresave{$key} = "$nosave";
 
-$key = q/maninfdet/;
+$key = q/manicamag/;
 $external_latex_labels{$key} = q|7.1.13|; 
 $noresave{$key} = "$nosave";
 
-$key = q/manmaps/;
+$key = q/maninfdet/;
 $external_latex_labels{$key} = q|7.1.14|; 
 $noresave{$key} = "$nosave";
 
-$key = q/manmcsqs/;
+$key = q/manmaps/;
 $external_latex_labels{$key} = q|7.1.15|; 
 $noresave{$key} = "$nosave";
 
-$key = q/manmemc2/;
+$key = q/manmcsqs/;
 $external_latex_labels{$key} = q|7.1.16|; 
 $noresave{$key} = "$nosave";
 
-$key = q/manmindist/;
+$key = q/manmemc2/;
 $external_latex_labels{$key} = q|7.1.17|; 
 $noresave{$key} = "$nosave";
 
-$key = q/manmmaps/;
+$key = q/manmindist/;
 $external_latex_labels{$key} = q|7.1.18|; 
+$noresave{$key} = "$nosave";
+
+$key = q/manmmaps/;
+$external_latex_labels{$key} = q|7.1.19|; 
 $noresave{$key} = "$nosave";
 
 $key = q/manpages/;
@@ -330,15 +338,15 @@ $external_latex_labels{$key} = q|7|;
 $noresave{$key} = "$nosave";
 
 $key = q/manphb/;
-$external_latex_labels{$key} = q|7.1.19|; 
-$noresave{$key} = "$nosave";
-
-$key = q/manpredcs/;
 $external_latex_labels{$key} = q|7.1.20|; 
 $noresave{$key} = "$nosave";
 
-$key = q/mansvsl/;
+$key = q/manpredcs/;
 $external_latex_labels{$key} = q|7.1.21|; 
+$noresave{$key} = "$nosave";
+
+$key = q/mansvsl/;
+$external_latex_labels{$key} = q|7.1.22|; 
 $noresave{$key} = "$nosave";
 
 $key = q/mapsemc2/;

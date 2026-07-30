@@ -3,8 +3,8 @@
 <!--Converted with LaTeX2HTML 2018.3 (Released July 19, 2018) -->
 <HTML lang="EN">
 <HEAD>
-<TITLE>mkaxes</TITLE>
-<META NAME="description" CONTENT="mkaxes">
+<TITLE>memc2</TITLE>
+<META NAME="description" CONTENT="memc2">
 <META NAME="keywords" CONTENT="manual">
 <META NAME="resource-type" CONTENT="document">
 <META NAME="distribution" CONTENT="global">
@@ -36,49 +36,77 @@
  HREF="node81.html">
 <IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
 <A
- HREF="node55.html">
+ HREF="node56.html">
 <IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
 <A
  HREF="node79.html">
 <IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
 <BR>
 <B> Next:</B> <A
- HREF="node81.html">mmaps</A>
+ HREF="node81.html">mindist</A>
 <B> Up:</B> <A
- HREF="node55.html">Command line options</A>
+ HREF="node56.html">Command line options</A>
 <B> Previous:</B> <A
- HREF="node79.html">mindist</A>
+ HREF="node79.html">mcsqs</A>
 <BR>
 <BR></DIV>
 <!--End of Navigation Panel-->
 
-<H2><A ID="SECTION008225000000000000000">
-mkaxes</A>
+<H2><A ID="SECTION008224000000000000000">
+memc2</A>
 </H2>
 <PRE>
-MaKe Axes 3.50, by Axel van de Walle
-     -h            Display more help (Default: Off)
- -trans            Transform to coordinate system (Default: Off)
-   -mat            Output transformation matrices (Default: Off)
-   -tri            Gibbs triangle (Default: Off)
- -tetra            Gibbs tetrahedron (Default: Off)
- -hidim=[int]      Dimension (Default: 3)
-   -col=[real]     Color (Default: 0)
-   -rgb=[real],... RGB Color (Default: )
-    -vl=[string]   Vertices labels (Default: )
-  -zmax=[real]      (Default: 1000)
-  -zmin=[real]      (Default: 0)
--zscale=[real]      (Default: 1000)
-    -cs            Cross-Section (Default: Off)
-    -cf=[string]   Cross section input File (Default: cut.in)
-  -font=[string]   font file (Default: )
-    -ef=[string]   Export format (default: vtk)
-   -sig=[int]      Number of significant digits printed (Default: 5)
-     -d            Use all default values (Default: Off)
+Multicomponent Eazy Monte Carlo Code 3.52, by Axel van de Walle
+     -h            Help (Default: Off)
+    -er=[real]     Set the system  size so that a sphere of that radius must fit inside the 
+                     simulation cell (Default: 0)
+    -cf=[string]   Control file specifying the ranges of temperature and chem. pot. scanned 
+                     (default: control.in)
+    -eq=[int]      Number of equilibration passes (Default: -1)
+     -n=[int]      Number of averaging passes (Default: -1)
+    -tp=[real]     Target precision (optional, replaces -n and -eq) (Default: 0)
+    -aq=[int]      Quantity that must meet the tolerance specified by -tp. 1: energy (default), 2: 
+                     long-range order, 3-: point correlations
+    -gs=[int]      which ground state to use as initial config (-gs=-1 to use random state) 
+                     (Default: -2)
+     -k=[real]     Boltzman's constant (conversion factor from T to energy) (Default: 1)
+   -keV            Set Boltzman's constant to 8.617e-5 so that temperature is in K when energy is in 
+                     eV (Default: Off)
+   -g2c            Convert output to canonical rather than grand-canonical quantities (Default: 
+                     Off)
+  -phi0=[real]     initial (grand) canonical potential (default: from mean field approx.)
+ -tstat=[real]     Critical value of the test for discontinuity (Default: 3)
+   -mft=[real]     Mean field threshold (if |lte-mf|&lt;mft, use mf values instead of mc) (Default: 
+                     -1)
+  -mftq=[int]      Quantity that must meet the tolerance specified by -mft.0: phi (default) , 1: 
+                     energy , 2: long-range order, 3-: concentrations
+-sigdig=[int]      Number of significant digits printed (Default: 6)
+     -q            Quiet (do not write to stdout) (Default: Off)
+     -o=[string]   Output file (default: mc.out)
+   -oss=[string]   Output snapshot file (default: mcsnapshot.out)
+  -opss=[string]   Output periodic snapshot files (default: do not write)
+    -sd=[int]      Seed for random number generation (default: use clock)
+    -dl            Drop the last data point of each inner loop (after the phase transition occured) 
+                     (Default: Off)
+    -is=[string]   File name containing a user-specified initial configuration (replaces -gs) 
+                     (Default: )
+    -hf            Shift all coordinates by half a grid point in scan (e.g. 2 steps in [0,1] give 
+                     0.25,0.75 instead of 0,0.5) (Default: Off)
+    -il            Include last coordinate in scan (e.g. 3 steps in [0,1] gives 0,0.5,1 instead of 
+                     0,0.333,0.666) (Default: Off)
+    -ts=[string]   Triangular scanning. Specify list of composition axes (e.g. -ts=1,2). (Default: 
+                     )
+   -crf=[string]   Select correlation functions (default: trigo)
+    -df=[int]      Max distance between flips (in unit cells) in grand-canonical mode (Default: -1)
+    -mf=[int]      Minimum number of flips in grand-canonical mode (experimental) (Default: 0)
+    -rw            Use random walk algorithm (experimental) (Default: Off)
+   -fdT=[real]     Temperature step for finite differences (Default: 0.01)
+  -fdmu=[real]     Chemical potential step for finite differences (Default: 0.01)
+    -ks=[string]   Specify how k space ECI are calculated (e.g. -ks=cs). (Default: )
 </PRE>
 <BR><HR>
 <ADDRESS>
-avdw@alum.mit.edu Sat, Jun 21, 2025 12:31:12 AM
+avdw@alum.mit.edu Thu, Jul 30, 2026  5:11:12 PM
 </ADDRESS>
 </BODY>
 </HTML>

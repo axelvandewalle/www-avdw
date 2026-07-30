@@ -3,8 +3,8 @@
 <!--Converted with LaTeX2HTML 2018.3 (Released July 19, 2018) -->
 <HTML lang="EN">
 <HEAD>
-<TITLE>sspp</TITLE>
-<META NAME="description" CONTENT="sspp">
+<TITLE>foreachfile</TITLE>
+<META NAME="description" CONTENT="foreachfile">
 <META NAME="keywords" CONTENT="manual">
 <META NAME="resource-type" CONTENT="document">
 <META NAME="distribution" CONTENT="global">
@@ -36,63 +36,36 @@
  HREF="node115.html">
 <IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
 <A
- HREF="node55.html">
+ HREF="node56.html">
 <IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
 <A
  HREF="node113.html">
 <IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
 <BR>
 <B> Next:</B> <A
- HREF="node115.html">chl</A>
+ HREF="node115.html">calc</A>
 <B> Up:</B> <A
- HREF="node55.html">Command line options</A>
+ HREF="node56.html">Command line options</A>
 <B> Previous:</B> <A
- HREF="node113.html">calc</A>
+ HREF="node113.html">blanktonl</A>
 <BR>
 <BR></DIV>
 <!--End of Navigation Panel-->
 
-<H2><A ID="SECTION008259000000000000000">
-sspp</A>
+<H2><A ID="SECTION008258000000000000000">
+foreachfile</A>
 </H2>
 <PRE>
-  Simple symbolic pre-processor
-  reads from stdin, writes to stdout (also writes temporary file tmp.awk)
-  Interprets simple definitions and evaluates numerical expressions with
-  constants definitions.
-  invoking sspp -nb produces a output file where all blank
-  lines have been removed
- 
-  input file syntax:
-   understands any C pre-processor commands (see man cpp)
-   also understands #const [var1]=[value2]; [var2]=[value2]
-   the variables var1 ... can be used later in the file.
-   Expression to be evaluated must be enclosed in braces {}
-   except when they are in a #const declaration.
-   The brace characters are entered as \{ and \}
-   Understands c++ comment char //
-
-  Examples:
-   #const x=2*3.14
-   The value is {1+cos(x)}
-   #define PLUS(x,y) ((x)+(y))
-   The answer is {PLUS(1,2)}
-   Braces are \{ \}
-
-  Implementation details:
-   Any line beginning with #const or #awk
-   is interpreted as an awk command (see man awk).
-   Expression in braces are awk expressions.
-   The file tmp.awk is the file sent to awk for interpretation.
-
-  BUGS
-
-   Never start a line with %
-   # is not a comment character
+Syntax: foreachfile [-e] [-n filename_to_skip] [-a and_filename] [-d depth] filename command
+Execute the specified command in every first-level subdirectory containing the file filename.
+The -e option cause foreachfile to skip directories containing the file "error".
+The -n option cause foreachfile to skip directories containing the file filename_to_skip.
+The -a option specifies that the file and_filename must also exist.
+The -d option specifies to go down to lower level subdirectories as well (the default is 1).
 </PRE>
 <BR><HR>
 <ADDRESS>
-avdw@alum.mit.edu Sat, Jun 21, 2025 12:31:12 AM
+avdw@alum.mit.edu Thu, Jul 30, 2026  5:11:12 PM
 </ADDRESS>
 </BODY>
 </HTML>

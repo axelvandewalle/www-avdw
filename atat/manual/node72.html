@@ -3,8 +3,8 @@
 <!--Converted with LaTeX2HTML 2018.3 (Released July 19, 2018) -->
 <HTML lang="EN">
 <HEAD>
-<TITLE>genstr</TITLE>
-<META NAME="description" CONTENT="genstr">
+<TITLE>gensqs</TITLE>
+<META NAME="description" CONTENT="gensqs">
 <META NAME="keywords" CONTENT="manual">
 <META NAME="resource-type" CONTENT="document">
 <META NAME="distribution" CONTENT="global">
@@ -36,36 +36,43 @@
  HREF="node73.html">
 <IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
 <A
- HREF="node55.html">
+ HREF="node56.html">
 <IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
 <A
  HREF="node71.html">
 <IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
 <BR>
 <B> Next:</B> <A
- HREF="node73.html">infdet</A>
+ HREF="node73.html">genstr</A>
 <B> Up:</B> <A
- HREF="node55.html">Command line options</A>
+ HREF="node56.html">Command line options</A>
 <B> Previous:</B> <A
- HREF="node71.html">gensqs</A>
+ HREF="node71.html">gencs</A>
 <BR>
 <BR></DIV>
 <!--End of Navigation Panel-->
 
-<H2><A ID="SECTION008217000000000000000">
-genstr</A>
+<H2><A ID="SECTION008216000000000000000">
+gensqs</A>
 </H2>
 <PRE>
-GENerate STRuctures 3.50, by Axel van de Walle
-  -n=[int]      maximum nb of atom/unit cell (Default: 0)
-  -z=[real]     Tolerance for finding symmetry operations (default: 1e-3)
+GENerate Special Quasirandom Structures 3.52, by Axel van de Walle
+  -n=[int]      nb of atom/unit cell (Default: 0)
 -sig=[int]      Number of significant digits to print in output files (Default: 6)
- -2d            Find supercells along a and b axes only (Default: Off)
+ -cf=[string]   Input file defining the clusters (default: clusters.out)
+ -tc=[string]   Input file defining the target correlations (default: tcorr.out)
+-tol=[real]     Tolerance for matching correlations (default: 1e-3)
   -l=[string]   Input file defining the lattice (default: lat.in)
+ -rc            Read unit cells from file (Default: Off)
+ -pc            Print number of supercells only, and quit (Default: Off)
+ -tp=[int]      Total number of processes (for parallel operation) (Default: 1)
+ -ip=[int]      Index of current process (0,...,tp-1) (for parallel operation) (Default: 0)
+-crf=[string]   Select correlation functions (default: trigo)
+  -h            Display more help (Default: Off)
 </PRE>
 <BR><HR>
 <ADDRESS>
-avdw@alum.mit.edu Sat, Jun 21, 2025 12:31:12 AM
+avdw@alum.mit.edu Thu, Jul 30, 2026  5:11:12 PM
 </ADDRESS>
 </BODY>
 </HTML>

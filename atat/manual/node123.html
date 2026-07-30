@@ -3,8 +3,8 @@
 <!--Converted with LaTeX2HTML 2018.3 (Released July 19, 2018) -->
 <HTML lang="EN">
 <HEAD>
-<TITLE>robustrelax-vasp</TITLE>
-<META NAME="description" CONTENT="robustrelax-vasp">
+<TITLE>runstruct-vasp</TITLE>
+<META NAME="description" CONTENT="runstruct-vasp">
 <META NAME="keywords" CONTENT="manual">
 <META NAME="resource-type" CONTENT="document">
 <META NAME="distribution" CONTENT="global">
@@ -36,105 +36,45 @@
  HREF="node124.html">
 <IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
 <A
- HREF="node55.html">
+ HREF="node56.html">
 <IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
 <A
  HREF="node122.html">
 <IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
 <BR>
 <B> Next:</B> <A
- HREF="node124.html">str2poscar</A>
+ HREF="node124.html">ezvasp</A>
 <B> Up:</B> <A
- HREF="node55.html">Command line options</A>
+ HREF="node56.html">Command line options</A>
 <B> Previous:</B> <A
- HREF="node122.html">ezvasp</A>
+ HREF="node122.html">lookup</A>
 <BR>
 <BR></DIV>
 <!--End of Navigation Panel-->
 
-<H2><A ID="SECTION008268000000000000000">
-robustrelax-vasp</A>
+<H2><A ID="SECTION008267000000000000000">
+runstruct-vasp</A>
 </H2>
 <PRE>
-This command implements the "inflection-detection" method introduced in
-A. van de Walle, Q. Hong, S. Kadkhodaei and R. Sun, "The free energy of mechanically unstable 
-                     phases"
-Nat. Com. 6, 7559 (2015) doi:10.1038/ncomms8559 .
-and
-A. van de Walle and S. Kadkhodaei and R. Sun and Q.-J. Hong, "Epicycle method for elasticity limit 
-                     calculations",
-Phys. Rev. B 95 144113 (2017) doi:10.1103/PhysRevB.95.144113 .
+runstruct_vasp [-w file] [-d depth] [-p] [-lu] [-ng] [-nr] [-ex] cmdprefix
+  where file is an optional alternate wrap file (default: vasp.wrap)
+    If the wrap file is not found in the current directory,
+    it searches in the parent directories, up to number specified by depth (default is 5).
+    For a description of the syntax of the vasp.wrap file, type
+     ezvasp -h
+    and look for options under the '[INCAR]' section.
 
-It calculates the energy of a structure that is potentially mechanically unstable.
-In a nutshell: the method finds either a local minimum (for a mechanically stable phase)
-or the inflection point on a path joining the unrelaxed and fully relaxed structures
-(for a mechanically unstable phase).
-
-Syntax: robustrelax_vasp [options] command_prefix
-where options are
-  -id             Inflection Detection method
-  -idop "options" Options passed to the infdet command.
-  -neb            Use the Nudged Elastic Band method to find minimum energy path
-                  Otherwise: simply interpolate linearly.
-  -ex             Only extract data form VASP files. Do not run anything.
-  -c  [real]      Relaxation magnitude cutoff needed to activate robust relax algorithm (default: 
-                     0).
-  -ni [integer]   Number of images in the minimum energy path (default: 6).
-  -rc [string]    Command for full relaxation          (Default: runstruct_vasp -w vasp.wrap).
-  -vc [string]    Command for volume only relaxation   (Default: runstruct_vasp -w vaspvol.wrap).
-  -cc [string]    Command for chain (neb) calculations (Default: runstruct_vasp -w vaspneb.wrap).
-  -sc [string]    Command for static runs              (Default: runstruct_vasp -w 
-                     vaspstatic.wrap).
-  -ic [string]    Command for inflection-detection runs (-id option) (Default: runstruct_vasp -p -w 
-                     vaspid.wrap).
-  -idf [real]     Starting point fraction for inflection detection (default: 0.5)
-  -ja
-  -jc             By how much to jitter atoms (-ja) and cell parameters (-jc) for the initial 
-                     conditions
-                  for inflection-detection method.
-  -vib            Update vibrational data in svib_ht file from vol_0/svib_ht file.
-  -mk             Make auxiliary vasp input files (vaspvol.wrap, vaspneb.wrap, vaspstatic.wrap, 
-                     vaspf.wrap, vaspid.wrap)
-                  from vasp.wrap. Does not run anything.
-  -cln            clean files for a full restart.
-  -cip            continue (an prior run) if possible (only implemented for -id algorithm).
-  -d              Use all defaults values.
-  -h              Display more help.
-  command_prefix  Prefix needed for vasp to run on a remote machine or in parallel (e.g. mpirun).
-
-Note: the commands specified by -rc,-vc,-cc,-sc can be set to empty "" to skip the corresponding
-  calculation step (useful to restart an aborted run).
-
-This command does the following:
-1) Fully relax the structure (in str_hint.out or str.out) to create str_relax.out,
-   just like runstruct_vasp.
-2) If the relaxation cutoff (-c=...) no exceeded, stop. Typically, should be set to -c=0.05.
-3) Relax the volume only of structure in str_sup.out or str.out. Results are in directory 00/
-4) Do a neb (-neb) or infection detection (-id) calculation between the two structures obtained in 
-                     step 1 and 3
-   or just a linear interpolation between them (if no -neb or -id). Results are in directories ??/
-   Note that you need VTST Tools from http://theory.cm.utexas.edu/vtsttools/ for the neb method
-   with variable cell shape.
-5) Do static calculations in each directory ??/
-6) Find the inflection point on the path optimized in step 4. If it does not exist, find the
-   minimum energy along that path.
-7) Report the energy found in 6 in the file energy and the corresponding geometry in str_relax.out
-
-Notes:
-1) str_beg.out and str_end.out contain the extremities of the path.
-   If you want to restart from scratch, delete these files.
-2) For high symmetry phases (e.g. bcc,fcc,hcp) you may need to break the symmetry of the phase for 
-                     it to relax.
-   For that purpose, you can use, e.g.,
-      symbrklib W fcc bcc
-   or
-      cellcvrt -ja=0.01 -jc=0.01 &lt; str.out &gt; str_hint.out .
-   Sometimes a supercell is needed (a phonon analysis will tell you that - or symbrklib for 
-                     bcc,fcc,hcp).
+  -p means preserve vasp output file
+  -lu means look up one directory for WAVECAR to use as starting point.
+  -ng means do not generate a vasp.in file, use the existing one.
+  -nr means do not run vasp, just generate input files
+  -ex means do not generate vasp.in, do not run vasp, but extract info from vasp output file
+  cmdprefix is the prefix needed for vasp to run on a remote machine,
+            such as "node -s node2"
 </PRE>
 <BR><HR>
 <ADDRESS>
-avdw@alum.mit.edu Sat, Jun 21, 2025 12:31:12 AM
+avdw@alum.mit.edu Thu, Jul 30, 2026  5:11:12 PM
 </ADDRESS>
 </BODY>
 </HTML>

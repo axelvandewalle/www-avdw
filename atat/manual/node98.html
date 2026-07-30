@@ -3,8 +3,8 @@
 <!--Converted with LaTeX2HTML 2018.3 (Released July 19, 2018) -->
 <HTML lang="EN">
 <HEAD>
-<TITLE>clusterpredict</TITLE>
-<META NAME="description" CONTENT="clusterpredict">
+<TITLE>clusterexpand</TITLE>
+<META NAME="description" CONTENT="clusterexpand">
 <META NAME="keywords" CONTENT="manual">
 <META NAME="resource-type" CONTENT="document">
 <META NAME="distribution" CONTENT="global">
@@ -36,33 +36,41 @@
  HREF="node99.html">
 <IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
 <A
- HREF="node55.html">
+ HREF="node56.html">
 <IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
 <A
  HREF="node97.html">
 <IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
 <BR>
 <B> Next:</B> <A
- HREF="node99.html">checkrelax</A>
+ HREF="node99.html">mkteci</A>
 <B> Up:</B> <A
- HREF="node55.html">Command line options</A>
+ HREF="node56.html">Command line options</A>
 <B> Previous:</B> <A
- HREF="node97.html">mkteci</A>
+ HREF="node97.html">makelat</A>
 <BR>
 <BR></DIV>
 <!--End of Navigation Panel-->
 
-<H2><A ID="SECTION008243000000000000000">
-clusterpredict</A>
+<H2><A ID="SECTION008242000000000000000">
+clusterexpand</A>
 </H2>
 <PRE>
-Syntax: clusterpredict [-pa] file
-see clusterexpand for more info.
-This command is to be run from within a specific structure directory containing a str.out file.
+Syntax: clusterexpand [-e] [-pa] [-s "1,0,1, ..."] filename
+Cluster expands the quantity stored in */filename
+Uses the clusters in clusters.out
+Outputs to filename.eci filename.ecimult
+ecimult contains the eci multiplied by multiplicity
+the option -e causes the structures flagged with an error file to be ignored
+the option -pa indicates that the quantity is per atom already
+   so that the code must NOT divide it by the number of atoms
+the option -s lets you select which cluster to include (1) or exclude (0)
+the option -g selects a generalized (tensor) cluster expansion
+the -cv option prints the cv score.
 </PRE>
 <BR><HR>
 <ADDRESS>
-avdw@alum.mit.edu Sat, Jun 21, 2025 12:31:12 AM
+avdw@alum.mit.edu Thu, Jul 30, 2026  5:11:12 PM
 </ADDRESS>
 </BODY>
 </HTML>
